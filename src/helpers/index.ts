@@ -1,4 +1,5 @@
 export * from './cursors'
 export * from './editor'
+export * from './events'
 export * from './game'
 export * from './level'

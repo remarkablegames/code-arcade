@@ -1,4 +1,10 @@
-import { editorView, getLevel, initGame, renderLevel } from '../helpers'
+import {
+  addEventListeners,
+  editorView,
+  getLevel,
+  initGame,
+  renderLevel,
+} from '../helpers'
 import { Scene } from '../types'
 
 export function initGameScene() {
@@ -24,14 +30,6 @@ export function initGameScene() {
 
     run()
 
-    const buttons = document.querySelectorAll(
-      '.run',
-    ) as NodeListOf<HTMLButtonElement>
-
-    buttons.forEach((oldButton) => {
-      const newButton = oldButton.cloneNode(true) as HTMLButtonElement
-      newButton.addEventListener('click', run)
-      oldButton.parentNode?.replaceChild(newButton, oldButton)
-    })
+    addEventListeners(run)
   })
 }
