@@ -1,7 +1,7 @@
 import { getEditorView, initKaboom } from '../helpers'
 import { getLevel } from '../levels'
 
-const button = document.querySelector('button')!
+const buttons = document.querySelectorAll('.run')
 
 scene('game', async (currentLevel: number) => {
   const level = await getLevel(currentLevel)
@@ -26,5 +26,5 @@ scene('game', async (currentLevel: number) => {
 
   run()
 
-  button.addEventListener('click', run)
+  buttons.forEach((button) => button.addEventListener('click', run))
 })
