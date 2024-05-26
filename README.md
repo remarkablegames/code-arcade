@@ -1,6 +1,17 @@
-# code-arcade
+<p align="center">
+  <img src="https://github.com/remarkablegames/code-arcade/blob/master/public/logo.png" alt="Code Arcade">
+</p>
 
-<kbd>code-arcade</kbd> is a template for making [Kaboom](https://kaboomjs.com/) games. See [example](https://remarkablegames.org/code-arcade).
+# Code Arcade
+
+![release](https://img.shields.io/github/v/release/remarkablegames/code-arcade)
+[![build](https://github.com/remarkablegames/code-arcade/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/code-arcade/actions/workflows/build.yml)
+
+🕹️ Learn how to program with Code Arcade.
+
+Play the game on:
+
+- [remarkablegames](https://remarkablegames.org/code-arcade).
 
 ## Stack
 

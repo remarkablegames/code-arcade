@@ -1,7 +1,7 @@
 {
   "name": "code-arcade",
   "version": "1.0.0-alpha",
-  "description": "A template for building Kaboom games.",
+  "description": "Learn how to program with Code Arcade.",
   "author": "Mark <mark@remarkablemark.org>",
   "scripts": {
     "build": "npm run clean && vite build",
