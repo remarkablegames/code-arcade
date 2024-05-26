@@ -1,8 +1,8 @@
 import { addCursorKeys } from '../helpers'
 import { Scene, Sprite } from '../types'
 
-export const level = 0
-export const title = 'Hello, World!'
+export const level = 1
+export const title = 'Comments'
 
 export function prescript() {
   loadSprite(Sprite.player, 'sprites/bean.png')
@@ -11,17 +11,20 @@ export function prescript() {
   addCursorKeys(
     add([sprite(Sprite.player), pos(50, 50), area(), Sprite.player]),
   )
-  add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
 
   onCollide(Sprite.player, Sprite.exit, () => {
-    go(Scene.game, level + 1)
+    go(Scene.game, 0)
   })
+
+  add([text("Where's the exit?")])
 }
 
 export const script = `
-add([
-  text('WASD or arrow keys to move')
-])
+/**
+ * Single line comments start with two forward slashes //
+ */
+
+// add([sprite('exit'), pos(center()), area(), 'exit'])
 `
 
 export function postscript() {}
