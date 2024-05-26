@@ -8,4 +8,10 @@ export function addEventListeners(callback: () => void) {
     newButton.addEventListener('click', callback)
     oldButton.parentNode?.replaceChild(newButton, oldButton)
   })
+
+  window.onerror = (message) => {
+    wait(0, () => {
+      debug.log(message)
+    })
+  }
 }
