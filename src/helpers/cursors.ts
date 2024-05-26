@@ -1,9 +1,10 @@
-import type { Player } from '../types'
+import type { GameObj } from 'kaboom'
 
 // pixels per second
 const SPEED = 320
 
-export function addCursorKeys(player: Player) {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function addCursorKeys(player: GameObj<any>) {
   onKeyDown('left', () => {
     player.move(-SPEED, 0)
   })
