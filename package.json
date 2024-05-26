@@ -16,6 +16,8 @@
   },
   "homepage": "https://remarkablegames.org/code-arcade/",
   "dependencies": {
+    "@codemirror/lang-javascript": "6.2.2",
+    "codemirror": "6.0.1",
     "kaboom": "3000.1.17"
   },
   "devDependencies": {

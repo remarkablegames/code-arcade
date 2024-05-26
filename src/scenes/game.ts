@@ -1,23 +1,30 @@
-import { addCursorKeys } from '../events'
-import { addEnemy, addPlayer } from '../gameobjects'
-import { Scene } from '../types'
+import { getEditorView, initKaboom } from '../helpers'
+import { getLevel } from '../levels'
 
-scene(Scene.game, () => {
-  const player = addPlayer()
+const button = document.querySelector('button')!
 
-  player.onUpdate(() => {
-    player.angle += 120 * dt()
+scene('game', async (currentLevel: number) => {
+  const level = await getLevel(currentLevel)
+
+  const editorView = getEditorView()
+
+  editorView.dispatch({
+    changes: {
+      from: 0,
+      to: editorView.state.doc.length,
+      insert: level.script.trim(),
+    },
   })
 
-  addCursorKeys(player)
-
-  onClick(() => addKaboom(mousePos()))
-
-  add([text('Press arrow keys', { width: width() / 2 }), pos(12, 12)])
-
-  for (let i = 0; i < 3; i++) {
-    const x = rand(0, width())
-    const y = rand(0, height())
-    addEnemy(x, y)
+  function run() {
+    initKaboom()
+    level.beforeScript()
+    const script = editorView.state.doc.toString()
+    eval(script)
+    level.afterScript()
   }
+
+  run()
+
+  button.addEventListener('click', run)
 })

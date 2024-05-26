@@ -1,8 +1,9 @@
 import './style.css'
+import './scenes'
 
-import { start } from './scenes'
+const level = Number(new URLSearchParams(location.search).get('level')) || 0
 
-start()
+go('game', level)
 
 // press F1
 // debug.inspect = true

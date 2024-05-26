@@ -47,10 +47,20 @@
   <body>
     <noscript>You need to enable JavaScript to play this game.</noscript>
 
+    <main>
+      <button>Run</button>
+
+      <section>
+        <canvas></canvas>
+        <div id="editor"></div>
+      </section>
+    </main>
+
     <script type="module">
-      import kaboom from 'kaboom'
-      kaboom()
+      import { initKaboom } from './src/helpers'
+      initKaboom()
     </script>
+
     <script type="module" src="src/index.ts"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
