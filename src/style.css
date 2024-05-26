@@ -3,6 +3,11 @@ main {
   justify-content: center;
 }
 
+.title {
+  font-family: 'Lucida Grande', sans-serif;
+  text-align: center;
+}
+
 .desktop {
   display: none;
 }

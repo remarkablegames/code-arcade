@@ -1,12 +1,10 @@
-import { getEditorView, initKaboom } from '../helpers'
-import { getLevel } from '../levels'
+import { editorView, getLevel, initKaboom, renderLevel } from '../helpers'
 
 const buttons = document.querySelectorAll('.run')
 
 scene('game', async (currentLevel: number) => {
   const level = await getLevel(currentLevel)
-
-  const editorView = getEditorView()
+  renderLevel(level)
 
   editorView.dispatch({
     changes: {
