@@ -11,7 +11,7 @@
 
 Play the game on:
 
-- [remarkablegames](https://remarkablegames.org/code-arcade).
+- [remarkablegames](https://remarkablegames.org/code-arcade)
 
 ## Stack
 
