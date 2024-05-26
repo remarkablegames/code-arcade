@@ -9,5 +9,7 @@ const titles = document.querySelectorAll(
 ) as NodeListOf<HTMLHeadingElement>
 
 export function renderLevel(level: Level) {
-  titles.forEach((title) => (title.innerText = level.title))
+  titles.forEach(
+    (title) => (title.innerText = `Level ${level.level}: ${level.title}`),
+  )
 }

@@ -1,1 +1,1 @@
-import './game'
+export * from './game'

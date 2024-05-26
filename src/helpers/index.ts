@@ -1,4 +1,4 @@
 export * from './cursors'
 export * from './editor'
-export * from './kaboom'
+export * from './game'
 export * from './level'
