@@ -1,6 +1,6 @@
-# kaboom-template
+# code-arcade
 
-<kbd>kaboom-template</kbd> is a template for making [Kaboom](https://kaboomjs.com/) games. See [example](https://remarkablegames.org/kaboom-template).
+<kbd>code-arcade</kbd> is a template for making [Kaboom](https://kaboomjs.com/) games. See [example](https://remarkablegames.org/code-arcade).
 
 ## Stack
 
@@ -17,8 +17,8 @@
 Clone the repository:
 
 ```sh
-git clone https://github.com/remarkablegames/kaboom-template.git
-cd kaboom-template
+git clone https://github.com/remarkablegames/code-arcade.git
+cd code-arcade
 ```
 
 Use the Node.js version:
