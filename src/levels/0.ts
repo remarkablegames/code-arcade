@@ -2,7 +2,7 @@ import { addCursorKeys } from '../helpers'
 
 export const title = 'Level 0: Hello, World!'
 
-export function beforeScript() {
+export function prescript() {
   loadSprite('player', 'sprites/bean.png')
   const player = add([sprite('player'), pos(80, 40), area()])
   addCursorKeys(player)
@@ -14,4 +14,4 @@ add([
 ])
 `
 
-export function afterScript() {}
+export function postscript() {}

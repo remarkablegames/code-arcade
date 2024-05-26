@@ -16,10 +16,10 @@ scene('game', async (currentLevel: number) => {
 
   function run() {
     initKaboom()
-    level.beforeScript()
+    level.prescript()
     const script = editorView.state.doc.toString()
     eval(script)
-    level.afterScript()
+    level.postscript()
   }
 
   run()

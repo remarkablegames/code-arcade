@@ -1,6 +1,6 @@
 export interface Level {
   title: string
-  beforeScript: () => void
+  prescript: () => void
   script: string
-  afterScript: () => void
+  postscript: () => void
 }
