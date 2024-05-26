@@ -1,0 +1,38 @@
+{
+  "name": "kaboom-template",
+  "version": "1.0.0-alpha",
+  "description": "A template for building Kaboom games.",
+  "author": "Mark <mark@remarkablemark.org>",
+  "scripts": {
+    "build": "npm run clean && vite build",
+    "bundle": "scripts/bundle.sh",
+    "clean": "rm -rf dist",
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "npm run lint -- --fix",
+    "lint:tsc": "tsc --noEmit",
+    "prepare": "husky",
+    "preview": "vite preview",
+    "start": "vite --open"
+  },
+  "homepage": "https://remarkablegames.org/kaboom-template/",
+  "dependencies": {
+    "kaboom": "3000.1.17"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.3.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "@typescript-eslint/eslint-plugin": "7.10.0",
+    "@typescript-eslint/parser": "7.10.0",
+    "eslint": "8.57.0",
+    "eslint-plugin-prettier": "5.1.3",
+    "eslint-plugin-simple-import-sort": "12.1.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.2.5",
+    "prettier": "3.2.5",
+    "typescript": "5.4.5",
+    "vite": "5.2.11",
+    "vite-plugin-html": "3.2.2"
+  },
+  "private": true,
+  "license": "MIT"
+}
