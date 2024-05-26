@@ -1,1 +1,0 @@
-main{display:flex;justify-content:center}.desktop{display:none}.run{cursor:pointer;font-weight:bold;margin:8px auto;padding:6px 24px}#editor{width:600px}@media (min-width: 1200px){.mobile{display:none}.desktop{display:block}main{display:block;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.container{display:flex}#editor{height:600px;overflow:auto}}
