@@ -10,6 +10,6 @@ const titles = document.querySelectorAll(
 
 export function renderLevel(level: Level) {
   titles.forEach(
-    (title) => (title.innerText = `Level ${level.level}: ${level.title}`),
+    (title) => (title.innerText = `${level.level}. ${level.title}`),
   )
 }
