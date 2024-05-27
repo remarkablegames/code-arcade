@@ -29,20 +29,17 @@ export function renderLevel(level: Level) {
  * Initializes level.
  *
  * @param level - Level number.
- * @param cleanup - Cleanup callback.
+ * @param cleanups - Cleanup callbacks.
  */
-export function initLevel(level: number, cleanup?: () => void) {
-  if (typeof cleanup === 'function') {
-    cleanup()
-  }
+export function initLevel(level: number, cleanups?: (() => void)[]) {
+  cleanups?.forEach((cleanup) => cleanup())
 
   loadSprite(Sprite.player, 'sprites/bean.png')
   loadSprite(Sprite.exit, 'sprites/door.png')
 
-  onCollide(Sprite.player, Sprite.exit, () => {
-    if (typeof cleanup === 'function') {
-      cleanup()
-    }
+  const collideEvent = onCollide(Sprite.player, Sprite.exit, () => {
+    cleanups?.forEach((cleanup) => cleanup())
+    collideEvent.cancel()
 
     const nextLevel = level + 1
     go(Scene.game, nextLevel)

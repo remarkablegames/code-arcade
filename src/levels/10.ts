@@ -3,7 +3,7 @@ import { Sprite } from '../types'
 
 export const level = 10
 export const title = 'Loops 2'
-let cleanup: () => void
+let cleanups: (() => void)[]
 
 const map = [
   '          ',
@@ -17,7 +17,7 @@ const map = [
 ]
 
 export function prescript() {
-  initLevel(level, cleanup)
+  initLevel(level, cleanups)
   loadSprite(Sprite.spike, 'sprites/spike.png')
 
   addCursorKeys(
@@ -49,11 +49,13 @@ export function prescript() {
     })
   })
 
-  onCollide(Sprite.player, Sprite.spike, (player, spike) => {
-    spike.opacity = 1
-    player.destroy()
-    addKaboom(player.pos)
-  })
+  cleanups.push(
+    onCollide(Sprite.player, Sprite.spike, (player, spike) => {
+      spike.opacity = 1
+      player.destroy()
+      addKaboom(player.pos)
+    }).cancel,
+  )
 
   add([text('Invisible spikes')])
 }
@@ -71,15 +73,17 @@ export function postscript() {
   const spikesCount = map.join('').split(' ').join('').length
   const player = get('player')[0]
 
-  cleanup = onUpdate(() => {
-    const { x, y } = player.pos
+  cleanups.push(
+    onUpdate(() => {
+      const { x, y } = player.pos
 
-    if (x < 0 || y < 0 || x > width() || y > height()) {
-      player.moveTo(40, 80)
-    }
+      if (x < 0 || y < 0 || x > width() || y > height()) {
+        player.moveTo(40, 80)
+      }
 
-    if (get(Sprite.spike).length < spikesCount) {
-      throw new Error(`There must be ${spikesCount} spikes!`)
-    }
-  }).cancel
+      if (get(Sprite.spike).length < spikesCount) {
+        throw new Error(`There must be ${spikesCount} spikes!`)
+      }
+    }).cancel,
+  )
 }

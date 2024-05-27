@@ -3,12 +3,12 @@ import { Sprite } from '../types'
 
 export const level = 11
 export const title = 'Loops 3'
-let cleanup: () => void
+let cleanups: (() => void)[]
 
 const ENEMY_SPEED = 500
 
 export function prescript() {
-  initLevel(level, cleanup)
+  initLevel(level, cleanups)
   loadSprite(Sprite.enemy, 'sprites/ghosty.png')
   loadSprite(Sprite.wall, 'sprites/steel.png')
 
@@ -32,16 +32,19 @@ export function prescript() {
     Sprite.enemy,
   ])
 
-  const enemyUpdate = enemy.onUpdate(() => {
+  const enemyUpdateEvent = enemy.onUpdate(() => {
     const dir = player.pos.sub(enemy.pos).unit()
     enemy.move(dir.scale(ENEMY_SPEED))
   })
+  cleanups.push(enemyUpdateEvent.cancel)
 
-  onCollide(Sprite.player, Sprite.enemy, (player) => {
-    enemyUpdate.cancel()
-    player.destroy()
-    addKaboom(player.pos)
-  })
+  cleanups.push(
+    onCollide(Sprite.player, Sprite.enemy, (player) => {
+      enemyUpdateEvent.cancel()
+      player.destroy()
+      addKaboom(player.pos)
+    }).cancel,
+  )
 
   add([text('Protect yourself')])
 }
@@ -63,9 +66,11 @@ add([
 export function postscript() {
   get('enemy')[0].moveTo(center())
 
-  cleanup = onUpdate(() => {
-    if (get(Sprite.enemy).length < 1) {
-      throw new Error('There must be 1 enemy!')
-    }
-  }).cancel
+  cleanups.push(
+    onUpdate(() => {
+      if (get(Sprite.enemy).length < 1) {
+        throw new Error('There must be 1 enemy!')
+      }
+    }).cancel,
+  )
 }
