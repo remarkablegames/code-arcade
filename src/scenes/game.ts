@@ -5,11 +5,18 @@ import {
   initGame,
   renderLevel,
 } from '../helpers'
-import { Scene } from '../types'
+import { Level, Scene } from '../types'
 
 export function initGameScene() {
   scene(Scene.game, async (currentLevel: number) => {
-    const level = await getLevel(currentLevel)
+    let level: Level
+
+    try {
+      level = await getLevel(currentLevel)
+    } catch (error) {
+      return go(Scene.game, 0)
+    }
+
     renderLevel(level)
 
     editorView.dispatch({

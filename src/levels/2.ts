@@ -1,20 +1,15 @@
-import { addCursorKeys } from '../helpers'
-import { Scene, Sprite } from '../types'
+import { addCursorKeys, initLevel } from '../helpers'
+import { Sprite } from '../types'
 
 export const level = 2
 export const title = 'Strings'
 
 export function prescript() {
-  loadSprite(Sprite.player, 'sprites/bean.png')
-  loadSprite(Sprite.exit, 'sprites/door.png')
+  initLevel(level)
 
   addCursorKeys(
     add([sprite(Sprite.player), pos(center()), area(), Sprite.player]),
   )
-
-  onCollide(Sprite.player, Sprite.exit, () => {
-    go(Scene.game, level + 1)
-  })
 }
 
 export const script = `
