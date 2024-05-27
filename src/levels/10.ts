@@ -3,7 +3,8 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 10
 export const title = 'Loops 2'
-let cleanups: Cleanup[]
+
+const cleanups: Cleanup[] = []
 
 const map = [
   '          ',
