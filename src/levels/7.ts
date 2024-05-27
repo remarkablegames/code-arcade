@@ -3,14 +3,15 @@ import { Sprite } from '../types'
 
 export const level = 7
 export const title = 'Functions'
+let cleanup: () => void
 
 export function prescript() {
-  initLevel(level)
+  initLevel(level, cleanup)
 
   add([sprite(Sprite.player), pos(0, 36), area(), Sprite.player])
-  add([sprite(Sprite.exit), pos(516, 516), area(), Sprite.exit])
+  add([sprite(Sprite.exit), pos(center().x, 500), area(), Sprite.exit])
 
-  add([text('Cannot move, automate me')])
+  add([text('Move me')])
 }
 
 export const script = `
@@ -21,7 +22,7 @@ export const script = `
 const player = get('player')[0]
 
 function movePlayer() {
-  player.move(0)
+  player.move(0, 0)
 }
 
 player.onUpdate(() => movePlayer())
@@ -30,4 +31,10 @@ player.onUpdate(() => movePlayer())
 export function postscript() {
   const player = get('player')[0]
   player.moveTo(0, 36)
+
+  const eventController = onKeyPress(() => {
+    debug.log('Keypress disabled!')
+  })
+
+  cleanup = eventController.cancel
 }

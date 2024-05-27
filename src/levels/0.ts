@@ -17,7 +17,7 @@ add([
   text('WASD or arrow keys to move')
 ])
 
-// press "Run" button to see log
+// press "Run" button to see the log
 console.log('Hello, World!')
 `
 
