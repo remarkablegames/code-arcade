@@ -69,8 +69,15 @@ spikes[0].opacity = 0
 
 export function postscript() {
   const spikesCount = map.join('').split(' ').join('').length
+  const player = get('player')[0]
 
   cleanup = onUpdate(() => {
+    const { x, y } = player.pos
+
+    if (x < 0 || y < 0 || x > width() || y > height()) {
+      player.moveTo(40, 80)
+    }
+
     if (get(Sprite.spike).length < spikesCount) {
       throw new Error(`There must be ${spikesCount} spikes!`)
     }
