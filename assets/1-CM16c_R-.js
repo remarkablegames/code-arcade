@@ -1,4 +1,4 @@
-import{a as e}from"./cursors-Ms_gDOeS.js";import{i as r,S as t}from"./index-B6QyTs1C.js";const s=1;const a="Comments";function p(){r(s);e(add([sprite(t.player),pos(50,50),area(),t.player]));add([text("Where's the exit?")])}const n=`
+import{a as e}from"./cursors-Ms_gDOeS.js";import{i as r,S as t}from"./index-IW7GMEmV.js";const s=1;const a="Comments";function p(){r(s);e(add([sprite(t.player),pos(50,50),area(),t.player]));add([text("Where's the exit?")])}const n=`
 /**
  * Single line comments start with two forward slashes //
  */

@@ -1,4 +1,4 @@
-import{i as r,S as e}from"./index-B6QyTs1C.js";const a=7;const p="Functions";let t;function n(){r(a,t);add([sprite(e.player),pos(0,36),area(),e.player]);add([sprite(e.exit),pos(center().x,500),area(),e.exit]);add([text("Move me")])}const i=`
+import{i as r,S as e}from"./index-IW7GMEmV.js";const a=7;const p="Functions";let t;function n(){r(a,t);add([sprite(e.player),pos(0,36),area(),e.player]);add([sprite(e.exit),pos(center().x,500),area(),e.exit]);add([text("Move me")])}const i=`
 /**
  * Functions are blocks of code designed to perform a task
  */
