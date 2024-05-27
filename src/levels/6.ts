@@ -25,9 +25,7 @@ player.pos.y = 36
 `
 
 export function postscript() {
-  const eventController = onKeyPress(() => {
+  cleanup = onKeyPress(() => {
     debug.log('Keypress disabled!')
-  })
-
-  cleanup = eventController.cancel
+  }).cancel
 }

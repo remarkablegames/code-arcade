@@ -32,9 +32,7 @@ export function postscript() {
   const player = get('player')[0]
   player.moveTo(0, 36)
 
-  const eventController = onKeyPress(() => {
+  cleanup = onKeyPress(() => {
     debug.log('Keypress disabled!')
-  })
-
-  cleanup = eventController.cancel
+  }).cancel
 }
