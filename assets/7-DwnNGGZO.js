@@ -1,4 +1,4 @@
-import{i as o,S as e}from"./index-CK0hfUCJ.js";const a=7;const p="Functions";function n(){o(a);add([sprite(e.player),pos(0,36),area(),e.player]);add([sprite(e.exit),pos(516,516),area(),e.exit]);add([text("Cannot move, automate me")])}const s=`
+import{i as o,S as e}from"./index-D0m1McmU.js";const a=7;const p="Functions";function n(){o(a);add([sprite(e.player),pos(0,36),area(),e.player]);add([sprite(e.exit),pos(516,516),area(),e.exit]);add([text("Cannot move, automate me")])}const s=`
 /**
  * Functions are blocks of code designed to perform a task
  */
