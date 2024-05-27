@@ -1,9 +1,9 @@
 import { addCursorKeys, initLevel } from '../helpers'
-import { Sprite } from '../types'
+import { Cleanup, Sprite } from '../types'
 
 export const level = 11
 export const title = 'Loops 3'
-let cleanups: (() => void)[]
+let cleanups: Cleanup[]
 
 const ENEMY_SPEED = 500
 

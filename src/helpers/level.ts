@@ -1,4 +1,4 @@
-import { Data, Level, Scene, Sprite } from '../types'
+import { Cleanup, Data, Level, Scene, Sprite } from '../types'
 
 /**
  * Gets level by number.
@@ -31,7 +31,7 @@ export function renderLevel(level: Level) {
  * @param level - Level number.
  * @param cleanups - Cleanup callbacks.
  */
-export function initLevel(level: number, cleanups?: (() => void)[]) {
+export function initLevel(level: number, cleanups?: Cleanup[]) {
   cleanups?.forEach((cleanup) => cleanup())
 
   loadSprite(Sprite.player, 'sprites/bean.png')

@@ -1,9 +1,9 @@
 import { initLevel } from '../helpers'
-import { Sprite } from '../types'
+import { Cleanup, Sprite } from '../types'
 
 export const level = 7
 export const title = 'Functions'
-let cleanups: (() => void)[]
+let cleanups: Cleanup[]
 
 export function prescript() {
   initLevel(level, cleanups)

@@ -5,3 +5,5 @@ export interface Level {
   script: string
   postscript: () => void
 }
+
+export type Cleanup = () => void

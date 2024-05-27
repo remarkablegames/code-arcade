@@ -1,9 +1,9 @@
 import { addCursorKeys, initLevel } from '../helpers'
-import { Sprite } from '../types'
+import { Cleanup, Sprite } from '../types'
 
 export const level = 10
 export const title = 'Loops 2'
-let cleanups: (() => void)[]
+let cleanups: Cleanup[]
 
 const map = [
   '          ',
