@@ -19,6 +19,7 @@ export const script = `
  */
 
 const player = get('player')[0]
+player.scale = 0.5
 player.pos.x = 0
 player.pos.y = 36
 `
