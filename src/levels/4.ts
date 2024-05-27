@@ -13,7 +13,7 @@ export function prescript() {
   )
 
   onCollide(Sprite.player, Sprite.exit, () => {
-    go(Scene.game, 0)
+    go(Scene.game, level + 1)
   })
 
   add([text('Exit is not truthy')])
