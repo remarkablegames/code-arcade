@@ -1,3 +1,5 @@
+const { log } = console
+
 export function addEventListeners(callback: () => void) {
   const buttons = document.querySelectorAll(
     '.run',
@@ -12,6 +14,14 @@ export function addEventListeners(callback: () => void) {
   window.onerror = (message) => {
     wait(0, () => {
       debug.log(message)
+    })
+  }
+
+  // eslint-disable-next-line no-console
+  console.log = (...args) => {
+    log(...args)
+    wait(0, () => {
+      debug.log(args.join(' '))
     })
   }
 }

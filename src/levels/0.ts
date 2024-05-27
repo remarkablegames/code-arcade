@@ -16,6 +16,9 @@ export const script = `
 add([
   text('WASD or arrow keys to move')
 ])
+
+// press "Run" button to see log
+console.log('Hello, World!')
 `
 
 export function postscript() {}
