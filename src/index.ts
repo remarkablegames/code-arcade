@@ -1,9 +1,12 @@
 import './style.css'
 import './scenes'
 
-import { Scene } from './types'
+import { Data, Scene } from './types'
 
-const level = Number(new URLSearchParams(location.search).get('level')) || 0
+const level =
+  Number(
+    new URLSearchParams(location.search).get('level') || getData(Data.level),
+  ) || 0
 
 go(Scene.game, level)
 

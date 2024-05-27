@@ -1,4 +1,4 @@
-import { Level, Scene, Sprite } from '../types'
+import { Data, Level, Scene, Sprite } from '../types'
 
 /**
  * Gets level by number.
@@ -40,10 +40,12 @@ export function initLevel(level: number, cleanup?: () => void) {
   loadSprite(Sprite.exit, 'sprites/door.png')
 
   onCollide(Sprite.player, Sprite.exit, () => {
-    go(Scene.game, level + 1)
-
     if (typeof cleanup === 'function') {
       cleanup()
     }
+
+    const nextLevel = level + 1
+    go(Scene.game, nextLevel)
+    setData(Data.level, nextLevel)
   })
 }
