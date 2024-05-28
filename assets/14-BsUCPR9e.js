@@ -1,4 +1,0 @@
-import{a as n}from"./cursors-BIrzN-a5.js";import{i as p,S as e}from"./index-DWpct6FG.js";import{b as l}from"./timer-CARbKUYj.js";const c=14;const f="Timer 3";let r=[];let t;function s(){return`Collect ${t} more key${t!==1?"s":""}`}function i(){add([sprite(e.key),pos(randi(width()),randi(height())),area(),anchor("center"),e.key])}function k(){r=[l];p(c,r);t=420;loadSprite(e.key,"sprites/key.png");n(add([sprite(e.player),pos(center()),area(),e.player]));const a=add([text(s())]);i();r.push(onCollide(e.key,e.player,o=>{t--;o.destroy();a.text=s();if(t){i()}else{add([sprite(e.exit),pos(center()),area(),e.exit])}}).cancel);r.push(onAdd(e.exit,()=>{if(t){destroyAll(e.exit)}}).cancel)}const u=`
-const player = get('player')[0]
-const key = get('key')[0]
-`;function g(){}export{c as level,g as postscript,k as prescript,u as script,f as title};
