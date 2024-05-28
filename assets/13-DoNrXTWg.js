@@ -1,4 +1,4 @@
-import{a as e}from"./cursors-Ms_gDOeS.js";import{i as r,S as t}from"./index-CMYgftrP.js";import{a}from"./timer-ACDtLTHx.js";const i=13;const p="Timer 2";function c(){r(i,[a]);e(add([sprite(t.player),pos(50,80),area(),anchor("center"),t.player]));add([sprite(t.exit),pos(center()),area(),anchor("center"),t.exit]);add([text("Exit in a loop")])}const l=`
+import{a as e}from"./cursors-Ms_gDOeS.js";import{i as r,S as t}from"./index-C5zdgeo5.js";import{a}from"./timer-CARbKUYj.js";const i=13;const p="Timer 2";function c(){r(i,[a]);e(add([sprite(t.player),pos(50,80),area(),anchor("center"),t.player]));add([sprite(t.exit),pos(center()),area(),anchor("center"),t.exit]);add([text("Exit in a loop")])}const l=`
 /**
  * setInterval() calls a function at specified intervals
  */

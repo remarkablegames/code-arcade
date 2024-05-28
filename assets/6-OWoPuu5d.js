@@ -1,4 +1,4 @@
-import{i as t,S as e}from"./index-CMYgftrP.js";const p=6;const r="Objects";const s=[];function a(){t(p,s);add([sprite(e.player),pos(0,36),area(),body(),e.player]);add([sprite(e.exit),pos(516,516),area(),e.exit]);add([text("Reposition me")])}const i=`
+import{i as t,S as e}from"./index-C5zdgeo5.js";const p=6;const r="Objects";const s=[];function a(){t(p,s);add([sprite(e.player),pos(0,36),area(),body(),e.player]);add([sprite(e.exit),pos(516,516),area(),e.exit]);add([text("Reposition me")])}const i=`
 /**
  * Objects are a collection of properties or key-value pairs
  */

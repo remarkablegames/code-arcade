@@ -1,0 +1,1 @@
+const l=()=>{};const{MAX_SAFE_INTEGER:t}=Number;function r(){let e=Number(setTimeout(l,t));while(e--){clearTimeout(e)}}function a(){let e=Number(setInterval(l,t));while(e--){clearInterval(e)}}function n(){r();a()}export{a,n as b,r as c};
