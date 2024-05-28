@@ -3,7 +3,7 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 11
 export const title = 'Loops 3'
-let cleanups: Cleanup[] = []
+const cleanups: Cleanup[] = []
 
 const ENEMY_SPEED = 500
 
@@ -32,7 +32,6 @@ function addEnemy() {
 }
 
 export function prescript() {
-  cleanups = []
   initLevel(level, cleanups)
 
   loadSprite(Sprite.enemy, 'sprites/ghosty.png')

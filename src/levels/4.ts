@@ -3,10 +3,9 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 4
 export const title = 'Booleans'
-let cleanups: Cleanup[] = []
+const cleanups: Cleanup[] = []
 
 export function prescript() {
-  cleanups = []
   initLevel(level, cleanups)
 
   cleanups.push(

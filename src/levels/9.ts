@@ -3,14 +3,13 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 9
 export const title = 'Loops'
-let cleanups: Cleanup[] = []
+const cleanups: Cleanup[] = []
 
 const password = Array.from(Array(42).keys())
   .map(() => 'answer')
   .join('')
 
 export function prescript() {
-  cleanups = []
   initLevel(level, cleanups)
 
   loadSprite(Sprite.key, 'sprites/key.png')
@@ -23,16 +22,17 @@ export function prescript() {
 
   add([sprite(Sprite.key), pos(center()), area(), Sprite.key, { password }])
 
-  cleanups.push(
-    onCollide(Sprite.key, Sprite.player, (key) => {
-      if (key.password === password) {
-        key.destroy()
-        add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
-      } else {
-        debug.log('Incorrect password')
-      }
-    }).cancel,
-  )
+  const cancelCollideEvent = onCollide(Sprite.key, Sprite.player, (key) => {
+    if (key.password === password) {
+      cancelCollideEvent()
+      key.destroy()
+      add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
+    } else {
+      debug.log('Incorrect password')
+    }
+  }).cancel
+
+  cleanups.push(cancelCollideEvent)
 
   add([text('Another password?')])
 }

@@ -3,10 +3,9 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 5
 export const title = 'Arrays'
-let cleanups: Cleanup[] = []
+const cleanups: Cleanup[] = []
 
 export function prescript() {
-  cleanups = []
   initLevel(level, cleanups)
 
   loadSprite(Sprite.wall, 'sprites/steel.png')

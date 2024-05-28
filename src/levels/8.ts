@@ -3,7 +3,7 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 8
 export const title = 'Variables'
-let cleanups: Cleanup[] = []
+const cleanups: Cleanup[] = []
 
 function generatePassword() {
   const year = new Date().getFullYear()
@@ -11,8 +11,8 @@ function generatePassword() {
 }
 
 export function prescript() {
-  cleanups = []
   initLevel(level, cleanups)
+
   loadSprite(Sprite.key, 'sprites/key.png')
 
   cleanups.push(
@@ -24,16 +24,17 @@ export function prescript() {
   const password = generatePassword()
   add([sprite(Sprite.key), pos(center()), area(), Sprite.key, { password }])
 
-  cleanups.push(
-    onCollide(Sprite.key, Sprite.player, (key) => {
-      if (key.password === password) {
-        key.destroy()
-        add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
-      } else {
-        debug.log('Incorrect password')
-      }
-    }).cancel,
-  )
+  const cancelCollideEvent = onCollide(Sprite.key, Sprite.player, (key) => {
+    if (key.password === password) {
+      cancelCollideEvent()
+      key.destroy()
+      add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
+    } else {
+      debug.log('Incorrect password')
+    }
+  }).cancel
+
+  cleanups.push(cancelCollideEvent)
 
   add([text("What's the password?")])
 }

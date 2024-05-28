@@ -3,7 +3,7 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 10
 export const title = 'Loops 2'
-let cleanups: Cleanup[] = []
+const cleanups: Cleanup[] = []
 
 const map = [
   '          ',
@@ -20,8 +20,8 @@ const SPIKES_COUNT = map.join('').split(' ').join('').length
 const TILE_SIZE = 64
 
 export function prescript() {
-  cleanups = []
   initLevel(level, cleanups)
+
   loadSprite(Sprite.spike, 'sprites/spike.png')
 
   const player = add([

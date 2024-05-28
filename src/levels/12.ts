@@ -3,11 +3,11 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 12
 export const title = 'Timer 1'
-let cleanups: Cleanup[] = []
+const cleanups: Cleanup[] = []
 
 export function prescript() {
-  cleanups = [clearAllTimeouts]
   initLevel(level, cleanups)
+  cleanups.push(clearAllTimeouts)
 
   cleanups.push(
     addCursorKeys(
