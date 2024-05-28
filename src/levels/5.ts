@@ -1,16 +1,28 @@
 import { addCursorKeys, initLevel } from '../helpers'
-import { Sprite } from '../types'
+import { Cleanup, Sprite } from '../types'
 
 export const level = 5
 export const title = 'Arrays'
+let cleanups: Cleanup[] = []
 
 export function prescript() {
-  initLevel(level)
+  cleanups = []
+  initLevel(level, cleanups)
+
   loadSprite(Sprite.wall, 'sprites/steel.png')
 
-  addCursorKeys(
-    add([sprite(Sprite.player), pos(center()), area(), body(), Sprite.player]),
+  cleanups.push(
+    addCursorKeys(
+      add([
+        sprite(Sprite.player),
+        pos(center()),
+        area(),
+        body(),
+        Sprite.player,
+      ]),
+    ).cancel,
   )
+
   add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
 
   add([text('Escape the walls')])

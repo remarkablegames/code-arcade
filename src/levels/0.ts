@@ -1,14 +1,20 @@
 import { addCursorKeys, initLevel } from '../helpers'
-import { Sprite } from '../types'
+import { Cleanup, Sprite } from '../types'
 
 export const level = 0
 export const title = 'Hello, World!'
+let cleanups: Cleanup[] = []
 
 export function prescript() {
-  initLevel(level)
-  addCursorKeys(
-    add([sprite(Sprite.player), pos(50, 50), area(), Sprite.player]),
+  cleanups = []
+  initLevel(level, cleanups)
+
+  cleanups.push(
+    addCursorKeys(
+      add([sprite(Sprite.player), pos(50, 50), area(), Sprite.player]),
+    ).cancel,
   )
+
   add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
 }
 

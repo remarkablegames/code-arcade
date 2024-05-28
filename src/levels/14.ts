@@ -3,9 +3,7 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 14
 export const title = 'Timer 3'
-
-const cleanups: Cleanup[] = [clearAllTimers]
-
+let cleanups: Cleanup[] = []
 let keys: number
 
 function getMessage() {
@@ -23,8 +21,10 @@ function addKey() {
 }
 
 export function prescript() {
-  keys = 420
+  cleanups = [clearAllTimers]
   initLevel(level, cleanups)
+
+  keys = 420
   loadSprite(Sprite.key, 'sprites/key.png')
 
   addCursorKeys(

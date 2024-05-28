@@ -3,13 +3,38 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 11
 export const title = 'Loops 3'
-
-const cleanups: Cleanup[] = []
+let cleanups: Cleanup[] = []
 
 const ENEMY_SPEED = 500
 
+let cancelEnemyUpdate: () => void
+
+function addEnemy() {
+  const enemy = add([
+    sprite(Sprite.enemy),
+    pos(center()),
+    area(),
+    body(),
+    Sprite.enemy,
+  ])
+
+  cancelEnemyUpdate = enemy.onUpdate(() => {
+    const player = get(Sprite.player)[0]
+    if (player) {
+      const dir = player.pos.sub(enemy.pos).unit()
+      enemy.move(dir.scale(ENEMY_SPEED))
+    }
+  }).cancel
+
+  cleanups.push(cancelEnemyUpdate)
+
+  return enemy
+}
+
 export function prescript() {
+  cleanups = []
   initLevel(level, cleanups)
+
   loadSprite(Sprite.enemy, 'sprites/ghosty.png')
   loadSprite(Sprite.wall, 'sprites/steel.png')
 
@@ -21,29 +46,25 @@ export function prescript() {
     anchor('center'),
     Sprite.player,
   ])
-  addCursorKeys(player)
+
+  cleanups.push(addCursorKeys(player).cancel)
 
   add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
 
-  const enemy = add([
-    sprite(Sprite.enemy),
-    pos(center()),
-    area(),
-    body(),
-    Sprite.enemy,
-  ])
-
-  const enemyUpdateEvent = enemy.onUpdate(() => {
-    const dir = player.pos.sub(enemy.pos).unit()
-    enemy.move(dir.scale(ENEMY_SPEED))
-  })
-  cleanups.push(enemyUpdateEvent.cancel)
+  addEnemy()
 
   cleanups.push(
-    onCollide(Sprite.player, Sprite.enemy, (player) => {
-      enemyUpdateEvent.cancel()
+    onCollide(Sprite.player, Sprite.enemy, (player, enemy) => {
+      cancelEnemyUpdate()
+      enemy.onUpdate(() => {}).cancel()
       player.destroy()
       addKaboom(player.pos)
+    }).cancel,
+  )
+
+  cleanups.push(
+    onDestroy(Sprite.enemy, () => {
+      addEnemy()
     }).cancel,
   )
 
@@ -65,13 +86,8 @@ add([
 `
 
 export function postscript() {
-  get('enemy')[0].moveTo(center())
-
-  cleanups.push(
-    onUpdate(() => {
-      if (get(Sprite.enemy).length < 1) {
-        throw new Error('There must be 1 enemy!')
-      }
-    }).cancel,
-  )
+  const enemy = get(Sprite.enemy)[0]
+  if (enemy) {
+    enemy.moveTo(center())
+  }
 }

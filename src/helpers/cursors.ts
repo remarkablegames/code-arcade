@@ -5,7 +5,7 @@ const SPEED = 320
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function addCursorKeys(player: GameObj<any>) {
-  onKeyDown((key) => {
+  return onKeyDown((key) => {
     switch (key) {
       case 'up':
       case 'w':

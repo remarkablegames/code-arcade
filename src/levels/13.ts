@@ -1,20 +1,24 @@
 import { addCursorKeys, clearAllIntervals, initLevel } from '../helpers'
-import { Sprite } from '../types'
+import { Cleanup, Sprite } from '../types'
 
 export const level = 13
 export const title = 'Timer 2'
+let cleanups: Cleanup[] = []
 
 export function prescript() {
-  initLevel(level, [clearAllIntervals])
+  cleanups = [clearAllIntervals]
+  initLevel(level, cleanups)
 
-  addCursorKeys(
-    add([
-      sprite(Sprite.player),
-      pos(50, 80),
-      area(),
-      anchor('center'),
-      Sprite.player,
-    ]),
+  cleanups.push(
+    addCursorKeys(
+      add([
+        sprite(Sprite.player),
+        pos(50, 80),
+        area(),
+        anchor('center'),
+        Sprite.player,
+      ]),
+    ).cancel,
   )
 
   add([

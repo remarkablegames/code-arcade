@@ -3,14 +3,20 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 6
 export const title = 'Objects'
-
-const cleanups: Cleanup[] = []
+let cleanups: Cleanup[] = []
 
 export function prescript() {
+  cleanups = []
   initLevel(level, cleanups)
 
   add([sprite(Sprite.player), pos(0, 36), area(), body(), Sprite.player])
   add([sprite(Sprite.exit), pos(516, 516), area(), Sprite.exit])
+
+  cleanups.push(
+    onKeyPress(() => {
+      debug.log('Keypress disabled!')
+    }).cancel,
+  )
 
   add([text('Reposition me')])
 }
@@ -25,10 +31,4 @@ player.pos.x = 0
 player.pos.y = 36
 `
 
-export function postscript() {
-  cleanups.push(
-    onKeyPress(() => {
-      debug.log('Keypress disabled!')
-    }).cancel,
-  )
-}
+export function postscript() {}

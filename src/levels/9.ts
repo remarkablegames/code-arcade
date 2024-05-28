@@ -3,19 +3,22 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 9
 export const title = 'Loops'
-
-const cleanups: Cleanup[] = []
+let cleanups: Cleanup[] = []
 
 const password = Array.from(Array(42).keys())
   .map(() => 'answer')
   .join('')
 
 export function prescript() {
+  cleanups = []
   initLevel(level, cleanups)
+
   loadSprite(Sprite.key, 'sprites/key.png')
 
-  addCursorKeys(
-    add([sprite(Sprite.player), pos(100, 100), area(), Sprite.player]),
+  cleanups.push(
+    addCursorKeys(
+      add([sprite(Sprite.player), pos(100, 100), area(), Sprite.player]),
+    ).cancel,
   )
 
   add([sprite(Sprite.key), pos(center()), area(), Sprite.key, { password }])

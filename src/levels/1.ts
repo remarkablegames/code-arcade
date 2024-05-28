@@ -1,14 +1,18 @@
 import { addCursorKeys, initLevel } from '../helpers'
-import { Sprite } from '../types'
+import { Cleanup, Sprite } from '../types'
 
 export const level = 1
 export const title = 'Comments'
+let cleanups: Cleanup[] = []
 
 export function prescript() {
-  initLevel(level)
+  cleanups = []
+  initLevel(level, cleanups)
 
-  addCursorKeys(
-    add([sprite(Sprite.player), pos(50, 50), area(), Sprite.player]),
+  cleanups.push(
+    addCursorKeys(
+      add([sprite(Sprite.player), pos(50, 50), area(), Sprite.player]),
+    ).cancel,
   )
 
   add([text("Where's the exit?")])

@@ -1,14 +1,18 @@
 import { addCursorKeys, initLevel } from '../helpers'
-import { Sprite } from '../types'
+import { Cleanup, Sprite } from '../types'
 
 export const level = 4
 export const title = 'Booleans'
+let cleanups: Cleanup[] = []
 
 export function prescript() {
-  initLevel(level)
+  cleanups = []
+  initLevel(level, cleanups)
 
-  addCursorKeys(
-    add([sprite(Sprite.player), pos(center()), area(), Sprite.player]),
+  cleanups.push(
+    addCursorKeys(
+      add([sprite(Sprite.player), pos(center()), area(), Sprite.player]),
+    ).cancel,
   )
 
   add([text('Exit is not truthy')])

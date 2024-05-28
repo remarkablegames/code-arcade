@@ -3,8 +3,7 @@ import { Cleanup, Sprite } from '../types'
 
 export const level = 8
 export const title = 'Variables'
-
-const cleanups: Cleanup[] = []
+let cleanups: Cleanup[] = []
 
 function generatePassword() {
   const year = new Date().getFullYear()
@@ -12,11 +11,14 @@ function generatePassword() {
 }
 
 export function prescript() {
+  cleanups = []
   initLevel(level, cleanups)
   loadSprite(Sprite.key, 'sprites/key.png')
 
-  addCursorKeys(
-    add([sprite(Sprite.player), pos(100, 100), area(), Sprite.player]),
+  cleanups.push(
+    addCursorKeys(
+      add([sprite(Sprite.player), pos(100, 100), area(), Sprite.player]),
+    ).cancel,
   )
 
   const password = generatePassword()

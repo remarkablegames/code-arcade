@@ -1,14 +1,18 @@
 import { addCursorKeys, initLevel } from '../helpers'
-import { Sprite } from '../types'
+import { Cleanup, Sprite } from '../types'
 
 export const level = 3
 export const title = 'Numbers'
+let cleanups: Cleanup[] = []
 
 export function prescript() {
-  initLevel(level)
+  cleanups = []
+  initLevel(level, cleanups)
 
-  addCursorKeys(
-    add([sprite(Sprite.player), pos(500, 500), area(), Sprite.player]),
+  cleanups.push(
+    addCursorKeys(
+      add([sprite(Sprite.player), pos(500, 500), area(), Sprite.player]),
+    ).cancel,
   )
 
   add([text('Exit is not in view?')])
