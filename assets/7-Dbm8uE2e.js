@@ -1,4 +1,4 @@
-import{i as r,S as e}from"./index-CttJsVe2.js";const s=7;const p="Functions";const t=[];function n(){r(s,t);add([sprite(e.player),pos(0,36),area(),e.player]);add([sprite(e.exit),pos(center().x,500),area(),e.exit]);t.push(onKeyPress(()=>{debug.log("Keypress disabled!")}).cancel);add([text("Move me")])}const c=`
+import{i as r,S as e}from"./index-Ma2pAkcw.js";const s=7;const p="Functions";const t=[];function n(){r(s,t);add([sprite(e.player),pos(0,36),area(),e.player]);add([sprite(e.exit),pos(center().x,500),area(),e.exit]);t.push(onKeyPress(()=>{debug.log("Keypress disabled!")}).cancel);add([text("Move me")])}const c=`
 /**
  * Functions are blocks of code designed to perform a task
  */
