@@ -31,7 +31,8 @@ export function initGameScene() {
       initGame()
       level.prescript()
       const script = editorView.state.doc.toString()
-      eval(script)
+      const fun = new Function(script)
+      fun()
       level.postscript()
     }
 
