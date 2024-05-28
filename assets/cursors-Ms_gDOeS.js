@@ -1,1 +1,0 @@
-const s=320;function c(e){onKeyDown(a=>{switch(a){case"up":case"w":e.move(0,-s);break;case"left":case"a":e.move(-s,0);break;case"down":case"s":e.move(0,s);break;case"right":case"d":e.move(s,0);break}})}export{c as a};

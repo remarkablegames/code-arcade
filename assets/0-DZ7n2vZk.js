@@ -1,0 +1,8 @@
+import{a as t}from"./cursors-BIrzN-a5.js";import{i as r,S as e}from"./index-DWpct6FG.js";const s=0;const a="Hello, World!";let o=[];function i(){o=[];r(s,o);o.push(t(add([sprite(e.player),pos(50,50),area(),e.player])).cancel);add([sprite(e.exit),pos(500,500),area(),e.exit])}const n=`
+add([
+  text('WASD or arrow keys to move')
+])
+
+// press "Run" button to see the log
+console.log('Hello, World!')
+`;function c(){}export{s as level,c as postscript,i as prescript,n as script,a as title};
