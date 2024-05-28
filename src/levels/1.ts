@@ -24,7 +24,9 @@ export const script = `
 
 // add([sprite('exit'), pos(center()), area(), 'exit'])
 
-// debug.inspect = true
+/*
+debug.inspect = true
+*/
 `
 
 export function postscript() {}
