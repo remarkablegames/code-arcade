@@ -63,7 +63,7 @@ export function prescript() {
 
 export const script = `
 /**
- * forEach loops iterate over an array
+ * forEach() is an iterative method
  */
 
 const spikes = get('spike')

@@ -1,8 +1,10 @@
 import { addCursorKeys, initLevel } from '../helpers'
-import { Sprite } from '../types'
+import { Cleanup, Sprite } from '../types'
 
 export const level = 8
 export const title = 'Variables'
+
+const cleanups: Cleanup[] = []
 
 function generatePassword() {
   const year = new Date().getFullYear()
@@ -10,7 +12,7 @@ function generatePassword() {
 }
 
 export function prescript() {
-  initLevel(level)
+  initLevel(level, cleanups)
   loadSprite(Sprite.key, 'sprites/key.png')
 
   addCursorKeys(
@@ -20,14 +22,16 @@ export function prescript() {
   const password = generatePassword()
   add([sprite(Sprite.key), pos(center()), area(), Sprite.key, { password }])
 
-  onCollide(Sprite.key, Sprite.player, (key) => {
-    if (key.password === password) {
-      key.destroy()
-      add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
-    } else {
-      debug.log('Incorrect password')
-    }
-  })
+  cleanups.push(
+    onCollide(Sprite.key, Sprite.player, (key) => {
+      if (key.password === password) {
+        key.destroy()
+        add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
+      } else {
+        debug.log('Incorrect password')
+      }
+    }).cancel,
+  )
 
   add([text("What's the password?")])
 }
