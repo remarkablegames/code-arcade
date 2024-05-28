@@ -12,7 +12,7 @@ export function addEventListeners(callback: () => void) {
   })
 
   window.onerror = (message) => {
-    wait(0, () => {
+    onLoad(() => {
       debug.log(message)
     })
   }
@@ -20,7 +20,7 @@ export function addEventListeners(callback: () => void) {
   // eslint-disable-next-line no-console
   console.log = (...args) => {
     log(...args)
-    wait(0, () => {
+    onLoad(() => {
       debug.log(args.join(' '))
     })
   }
