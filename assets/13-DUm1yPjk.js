@@ -1,4 +1,4 @@
-import{a as r}from"./cursors-BIrzN-a5.js";import{i as a,S as e}from"./index-Ma2pAkcw.js";import{a as s}from"./timer-CARbKUYj.js";const i=13;const c="Timer 2";const t=[];function l(){a(i,t);t.push(s);t.push(r(add([sprite(e.player),pos(50,80),area(),anchor("center"),e.player])).cancel);add([sprite(e.exit),pos(center()),area(),anchor("center"),e.exit]);add([text("Exit in a loop")])}const d=`
+import{a as r}from"./cursors-BIrzN-a5.js";import{i as a,S as e}from"./index-s47Hfpno.js";import{a as s}from"./timer-CARbKUYj.js";const i=13;const c="Timer 2";const t=[];function l(){a(i,t);t.push(s);t.push(r(add([sprite(e.player),pos(50,80),area(),anchor("center"),e.player])).cancel);add([sprite(e.exit),pos(center()),area(),anchor("center"),e.exit]);add([text("Exit in a loop")])}const d=`
 /**
  * setInterval() calls a function at specified intervals
  */
