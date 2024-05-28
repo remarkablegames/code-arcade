@@ -15,13 +15,11 @@ export function prescript() {
   )
 
   add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
+
+  add([text('WASD or arrow keys to move')])
 }
 
 export const script = `
-add([
-  text('WASD or arrow keys to move')
-])
-
 // press "Run" button to see the log
 console.log('Hello, World!')
 `
