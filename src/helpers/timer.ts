@@ -20,3 +20,11 @@ export function clearAllIntervals() {
     clearInterval(id)
   }
 }
+
+/**
+ * Clears all `setTimeout()` and `setInterval()` timers.
+ */
+export function clearAllTimers() {
+  clearAllTimeouts()
+  clearAllIntervals()
+}
