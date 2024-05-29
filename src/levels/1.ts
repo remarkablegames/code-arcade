@@ -9,8 +9,8 @@ export const level = 1
 export const title = 'Comments'
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 
 const player = add([sprite('player'), pos(50, 50), area(), 'player'])
 

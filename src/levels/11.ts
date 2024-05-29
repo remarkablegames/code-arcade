@@ -9,8 +9,8 @@ export const level = 11
 export const title = 'Loops'
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 loadSprite('enemy', 'sprites/ghosty.png')
 loadSprite('wall', 'sprites/steel.png')
 

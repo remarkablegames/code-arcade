@@ -4,8 +4,8 @@ export const level = 6
 export const title = 'Objects'
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 
 const player = add([sprite('player'), pos(0, 36), area(), body(), 'player'])
 add([sprite('exit'), pos(516, 516), area(), 'exit'])

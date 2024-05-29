@@ -9,8 +9,8 @@ export const level = 13
 export const title = 'setInterval'
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 
 const player = add([sprite('player'), pos(50, 80), area(), anchor('center'), 'player'])
 

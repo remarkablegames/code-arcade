@@ -13,8 +13,8 @@ const password = Array.from(Array(42).keys())
   .join('')
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 loadSprite('key', 'sprites/key.png')
 
 const player = add([sprite('player'), pos(100, 100), area(), 'player'])

@@ -11,8 +11,8 @@ export const title = 'Variables'
 const password = (new Date().getFullYear() + level) * 31337
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 loadSprite('key', 'sprites/key.png')
 
 const player = add([sprite('player'), pos(100, 100), area(), 'player'])

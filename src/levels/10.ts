@@ -9,8 +9,8 @@ export const level = 10
 export const title = 'forEach'
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 loadSprite('spike', 'sprites/spike.png')
 
 const player = add([

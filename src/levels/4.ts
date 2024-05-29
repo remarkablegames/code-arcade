@@ -9,8 +9,8 @@ export const level = 4
 export const title = 'Booleans'
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 
 const player = add([sprite('player'), pos(center()), area(), 'player'])
 

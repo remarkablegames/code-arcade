@@ -11,8 +11,8 @@ export const title = 'JSON.stringify'
 const password = JSON.stringify({ level, year: new Date().getFullYear() })
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 loadSprite('key', 'sprites/key.png')
 
 const player = add([sprite('player'), pos(100, 100), area(), 'player'])

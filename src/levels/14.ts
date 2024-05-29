@@ -9,8 +9,8 @@ export const level = 14
 export const title = 'Timer'
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 loadSprite('key', 'sprites/key.png')
 
 const player = add([sprite('player'), pos(center()), area(), 'player'])

@@ -9,8 +9,8 @@ export const level = 3
 export const title = 'Numbers'
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 
 const player = add([sprite('player'), pos(500, 500), area(), 'player'])
 

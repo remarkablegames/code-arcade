@@ -9,8 +9,8 @@ export const level = 2
 export const title = 'Strings'
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 
 const player = add([sprite('player'), pos(center()), area(), 'player'])
 

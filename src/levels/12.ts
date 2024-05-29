@@ -9,8 +9,8 @@ export const level = 12
 export const title = 'setTimeout'
 
 export const prescript = `
-${loadPlayer}
-${loadExit}
+${loadPlayer()}
+${loadExit()}
 
 const player = add([sprite('player'), pos(50, 50), area(), 'player'])
 

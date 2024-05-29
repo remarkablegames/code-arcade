@@ -1,5 +1,4 @@
-export function wrapGame(code: string) {
-  return `
+export const wrapGame = (code: string) => `
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,4 +36,3 @@ ${code}
 </body>
 </html>
 `
-}
