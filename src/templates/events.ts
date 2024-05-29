@@ -1,3 +1,5 @@
+import { GAME_ID } from '../constants'
+
 /**
  * Creates cursor keys for player.
  *
@@ -39,7 +41,7 @@ onKeyDown((key) => {
 export const registerWinCondition = (level: number) => `
 onCollide('player', 'exit', () => {
   parent.postMessage({
-    source: ${JSON.stringify(import.meta.env.VITE_APP_NAME)},
+    source: '${GAME_ID}',
     level: ${level + 1},
   })
 })

@@ -1,3 +1,4 @@
+import { GAME_ID } from '../constants'
 import { setData } from '../helpers'
 import {
   addEventListeners,
@@ -51,12 +52,10 @@ export async function go(levelNumber: number) {
 /**
  * Listen to iframe postMessage on level clear.
  */
-addEventListener('message', (event) => {
-  const { origin, data } = event
-
+window.addEventListener('message', (event) => {
   if (
-    !origin.includes(location.origin) ||
-    data?.source !== import.meta.env.VITE_APP_NAME
+    !event.origin.includes(location.origin) ||
+    event.data?.source !== GAME_ID
   ) {
     return
   }
