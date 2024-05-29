@@ -35,7 +35,7 @@ function addKey() {
 addKey()
 
 ${registerPlayerKeys()}
-${registerWinCondition}
+${registerWinCondition(level)}
 
 onCollide('key', 'player', (key) => {
   keys--

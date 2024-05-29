@@ -15,7 +15,7 @@ ${loadExit}
 const player = add([sprite('player'), pos(50, 50), area(), 'player'])
 
 ${registerPlayerKeys()}
-${registerWinCondition}
+${registerWinCondition(level)}
 
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 add([text('WASD or arrow keys to move')])

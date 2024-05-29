@@ -15,7 +15,7 @@ ${loadExit}
 const player = add([sprite('player'), pos(50, 50), area(), 'player'])
 
 ${registerPlayerKeys()}
-${registerWinCondition}
+${registerWinCondition(level)}
 
 add([text("Where's the exit?")])
 `

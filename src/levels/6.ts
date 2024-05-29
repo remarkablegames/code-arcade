@@ -14,7 +14,7 @@ onKeyPress(() => {
   debug.log('Keypress disabled!')
 })
 
-${registerWinCondition}
+${registerWinCondition(level)}
 
 add([text('Reposition me')])
 `

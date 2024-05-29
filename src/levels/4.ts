@@ -15,7 +15,7 @@ ${loadExit}
 const player = add([sprite('player'), pos(center()), area(), 'player'])
 
 ${registerPlayerKeys()}
-${registerWinCondition}
+${registerWinCondition(level)}
 
 add([text('Exit is not truthy')])
 `

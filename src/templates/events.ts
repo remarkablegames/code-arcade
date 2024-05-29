@@ -1,6 +1,9 @@
-import { getData } from '../helpers'
-import { Data } from '../types'
-
+/**
+ * Creates cursor keys for player.
+ *
+ * @param speed - Pixels per second.
+ * @returns - Game script.
+ */
 export const registerPlayerKeys = (speed = 320) => `
 onKeyDown((key) => {
   switch (key) {
@@ -27,11 +30,17 @@ onKeyDown((key) => {
 })
 `
 
-export const registerWinCondition = `
+/**
+ * Registers event listener for beating the level.
+ *
+ * @param level - Current level.
+ * @returns - Game script.
+ */
+export const registerWinCondition = (level: number) => `
 onCollide('player', 'exit', () => {
   parent.postMessage({
     source: ${JSON.stringify(import.meta.env.VITE_APP_NAME)},
-    level: ${Number(getData(Data.level)) + 1},
+    level: ${level + 1},
   })
 })
 `

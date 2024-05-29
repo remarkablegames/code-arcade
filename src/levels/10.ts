@@ -25,7 +25,7 @@ const player = add([
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
 ${registerPlayerKeys()}
-${registerWinCondition}
+${registerWinCondition(level)}
 
 const map = [
   '          ',

@@ -20,7 +20,7 @@ const player = add([sprite('player'), pos(100, 100), area(), 'player'])
 add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
 
 ${registerPlayerKeys()}
-${registerWinCondition}
+${registerWinCondition(level)}
 
 onCollide('key', 'player', (key) => {
   if (key.password === '${password}') {

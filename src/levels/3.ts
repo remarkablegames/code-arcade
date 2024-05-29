@@ -15,7 +15,7 @@ ${loadExit}
 const player = add([sprite('player'), pos(500, 500), area(), 'player'])
 
 ${registerPlayerKeys()}
-${registerWinCondition}
+${registerWinCondition(level)}
 
 add([text('Exit is not in view?')])
 `

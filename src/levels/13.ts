@@ -22,7 +22,7 @@ const exit = add([
   'exit',
 ])
 
-${registerWinCondition}
+${registerWinCondition(level)}
 
 add([text('Exit in a loop')])
 `

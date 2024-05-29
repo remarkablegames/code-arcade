@@ -15,7 +15,7 @@ ${loadExit}
 const player = add([sprite('player'), pos(center()), area(), 'player'])
 
 ${registerPlayerKeys()}
-${registerWinCondition}
+${registerWinCondition(level)}
 `
 
 export const script = `
