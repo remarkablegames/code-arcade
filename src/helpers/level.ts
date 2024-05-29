@@ -10,17 +10,17 @@ export function getLevel(level: number): Promise<Level> {
   return import(`../levels/${level}.ts`)
 }
 
-const titles = document.querySelectorAll(
-  '.title',
+const headings = document.querySelectorAll(
+  'main h1',
 ) as NodeListOf<HTMLHeadingElement>
 
 /**
- * Renders level title.
+ * Renders level heading.
  *
  * @param level - Level config.
  */
 export function renderLevel(level: Level) {
-  titles.forEach(
-    (title) => (title.innerText = `${level.level}. ${level.title}`),
+  headings.forEach(
+    (heading) => (heading.innerText = `${level.level}. ${level.title}`),
   )
 }

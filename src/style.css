@@ -1,57 +1,36 @@
-main {
-  display: flex;
-  justify-content: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  button {
+    @apply bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded;
+  }
+
+  h1 {
+    @apply font-mono text-3xl;
+  }
+
+  iframe {
+    width: 600px;
+    height: 600px;
+  }
 }
 
-.title {
-  font-family: 'Lucida Grande', sans-serif;
-  text-align: center;
-}
-
-.desktop {
-  display: none;
-}
-
-.run {
-  cursor: pointer;
-  font-weight: bold;
-  margin: 8px auto;
-  padding: 6px 24px;
-}
-
-#game {
-  border: 0;
-  width: 600px;
-  height: 600px;
+@layer utilities {
+  .center {
+    @apply absolute block left-1/2 top-1/2;
+    transform: translate(-50%, -50%);
+  }
 }
 
 #editor {
   width: 600px;
 }
 
-@media (min-width: 1200px) {
-  .mobile {
-    display: none;
-  }
-
-  .desktop {
-    display: block;
-  }
-
-  main {
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .container {
-    display: flex;
-  }
-
+@media screen(xl) {
   #editor {
+    @apply overflow-auto;
     height: 600px;
-    overflow: auto;
   }
 }
