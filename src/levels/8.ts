@@ -30,7 +30,7 @@ onCollide('key', 'player', (key) => {
   }
 })
 
-add([text("What's the password?")])
+add([text('Update password & go to key')])
 `
 
 export const script = `

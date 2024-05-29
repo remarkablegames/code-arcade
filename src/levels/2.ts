@@ -24,6 +24,7 @@ export const script = `
  */
 
 add([
+  // fix the error below
   sprite('exite'),
   area(),
   "exit",

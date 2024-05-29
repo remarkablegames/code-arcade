@@ -33,7 +33,7 @@ onCollide('key', 'player', (key) => {
   }
 })
 
-add([text('Another password?')])
+add([text('Repeat the password')])
 `
 
 export const script = `

@@ -6,7 +6,7 @@ import {
 } from '../templates'
 
 export const level = 1
-export const title = 'Comments'
+export const title = 'Single-line comments'
 
 export const prescript = `
 ${loadPlayer()}
@@ -17,17 +17,16 @@ const player = add([sprite('player'), pos(50, 50), area(), 'player'])
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-add([text("Where's the exit?")])
+add([text('Uncomment the exit')])
 `
 
 export const script = `
 /**
- * Single line comments start with two forward slashes //
+ * Single-line comments start with 2 forward slashes //
  */
 
-// add([sprite('exit'), pos(center()), area(), 'exit'])
+// console.log('This is commented out')
+console.log('This is not commented out')
 
-/*
-debug.inspect = true
-*/
+// add([sprite('exit'), pos(center()), area(), 'exit'])
 `
