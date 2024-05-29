@@ -1,6 +1,6 @@
-import{l as r,a as s,r as o,b as a}from"./sprites-BgHRVQJw.js";const t=9;const d="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
-${r}
-${s}
+import{l as r,a as s,r as o,b as a}from"./sprites-Bgw52aqI.js";const t=9;const d="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
+${r()}
+${s()}
 loadSprite('key', 'sprites/key.png')
 
 const player = add([sprite('player'), pos(100, 100), area(), 'player'])

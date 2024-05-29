@@ -1,6 +1,6 @@
-import{l as r,a,r as t,b as o}from"./sprites-BgHRVQJw.js";const s=8;const p="Variables";const e=(new Date().getFullYear()+s)*31337;const l=`
-${r}
-${a}
+import{l as r,a,r as t,b as o}from"./sprites-Bgw52aqI.js";const s=8;const p="Variables";const e=(new Date().getFullYear()+s)*31337;const l=`
+${r()}
+${a()}
 loadSprite('key', 'sprites/key.png')
 
 const player = add([sprite('player'), pos(100, 100), area(), 'player'])

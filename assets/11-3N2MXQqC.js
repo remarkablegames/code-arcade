@@ -1,6 +1,6 @@
-import{l as e,a as t,r as a,b as n}from"./sprites-BgHRVQJw.js";const o=11;const s="Loops";const l=`
-${e}
-${t}
+import{l as e,a as t,r as a,b as n}from"./sprites-Bgw52aqI.js";const o=11;const s="Loops";const l=`
+${e()}
+${t()}
 loadSprite('enemy', 'sprites/ghosty.png')
 loadSprite('wall', 'sprites/steel.png')
 

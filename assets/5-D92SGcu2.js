@@ -1,7 +1,7 @@
-import{l as e,a,r as t,b as r}from"./sprites-BgHRVQJw.js";const s=5;const i="Arrays";const o=`
-${e}
+import{l as e,a,r as t,b as r}from"./sprites-Bgw52aqI.js";const s=5;const i="Arrays";const o=`
+${e()}
 loadSprite('wall', 'sprites/steel.png')
-${a}
+${a()}
 
 const player = add([sprite('player'), pos(center()), area(), body(), 'player'])
 add([sprite('exit'), pos(500, 500), area(), 'exit'])

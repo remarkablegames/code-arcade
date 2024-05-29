@@ -1,6 +1,6 @@
-import{l as e,a as r,r as t,b as s}from"./sprites-BgHRVQJw.js";const i=3;const o="Numbers";const n=`
-${e}
-${r}
+import{l as e,a as r,r as t,b as s}from"./sprites-Bgw52aqI.js";const i=3;const o="Numbers";const n=`
+${e()}
+${r()}
 
 const player = add([sprite('player'), pos(500, 500), area(), 'player'])
 

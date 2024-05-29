@@ -1,6 +1,6 @@
-import{l as e,a as o,r as s,b as i}from"./sprites-BgHRVQJw.js";const t=10;const r="forEach";const a=`
-${e}
-${o}
+import{l as e,a as o,r as s,b as i}from"./sprites-Bgw52aqI.js";const t=10;const r="forEach";const a=`
+${e()}
+${o()}
 loadSprite('spike', 'sprites/spike.png')
 
 const player = add([

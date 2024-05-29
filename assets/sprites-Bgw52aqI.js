@@ -29,4 +29,4 @@ onCollide('player', 'exit', () => {
     level: ${e+1},
   })
 })
-`;const s=`loadSprite('exit', 'sprites/door.png')`;const o=`loadSprite('player', 'sprites/bean.png')`;export{s as a,r as b,o as l,a as r};
+`;const s=()=>`loadSprite('exit', 'sprites/door.png')`;const o=()=>`loadSprite('player', 'sprites/bean.png')`;export{s as a,r as b,o as l,a as r};

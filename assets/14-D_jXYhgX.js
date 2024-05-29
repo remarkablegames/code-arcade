@@ -1,6 +1,6 @@
-import{l as e,a as s,r as t,b as a}from"./sprites-BgHRVQJw.js";const r=14;const y="Timer";const i=`
-${e}
-${s}
+import{l as e,a as s,r as t,b as a}from"./sprites-Bgw52aqI.js";const r=14;const y="Timer";const i=`
+${e()}
+${s()}
 loadSprite('key', 'sprites/key.png')
 
 const player = add([sprite('player'), pos(center()), area(), 'player'])

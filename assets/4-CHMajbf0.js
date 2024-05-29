@@ -1,6 +1,6 @@
-import{l as e,a as t,r,b as a}from"./sprites-BgHRVQJw.js";const s=4;const i="Booleans";const l=`
-${e}
-${t}
+import{l as e,a as t,r,b as a}from"./sprites-Bgw52aqI.js";const s=4;const i="Booleans";const l=`
+${e()}
+${t()}
 
 const player = add([sprite('player'), pos(center()), area(), 'player'])
 
