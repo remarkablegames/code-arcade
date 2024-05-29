@@ -1,4 +1,4 @@
-import{G as a}from"./index-DhYtdT-E.js";const s=(e=320)=>`
+import{G as a}from"./index-x1ppZCB-.js";const s=(e=320)=>`
 onKeyDown((key) => {
   switch (key) {
     case 'up':

@@ -1,4 +1,4 @@
-import{l as r,a as s,r as a,b as o}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const t=9;const i="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
+import{l as r,a as s,r as a,b as o}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const t=10;const i="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
 ${r()}
 ${s()}
 loadSprite('key', 'sprites/key.png')

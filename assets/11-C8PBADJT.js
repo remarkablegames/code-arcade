@@ -1,4 +1,4 @@
-import{l as e,a as o,r as s,b as i}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const t=10;const a="forEach";const n=`
+import{l as e,a as o,r as s,b as i}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const t=11;const a="forEach";const n=`
 ${e()}
 ${o()}
 loadSprite('spike', 'sprites/spike.png')
