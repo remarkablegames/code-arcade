@@ -1,66 +1,67 @@
-import { addCursorKeys, clearAllTimers, initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import {
+  loadExit,
+  loadPlayer,
+  registerPlayerKeys,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 14
-export const title = 'Timer 3'
-const cleanups: Cleanup[] = []
-let keys: number
+export const title = 'Timer'
 
-function getMessage() {
-  return `Collect ${keys} more key${keys !== 1 ? 's' : ''}`
-}
+export const prescript = `
+${loadPlayer}
+${loadExit}
+loadSprite('key', 'sprites/key.png')
+
+const player = add([sprite('player'), pos(center()), area(), 'player'])
+
+let keys = 420
+
+const getMessage = () =>
+  'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
+
+const message = add([text(getMessage())])
 
 function addKey() {
   add([
-    sprite(Sprite.key),
+    sprite('key'),
     pos(randi(width()), randi(height())),
     area(),
     anchor('center'),
-    Sprite.key,
+    'key',
   ])
 }
 
-export function prescript() {
-  initLevel(level, cleanups)
-  cleanups.push(clearAllTimers)
+addKey()
 
-  keys = 420
-  loadSprite(Sprite.key, 'sprites/key.png')
+${registerPlayerKeys()}
+${registerWinCondition}
 
-  addCursorKeys(
-    add([sprite(Sprite.player), pos(center()), area(), Sprite.player]),
-  )
+onCollide('key', 'player', (key) => {
+  keys--
+  key.destroy()
+  message.text = getMessage()
 
-  const message = add([text(getMessage())])
+  if (keys) {
+    addKey()
+  } else {
+    add([sprite('exit'), pos(center()), area(), 'exit'])
+  }
+})
 
-  addKey()
-
-  cleanups.push(
-    onCollide(Sprite.key, Sprite.player, (key) => {
-      keys--
-      key.destroy()
-      message.text = getMessage()
-
-      if (keys) {
-        addKey()
-      } else {
-        add([sprite(Sprite.exit), pos(center()), area(), Sprite.exit])
-      }
-    }).cancel,
-  )
-
-  cleanups.push(
-    onAdd(Sprite.exit, () => {
-      if (keys) {
-        destroyAll(Sprite.exit)
-      }
-    }).cancel,
-  )
-}
-
-export const script = `
-const player = get('player')[0]
-const key = get('key')[0]
+onAdd('exit', () => {
+  if (keys) {
+    destroyAll('exit')
+  }
+})
 `
 
-export function postscript() {}
+export const script = `
+/**
+ * Can we speed this up?
+ */
+
+const player = get('player')[0]
+const key = get('key')[0]
+// player.moveTo(key.pos)
+`

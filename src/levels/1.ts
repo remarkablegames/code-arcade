@@ -1,21 +1,24 @@
-import { addCursorKeys, initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import {
+  loadExit,
+  loadPlayer,
+  registerPlayerKeys,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 1
 export const title = 'Comments'
-const cleanups: Cleanup[] = []
 
-export function prescript() {
-  initLevel(level, cleanups)
+export const prescript = `
+${loadPlayer}
+${loadExit}
 
-  cleanups.push(
-    addCursorKeys(
-      add([sprite(Sprite.player), pos(50, 50), area(), Sprite.player]),
-    ).cancel,
-  )
+const player = add([sprite('player'), pos(50, 50), area(), 'player'])
 
-  add([text("Where's the exit?")])
-}
+${registerPlayerKeys()}
+${registerWinCondition}
+
+add([text("Where's the exit?")])
+`
 
 export const script = `
 /**
@@ -28,5 +31,3 @@ export const script = `
 debug.inspect = true
 */
 `
-
-export function postscript() {}

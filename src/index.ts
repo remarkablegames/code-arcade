@@ -1,14 +1,12 @@
 import './style.css'
-import './scenes'
 
-import { Data, Scene } from './types'
+import { getData } from './helpers'
+import { go } from './scenes'
+import { Data } from './types'
 
 const level =
   Number(
-    new URLSearchParams(location.search).get('level') || getData(Data.level),
+    new URLSearchParams(location.search).get(Data.level) || getData(Data.level),
   ) || 0
 
-go(Scene.game, level)
-
-// press F1
-// debug.inspect = true
+go(level)

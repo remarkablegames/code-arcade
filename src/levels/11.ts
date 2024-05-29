@@ -1,76 +1,78 @@
-import { addCursorKeys, initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import {
+  loadExit,
+  loadPlayer,
+  registerPlayerKeys,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 11
-export const title = 'Loops 3'
-const cleanups: Cleanup[] = []
+export const title = 'Loops'
+
+export const prescript = `
+${loadPlayer}
+${loadExit}
+loadSprite('enemy', 'sprites/ghosty.png')
+loadSprite('wall', 'sprites/steel.png')
+
+const player = add([
+  sprite('player'),
+  pos(40, 60),
+  area(),
+  body(),
+  anchor('center'),
+  'player',
+])
+
+add([sprite('exit'), pos(500, 500), area(), 'exit'])
+
+${registerPlayerKeys()}
+${registerWinCondition}
 
 const ENEMY_SPEED = 500
 
-let cancelEnemyUpdate: () => void
+let cancelEnemyUpdate;
 
 function addEnemy() {
   const enemy = add([
-    sprite(Sprite.enemy),
+    sprite('enemy'),
     pos(center()),
     area(),
     body(),
-    Sprite.enemy,
+    'enemy',
   ])
 
   cancelEnemyUpdate = enemy.onUpdate(() => {
-    const player = get(Sprite.player)[0]
     if (player) {
       const dir = player.pos.sub(enemy.pos).unit()
       enemy.move(dir.scale(ENEMY_SPEED))
     }
   }).cancel
 
-  cleanups.push(cancelEnemyUpdate)
-
   return enemy
 }
 
-export function prescript() {
-  initLevel(level, cleanups)
+addEnemy()
 
-  loadSprite(Sprite.enemy, 'sprites/ghosty.png')
-  loadSprite(Sprite.wall, 'sprites/steel.png')
+onCollide('player', 'enemy', (player, enemy) => {
+  if (typeof cancelEnemyUpdate === 'function') {
+    cancelEnemyUpdate()
+  }
+  player.destroy()
+  addKaboom(player.pos)
+})
 
-  const player = add([
-    sprite(Sprite.player),
-    pos(40, 60),
-    area(),
-    body(),
-    anchor('center'),
-    Sprite.player,
-  ])
-
-  cleanups.push(addCursorKeys(player).cancel)
-
-  add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
-
+onDestroy('enemy', () => {
   addEnemy()
+})
 
-  cleanups.push(
-    onCollide(Sprite.player, Sprite.enemy, (player, enemy) => {
-      cancelEnemyUpdate()
-      enemy.onUpdate(() => {}).cancel()
-      player.destroy()
-      addKaboom(player.pos)
-    }).cancel,
-  )
-
-  cleanups.push(
-    onDestroy(Sprite.enemy, () => {
-      addEnemy()
-    }).cancel,
-  )
-
-  add([text('Protect yourself')])
-}
+add([text('Protect yourself')])
+`
 
 export const script = `
+/**
+ * Can you build a fortress to protect yourself?
+ */
+
 const wall = {
   width: 64,
   height: 64,
@@ -84,9 +86,8 @@ add([
 ])
 `
 
-export function postscript() {
-  const enemy = get(Sprite.enemy)[0]
-  if (enemy) {
-    enemy.moveTo(center())
+export const postscript = `
+  if (get('enemy').length) {
+    get('enemy')[0].moveTo(center())
   }
-}
+`

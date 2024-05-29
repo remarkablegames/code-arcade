@@ -1,27 +1,27 @@
-import { addCursorKeys, initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import {
+  loadExit,
+  loadPlayer,
+  registerPlayerKeys,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 0
 export const title = 'Hello, World!'
-const cleanups: Cleanup[] = []
 
-export function prescript() {
-  initLevel(level, cleanups)
+export const prescript = `
+${loadPlayer}
+${loadExit}
 
-  cleanups.push(
-    addCursorKeys(
-      add([sprite(Sprite.player), pos(50, 50), area(), Sprite.player]),
-    ).cancel,
-  )
+const player = add([sprite('player'), pos(50, 50), area(), 'player'])
 
-  add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
+${registerPlayerKeys()}
+${registerWinCondition}
 
-  add([text('WASD or arrow keys to move')])
-}
+add([sprite('exit'), pos(500, 500), area(), 'exit'])
+add([text('WASD or arrow keys to move')])
+`
 
 export const script = `
 // press "Run" button to see the log
 console.log('Hello, World!')
 `
-
-export function postscript() {}

@@ -51,17 +51,12 @@
       <h1 class="title desktop">Code Arcade</h1>
       <div class="container">
         <h1 class="title mobile">Code Arcade</h1>
-        <canvas></canvas>
+        <iframe id="game"></iframe>
         <div id="editor"></div>
         <button class="run mobile">► Run</button>
       </div>
       <button class="run desktop">► Run</button>
     </main>
-
-    <script type="module">
-      import { initGame } from './src/helpers'
-      initGame()
-    </script>
 
     <script type="module" src="src/index.ts"></script>
 

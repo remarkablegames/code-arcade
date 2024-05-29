@@ -1,9 +1,7 @@
 export interface Level {
   level: number
   title: string
-  prescript: () => void
-  script: string
-  postscript: () => void
+  prescript?: string
+  script?: string
+  postscript?: string
 }
-
-export type Cleanup = () => void

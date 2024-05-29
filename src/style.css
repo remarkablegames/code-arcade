@@ -19,6 +19,12 @@ main {
   padding: 6px 24px;
 }
 
+#game {
+  border: 0;
+  width: 600px;
+  height: 600px;
+}
+
 #editor {
   width: 600px;
 }

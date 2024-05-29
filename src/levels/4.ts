@@ -1,21 +1,24 @@
-import { addCursorKeys, initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import {
+  loadExit,
+  loadPlayer,
+  registerPlayerKeys,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 4
 export const title = 'Booleans'
-const cleanups: Cleanup[] = []
 
-export function prescript() {
-  initLevel(level, cleanups)
+export const prescript = `
+${loadPlayer}
+${loadExit}
 
-  cleanups.push(
-    addCursorKeys(
-      add([sprite(Sprite.player), pos(center()), area(), Sprite.player]),
-    ).cancel,
-  )
+const player = add([sprite('player'), pos(center()), area(), 'player'])
 
-  add([text('Exit is not truthy')])
-}
+${registerPlayerKeys()}
+${registerWinCondition}
+
+add([text('Exit is not truthy')])
+`
 
 export const script = `
 /**
@@ -30,5 +33,3 @@ if (false) {
   ])
 }
 `
-
-export function postscript() {}
