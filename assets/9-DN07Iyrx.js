@@ -1,4 +1,4 @@
-import{l as r,a as s,r as o,b as a}from"./sprites-Bgw52aqI.js";const t=9;const d="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
+import{l as r,a as s,r as a,b as o}from"./sprites-Bgw52aqI.js";const t=9;const d="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
 ${r()}
 ${s()}
 loadSprite('key', 'sprites/key.png')
@@ -7,8 +7,8 @@ const player = add([sprite('player'), pos(100, 100), area(), 'player'])
 
 add([sprite('key'), pos(center()), area(), 'key', { password: '${e}' }])
 
-${o()}
-${a(t)}
+${a()}
+${o(t)}
 
 onCollide('key', 'player', (key) => {
   if (key.password === '${e}') {
@@ -19,7 +19,7 @@ onCollide('key', 'player', (key) => {
   }
 })
 
-add([text('Another password?')])
+add([text('Repeat the password')])
 `;const i=`
 /**
  * For loops repeat a block of code
