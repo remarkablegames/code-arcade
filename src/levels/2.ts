@@ -6,27 +6,38 @@ import {
 } from '../templates'
 
 export const level = 2
-export const title = 'Strings'
+export const title = 'Multi-line comments'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 
-const player = add([sprite('player'), pos(center()), area(), 'player'])
+add([sprite('exit'), pos(center()), area(), 'exit'])
 
-${registerPlayerKeys()}
 ${registerWinCondition(level)}
+
+add([text('Uncomment the player')])
 `
 
 export const script = `
-/**
- * Strings are text inside single or double quotes
- */
+// Multi-line comments start with /* and end with */
 
+/* console.log('This is commented out') */
+console.log('This is not commented out')
+
+/*
 add([
-  // fix the error below
-  sprite('exite'),
+  sprite('player'),
+  pos(50, 50),
   area(),
-  "exit",
+  'player',
 ])
+*/
+`
+
+export const postscript = `
+const player = get('player')[0]
+if (player) {
+${registerPlayerKeys()}
+}
 `

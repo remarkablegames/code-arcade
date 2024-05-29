@@ -6,46 +6,30 @@ import {
 } from '../templates'
 
 export const level = 13
-export const title = 'setInterval'
+export const title = 'setTimeout'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 
-const player = add([sprite('player'), pos(50, 80), area(), anchor('center'), 'player'])
+const player = add([sprite('player'), pos(50, 50), area(), 'player'])
 
-const exit = add([
-  sprite('exit'),
-  pos(center()),
-  area(),
-  anchor('center'),
-  'exit',
-])
-
+${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-add([text('Exit in a loop')])
+add([text('Wait for the exit')])
 `
 
 export const script = `
 /**
- * setInterval() calls a function at specified intervals
+ * setTimeout() executes a function once the timer expires
  */
 
 const MILLISECOND = 1
 const SECOND = MILLISECOND * 1000
+const MINUTE = SECOND * 60
 
-const exit = get('exit')[0]
-
-setInterval(() => {
-  exit.moveTo(
-    randi(width()),
-    randi(height()),
-  )
-}, SECOND)
-`
-
-export const postscript = `
-const player = get('player')[0]
-${registerPlayerKeys(50)}
+setTimeout(() => {
+  add([sprite('exit'), pos(center()), area(), 'exit'])
+}, 5 * MINUTE)
 `

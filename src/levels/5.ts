@@ -6,56 +6,30 @@ import {
 } from '../templates'
 
 export const level = 5
-export const title = 'Arrays'
+export const title = 'Booleans'
 
 export const prescript = `
 ${loadPlayer()}
-loadSprite('wall', 'sprites/steel.png')
 ${loadExit()}
 
-const player = add([sprite('player'), pos(center()), area(), body(), 'player'])
-add([sprite('exit'), pos(500, 500), area(), 'exit'])
+const player = add([sprite('player'), pos(center()), area(), 'player'])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-add([text('Trapped in arrays')])
-
-onUpdate(() => {
-  if (!get('map')[0]?.map?.length) {
-    throw new Error('Map must be valid')
-  }
-})
+add([text('Exit is not truthy')])
 `
 
 export const script = `
 /**
- * Arrays are an ordered list of data
+ * Booleans can either be true or false
  */
 
-const map = [
-  '#######',
-  '#     #',
-  '#     #',
-  '#     #',
-  '#     #',
-  '#######',
-]
-
-add(['map', { map }])
-`
-
-export const postscript = `
-addLevel(get('map')[0].map, {
-  tileWidth: 64,
-  tileHeight: 64,
-  pos: vec2(64, 64),
-  tiles: {
-    '#': () => [
-      sprite('wall'),
-      area(),
-      body({ isStatic: true }),
-    ],
-  }
-})
+if (false) {
+  add([
+    sprite('exit'),
+    area(),
+    'exit',
+  ])
+}
 `

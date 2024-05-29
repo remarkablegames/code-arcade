@@ -6,62 +6,46 @@ import {
 } from '../templates'
 
 export const level = 14
-export const title = 'Timer'
+export const title = 'setInterval'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
-loadSprite('key', 'sprites/key.png')
 
-const player = add([sprite('player'), pos(center()), area(), 'player'])
+const player = add([sprite('player'), pos(50, 80), area(), anchor('center'), 'player'])
 
-let keys = 420
+const exit = add([
+  sprite('exit'),
+  pos(center()),
+  area(),
+  anchor('center'),
+  'exit',
+])
 
-const getMessage = () =>
-  'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
-
-const message = add([text(getMessage())])
-
-function addKey() {
-  add([
-    sprite('key'),
-    pos(randi(width()), randi(height())),
-    area(),
-    anchor('center'),
-    'key',
-  ])
-}
-
-addKey()
-
-${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-onCollide('key', 'player', (key) => {
-  keys--
-  key.destroy()
-  message.text = getMessage()
-
-  if (keys) {
-    addKey()
-  } else {
-    add([sprite('exit'), pos(center()), area(), 'exit'])
-  }
-})
-
-onAdd('exit', () => {
-  if (keys) {
-    destroyAll('exit')
-  }
-})
+add([text('Exit in a loop')])
 `
 
 export const script = `
 /**
- * Can we speed this up?
+ * setInterval() calls a function at specified intervals
  */
 
+const MILLISECOND = 1
+const SECOND = MILLISECOND * 1000
+
+const exit = get('exit')[0]
+
+setInterval(() => {
+  exit.moveTo(
+    randi(width()),
+    randi(height()),
+  )
+}, SECOND)
+`
+
+export const postscript = `
 const player = get('player')[0]
-const key = get('key')[0]
-// player.moveTo(key.pos)
+${registerPlayerKeys(50)}
 `

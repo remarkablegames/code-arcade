@@ -6,29 +6,27 @@ import {
 } from '../templates'
 
 export const level = 3
-export const title = 'Numbers'
+export const title = 'Strings'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 
-const player = add([sprite('player'), pos(500, 500), area(), 'player'])
+const player = add([sprite('player'), pos(center()), area(), 'player'])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
-
-add([text('Exit is not in view?')])
 `
 
 export const script = `
 /**
- * Numbers represent floating-point numbers like 42 or -13.37
+ * Strings are text inside single or double quotes
  */
 
 add([
-  sprite('exit'),
+  // fix the error below
+  sprite('exite'),
   area(),
-  'exit',
-  pos(-9999, -9999),
+  "exit",
 ])
 `

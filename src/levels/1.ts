@@ -21,9 +21,7 @@ add([text('Uncomment the exit')])
 `
 
 export const script = `
-/**
- * Single-line comments start with 2 forward slashes //
- */
+// Single-line comments start with 2 forward slashes
 
 // console.log('This is commented out')
 console.log('This is not commented out')

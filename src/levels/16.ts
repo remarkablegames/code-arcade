@@ -5,10 +5,10 @@ import {
   registerWinCondition,
 } from '../templates'
 
-export const level = 9
-export const title = 'Variables'
+export const level = 16
+export const title = 'JSON.stringify'
 
-const password = (new Date().getFullYear() + level) * 31337
+const password = JSON.stringify({ level, year: new Date().getFullYear() })
 
 export const prescript = `
 ${loadPlayer()}
@@ -16,13 +16,14 @@ ${loadExit()}
 loadSprite('key', 'sprites/key.png')
 
 const player = add([sprite('player'), pos(100, 100), area(), 'player'])
-add([sprite('key'), pos(center()), area(), 'key', { password: ${password} }])
+
+add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
 onCollide('key', 'player', (key) => {
-  if (key.password === ${password}) {
+  if (key.password === '${password}') {
     key.destroy()
     add([sprite('exit'), pos(500, 500), area(), 'exit'])
   } else {
@@ -30,18 +31,17 @@ onCollide('key', 'player', (key) => {
   }
 })
 
-add([text('Update password & go to key')])
+add([text('Got the password?')])
 `
 
 export const script = `
 /**
- * Variables store data
- * 'const' cannot be reassigned, whereas 'let' can be reassigned
+ * JSON.stringify() is a method that converts data into a string
  */
 
 const key = get('key')[0]
 
-// password = (current_year + current_level_number) * 31337
+// password = JSON string of object containing 'level' and 'year'
 let password
 
 key.password = password

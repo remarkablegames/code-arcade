@@ -6,81 +6,45 @@ import {
 } from '../templates'
 
 export const level = 10
-export const title = 'forEach'
+export const title = 'For Loop'
+
+const password = Array.from(Array(42).keys())
+  .map(() => 'answer')
+  .join('')
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
-loadSprite('spike', 'sprites/spike.png')
+loadSprite('key', 'sprites/key.png')
 
-const player = add([
-  sprite('player'),
-  pos(40, 80),
-  area(),
-  body(),
-  anchor('center'),
-  'player',
-])
+const player = add([sprite('player'), pos(100, 100), area(), 'player'])
 
-add([sprite('exit'), pos(500, 500), area(), 'exit'])
+add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-const map = [
-  '          ',
-  '          ',
-  '^^^^^  ^^^',
-  '          ',
-  '^  ^^^^   ',
-  '^      ^^^',
-  '   ^      ',
-  '^^^^ ^^^  ',
-]
-
-const SPIKES_COUNT = map.join('').split(' ').join('').length
-const TILE_SIZE = 64
-
-map.forEach((row, rowIndex) => {
-  row.split('').forEach((column, columnIndex) => {
-    if (column === '^') {
-      add([
-        sprite('spike'),
-        area(),
-        pos(TILE_SIZE * columnIndex, TILE_SIZE * rowIndex),
-        opacity(0),
-        'spike',
-      ])
-    }
-  })
-})
-
-onCollide('player', 'spike', (player, spike) => {
-  spike.opacity = 1
-  player.destroy()
-  addKaboom(player.pos)
-})
-
-onUpdate(() => {
-  const { x, y } = player.pos
-
-  if (x < 0 || y < 0 || x > width() || y > height()) {
-    player.moveTo(40, 80)
-  }
-
-  if (get('spike').length < SPIKES_COUNT) {
-    throw new Error('There must be ' + SPIKES_COUNT + ' spikes!')
+onCollide('key', 'player', (key) => {
+  if (key.password === '${password}') {
+    key.destroy()
+    add([sprite('exit'), pos(500, 500), area(), 'exit'])
+  } else {
+    debug.log('Incorrect password')
   }
 })
 
-add([text('Invisible spikes')])
+add([text('Repeat the password')])
 `
 
 export const script = `
 /**
- * forEach() is an iterative method
+ * For loops repeat a block of code
  */
 
-const spikes = get('spike')
-spikes[0].opacity = 0
+const key = get('key')[0]
+
+// password = 'answer' repeated 42 times
+let password = 'answer' + 'answer'
+
+key.password = password
 `

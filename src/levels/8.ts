@@ -1,48 +1,39 @@
-import {
-  loadExit,
-  loadPlayer,
-  registerPlayerKeys,
-  registerWinCondition,
-} from '../templates'
+import { loadExit, loadPlayer, registerWinCondition } from '../templates'
 
 export const level = 8
-export const title = 'Variables'
-
-const password = (new Date().getFullYear() + level) * 31337
+export const title = 'Functions'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
-loadSprite('key', 'sprites/key.png')
 
-const player = add([sprite('player'), pos(100, 100), area(), 'player'])
-add([sprite('key'), pos(center()), area(), 'key', { password: ${password} }])
+add([sprite('player'), pos(0, 36), area(), 'player'])
+add([sprite('exit'), pos(center().x, 500), area(), 'exit'])
 
-${registerPlayerKeys()}
-${registerWinCondition(level)}
-
-onCollide('key', 'player', (key) => {
-  if (key.password === ${password}) {
-    key.destroy()
-    add([sprite('exit'), pos(500, 500), area(), 'exit'])
-  } else {
-    debug.log('Incorrect password')
-  }
+onKeyPress(() => {
+  debug.log('Keypress disabled!')
 })
 
-add([text('Update password & go to key')])
+${registerWinCondition(level)}
+
+add([text('Move me')])
 `
 
 export const script = `
 /**
- * Variables store data
- * 'const' cannot be reassigned, whereas 'let' can be reassigned
+ * Functions are blocks of code designed to perform a task
  */
 
-const key = get('key')[0]
+const player = get('player')[0]
+player.move(0, 0)
 
-// password = (current_year + current_level_number) * 31337
-let password
+function movePlayer() {
+  // how can we move the player?
+}
 
-key.password = password
+player.onUpdate(() => movePlayer())
+`
+
+export const postscript = `
+get('player')[0].moveTo(0, 36)
 `
