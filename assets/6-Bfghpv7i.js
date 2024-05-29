@@ -1,4 +1,4 @@
-import{l as e,a as o,b as s}from"./sprites-Bgw52aqI.js";const t=6;const a="Objects";const p=`
+import{l as e,a as o,b as s}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const t=6;const p="Objects";const i=`
 ${e()}
 ${o()}
 
@@ -12,7 +12,7 @@ onKeyPress(() => {
 ${s(t)}
 
 add([text('Reposition me')])
-`;const i=`
+`;const l=`
 /**
  * Objects are a collection of properties or key-value pairs
  */
@@ -25,4 +25,4 @@ const coordinates = {
 const player = get('player')[0]
 player.pos.x = coordinates.x
 player.pos.y = coordinates.y
-`;export{t as level,p as prescript,i as script,a as title};
+`;export{t as level,i as prescript,l as script,p as title};

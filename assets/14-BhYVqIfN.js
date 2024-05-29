@@ -1,4 +1,4 @@
-import{l as e,a as s,r as t,b as a}from"./sprites-Bgw52aqI.js";const r=14;const y="Timer";const i=`
+import{l as e,a as s,r as t,b as a}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const r=14;const i="Timer";const d=`
 ${e()}
 ${s()}
 loadSprite('key', 'sprites/key.png')
@@ -44,7 +44,7 @@ onAdd('exit', () => {
     destroyAll('exit')
   }
 })
-`;const d=`
+`;const p=`
 /**
  * Can we speed this up?
  */
@@ -52,4 +52,4 @@ onAdd('exit', () => {
 const player = get('player')[0]
 const key = get('key')[0]
 // player.moveTo(key.pos)
-`;export{r as level,i as prescript,d as script,y as title};
+`;export{r as level,d as prescript,p as script,i as title};

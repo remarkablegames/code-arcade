@@ -1,4 +1,4 @@
-import{l as e,a as o,r as s,b as i}from"./sprites-Bgw52aqI.js";const t=10;const r="forEach";const a=`
+import{l as e,a as o,r as s,b as i}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const t=10;const a="forEach";const n=`
 ${e()}
 ${o()}
 loadSprite('spike', 'sprites/spike.png')
@@ -64,11 +64,11 @@ onUpdate(() => {
 })
 
 add([text('Invisible spikes')])
-`;const n=`
+`;const l=`
 /**
  * forEach() is an iterative method
  */
 
 const spikes = get('spike')
 spikes[0].opacity = 0
-`;export{t as level,a as prescript,n as script,r as title};
+`;export{t as level,n as prescript,l as script,a as title};

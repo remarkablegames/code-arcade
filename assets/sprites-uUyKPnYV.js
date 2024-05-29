@@ -1,4 +1,4 @@
-const a=(e=320)=>`
+import{G as a}from"./index-DhYtdT-E.js";const s=(e=320)=>`
 onKeyDown((key) => {
   switch (key) {
     case 'up':
@@ -22,11 +22,11 @@ onKeyDown((key) => {
       break
   }
 })
-`;const r=e=>`
+`;const o=e=>`
 onCollide('player', 'exit', () => {
   parent.postMessage({
-    source: ${JSON.stringify("code-arcade")},
+    source: '${a}',
     level: ${e+1},
   })
 })
-`;const s=()=>`loadSprite('exit', 'sprites/door.png')`;const o=()=>`loadSprite('player', 'sprites/bean.png')`;export{s as a,r as b,o as l,a as r};
+`;const t=()=>`loadSprite('exit', 'sprites/door.png')`;const l=()=>`loadSprite('player', 'sprites/bean.png')`;export{t as a,o as b,l,s as r};

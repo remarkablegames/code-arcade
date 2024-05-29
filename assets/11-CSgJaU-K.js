@@ -1,4 +1,4 @@
-import{l as e,a as t,r as a,b as n}from"./sprites-Bgw52aqI.js";const o=11;const s="Loops";const l=`
+import{l as e,a as t,r as a,b as o}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const n=11;const l="Loops";const p=`
 ${e()}
 ${t()}
 loadSprite('enemy', 'sprites/ghosty.png')
@@ -16,7 +16,7 @@ const player = add([
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
 ${a()}
-${n(o)}
+${o(n)}
 
 const ENEMY_SPEED = 500
 
@@ -72,8 +72,8 @@ add([
   area(),
   body({ isStatic: true }),
 ])
-`;const p=`
+`;const d=`
   if (get('enemy').length) {
     get('enemy')[0].moveTo(center())
   }
-`;export{o as level,p as postscript,l as prescript,y as script,s as title};
+`;export{n as level,d as postscript,p as prescript,y as script,l as title};

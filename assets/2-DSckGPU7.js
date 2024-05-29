@@ -1,4 +1,4 @@
-import{l as e,a as r,r as t,b as s}from"./sprites-Bgw52aqI.js";const i=2;const o="Strings";const l=`
+import{l as e,a as r,r as t,b as s}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const i=2;const l="Strings";const n=`
 ${e()}
 ${r()}
 
@@ -6,7 +6,7 @@ const player = add([sprite('player'), pos(center()), area(), 'player'])
 
 ${t()}
 ${s(i)}
-`;const n=`
+`;const p=`
 /**
  * Strings are text inside single or double quotes
  */
@@ -17,4 +17,4 @@ add([
   area(),
   "exit",
 ])
-`;export{i as level,l as prescript,n as script,o as title};
+`;export{i as level,n as prescript,p as script,l as title};

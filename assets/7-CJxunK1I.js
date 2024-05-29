@@ -1,4 +1,4 @@
-import{l as e,a as o,b as t}from"./sprites-Bgw52aqI.js";const a=7;const s="Functions";const p=`
+import{l as e,a as o,b as t}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const r=7;const p="Functions";const i=`
 ${e()}
 ${o()}
 
@@ -9,7 +9,7 @@ onKeyPress(() => {
   debug.log('Keypress disabled!')
 })
 
-${t(a)}
+${t(r)}
 
 add([text('Move me')])
 `;const l=`
@@ -27,4 +27,4 @@ function movePlayer() {
 player.onUpdate(() => movePlayer())
 `;const n=`
 get('player')[0].moveTo(0, 36)
-`;export{a as level,n as postscript,p as prescript,l as script,s as title};
+`;export{r as level,n as postscript,i as prescript,l as script,p as title};

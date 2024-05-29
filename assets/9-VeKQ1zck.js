@@ -1,4 +1,4 @@
-import{l as r,a as s,r as a,b as o}from"./sprites-Bgw52aqI.js";const t=9;const d="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
+import{l as r,a as s,r as a,b as o}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const t=9;const i="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
 ${r()}
 ${s()}
 loadSprite('key', 'sprites/key.png')
@@ -20,7 +20,7 @@ onCollide('key', 'player', (key) => {
 })
 
 add([text('Repeat the password')])
-`;const i=`
+`;const l=`
 /**
  * For loops repeat a block of code
  */
@@ -31,4 +31,4 @@ const key = get('key')[0]
 let password = 'answer' + 'answer'
 
 key.password = password
-`;export{t as level,y as prescript,i as script,d as title};
+`;export{t as level,y as prescript,l as script,i as title};

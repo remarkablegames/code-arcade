@@ -1,4 +1,4 @@
-import{l as t,a as r,r as a,b as o}from"./sprites-Bgw52aqI.js";const s=15;const d="JSON.stringify";const e=JSON.stringify({level:s,year:new Date().getFullYear()});const p=`
+import{l as t,a as r,r as a,b as o}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const s=15;const d="JSON.stringify";const e=JSON.stringify({level:s,year:new Date().getFullYear()});const n=`
 ${t()}
 ${r()}
 loadSprite('key', 'sprites/key.png')
@@ -20,7 +20,7 @@ onCollide('key', 'player', (key) => {
 })
 
 add([text('Got the password?')])
-`;const n=`
+`;const y=`
 /**
  * JSON.stringify() is a method that converts data into a string
  */
@@ -31,4 +31,4 @@ const key = get('key')[0]
 let password
 
 key.password = password
-`;export{s as level,p as prescript,n as script,d as title};
+`;export{s as level,n as prescript,y as script,d as title};

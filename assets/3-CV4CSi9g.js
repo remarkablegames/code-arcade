@@ -1,4 +1,4 @@
-import{l as e,a as r,r as t,b as s}from"./sprites-Bgw52aqI.js";const i=3;const o="Numbers";const n=`
+import{l as e,a as r,r as t,b as s}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const i=3;const p="Numbers";const n=`
 ${e()}
 ${r()}
 
@@ -8,7 +8,7 @@ ${t()}
 ${s(i)}
 
 add([text('Exit is not in view?')])
-`;const p=`
+`;const l=`
 /**
  * Numbers represent floating-point numbers like 42 or -13.37
  */
@@ -19,4 +19,4 @@ add([
   'exit',
   pos(-9999, -9999),
 ])
-`;export{i as level,n as prescript,p as script,o as title};
+`;export{i as level,n as prescript,l as script,p as title};

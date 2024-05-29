@@ -1,12 +1,12 @@
-import{l as e,a,r as t,b as r}from"./sprites-Bgw52aqI.js";const s=5;const i="Arrays";const o=`
+import{l as e,a as t,r as a,b as r}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const s=5;const o="Arrays";const l=`
 ${e()}
 loadSprite('wall', 'sprites/steel.png')
-${a()}
+${t()}
 
 const player = add([sprite('player'), pos(center()), area(), body(), 'player'])
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
-${t()}
+${a()}
 ${r(s)}
 
 add([text('Trapped in arrays')])
@@ -16,7 +16,7 @@ onUpdate(() => {
     throw new Error('Map must be valid')
   }
 })
-`;const l=`
+`;const d=`
 /**
  * Arrays are an ordered list of data
  */
@@ -31,7 +31,7 @@ const map = [
 ]
 
 add(['map', { map }])
-`;const d=`
+`;const n=`
 addLevel(get('map')[0].map, {
   tileWidth: 64,
   tileHeight: 64,
@@ -44,4 +44,4 @@ addLevel(get('map')[0].map, {
     ],
   }
 })
-`;export{s as level,d as postscript,o as prescript,l as script,i as title};
+`;export{s as level,n as postscript,l as prescript,d as script,o as title};

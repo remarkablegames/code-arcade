@@ -1,4 +1,4 @@
-import{l as e,a as t,r,b as a}from"./sprites-Bgw52aqI.js";const s=4;const i="Booleans";const l=`
+import{l as e,a as t,r,b as a}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const s=4;const l="Booleans";const n=`
 ${e()}
 ${t()}
 
@@ -8,7 +8,7 @@ ${r()}
 ${a(s)}
 
 add([text('Exit is not truthy')])
-`;const n=`
+`;const p=`
 /**
  * Booleans can either be true or false
  */
@@ -20,4 +20,4 @@ if (false) {
     'exit',
   ])
 }
-`;export{s as level,l as prescript,n as script,i as title};
+`;export{s as level,n as prescript,p as script,l as title};

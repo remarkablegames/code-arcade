@@ -1,4 +1,4 @@
-import{l as e,a as o,r as t,b as s}from"./sprites-Bgw52aqI.js";const r=0;const l="console.log";const n=`
+import{l as e,a as o,r as t,b as s}from"./sprites-uUyKPnYV.js";import"./index-DhYtdT-E.js";const r=0;const n="console.log";const c=`
 ${e()}
 ${o()}
 
@@ -10,11 +10,11 @@ ${s(r)}
 
 add([text('WASD or arrow keys to move')])
 add([text('Goal: reach the exit'), pos(0, 64), color(0, 0, 0)])
-`;const c=`
+`;const i=`
 /**
  * console.log() outputs a message to the console
  */
 
 // change the message below and press "Run"
 console.log('Hello, World!')
-`;export{r as level,n as prescript,c as script,l as title};
+`;export{r as level,c as prescript,i as script,n as title};
