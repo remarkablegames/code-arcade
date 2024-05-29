@@ -1,25 +1,28 @@
-import { addCursorKeys, initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import {
+  loadExit,
+  loadPlayer,
+  registerPlayerKeys,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 3
 export const title = 'Numbers'
-const cleanups: Cleanup[] = []
 
-export function prescript() {
-  initLevel(level, cleanups)
+export const prescript = `
+${loadPlayer}
+${loadExit}
 
-  cleanups.push(
-    addCursorKeys(
-      add([sprite(Sprite.player), pos(500, 500), area(), Sprite.player]),
-    ).cancel,
-  )
+const player = add([sprite('player'), pos(500, 500), area(), 'player'])
 
-  add([text('Exit is not in view?')])
-}
+${registerPlayerKeys()}
+${registerWinCondition(level)}
+
+add([text('Exit is not in view?')])
+`
 
 export const script = `
 /**
- * Numbers represent floating-point numbers like 42 or -13.37.
+ * Numbers represent floating-point numbers like 42 or -13.37
  */
 
 add([
@@ -29,5 +32,3 @@ add([
   pos(-9999, -9999),
 ])
 `
-
-export function postscript() {}

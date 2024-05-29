@@ -1,39 +1,38 @@
-import { addCursorKeys, initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import {
+  loadExit,
+  loadPlayer,
+  registerPlayerKeys,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 15
 export const title = 'JSON.stringify'
-const cleanups: Cleanup[] = []
 
-export function prescript() {
-  initLevel(level, cleanups)
+const password = JSON.stringify({ level, year: new Date().getFullYear() })
 
-  loadSprite(Sprite.key, 'sprites/key.png')
+export const prescript = `
+${loadPlayer}
+${loadExit}
+loadSprite('key', 'sprites/key.png')
 
-  cleanups.push(
-    addCursorKeys(
-      add([sprite(Sprite.player), pos(100, 100), area(), Sprite.player]),
-    ).cancel,
-  )
+const player = add([sprite('player'), pos(100, 100), area(), 'player'])
 
-  const password = JSON.stringify({ level, year: new Date().getFullYear() })
+add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
 
-  add([sprite(Sprite.key), pos(center()), area(), Sprite.key, { password }])
+${registerPlayerKeys()}
+${registerWinCondition(level)}
 
-  const cancelCollideEvent = onCollide(Sprite.key, Sprite.player, (key) => {
-    if (key.password === password) {
-      cancelCollideEvent()
-      key.destroy()
-      add([sprite(Sprite.exit), pos(500, 500), area(), Sprite.exit])
-    } else {
-      debug.log('Incorrect password')
-    }
-  }).cancel
+onCollide('key', 'player', (key) => {
+  if (key.password === '${password}') {
+    key.destroy()
+    add([sprite('exit'), pos(500, 500), area(), 'exit'])
+  } else {
+    debug.log('Incorrect password')
+  }
+})
 
-  cleanups.push(cancelCollideEvent)
-
-  add([text('Got the password?')])
-}
+add([text('Got the password?')])
+`
 
 export const script = `
 /**
@@ -47,5 +46,3 @@ let password
 
 key.password = password
 `
-
-export function postscript() {}

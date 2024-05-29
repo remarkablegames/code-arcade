@@ -1,36 +1,31 @@
-import { addCursorKeys, clearAllIntervals, initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import {
+  loadExit,
+  loadPlayer,
+  registerPlayerKeys,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 13
-export const title = 'Timer 2'
-const cleanups: Cleanup[] = []
+export const title = 'setInterval'
 
-export function prescript() {
-  initLevel(level, cleanups)
-  cleanups.push(clearAllIntervals)
+export const prescript = `
+${loadPlayer}
+${loadExit}
 
-  cleanups.push(
-    addCursorKeys(
-      add([
-        sprite(Sprite.player),
-        pos(50, 80),
-        area(),
-        anchor('center'),
-        Sprite.player,
-      ]),
-    ).cancel,
-  )
+const player = add([sprite('player'), pos(50, 80), area(), anchor('center'), 'player'])
 
-  add([
-    sprite(Sprite.exit),
-    pos(center()),
-    area(),
-    anchor('center'),
-    Sprite.exit,
-  ])
+const exit = add([
+  sprite('exit'),
+  pos(center()),
+  area(),
+  anchor('center'),
+  'exit',
+])
 
-  add([text('Exit in a loop')])
-}
+${registerWinCondition(level)}
+
+add([text('Exit in a loop')])
+`
 
 export const script = `
 /**
@@ -40,15 +35,17 @@ export const script = `
 const MILLISECOND = 1
 const SECOND = MILLISECOND * 1000
 
-const player = get('player')[0]
 const exit = get('exit')[0]
 
 setInterval(() => {
   exit.moveTo(
-    randi(player.pos.x, width()),
-    randi(player.pos.y, height()),
+    randi(width()),
+    randi(height()),
   )
 }, SECOND)
 `
 
-export function postscript() {}
+export const postscript = `
+const player = get('player')[0]
+${registerPlayerKeys(50)}
+`

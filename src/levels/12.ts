@@ -1,22 +1,24 @@
-import { addCursorKeys, clearAllTimeouts, initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import {
+  loadExit,
+  loadPlayer,
+  registerPlayerKeys,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 12
-export const title = 'Timer 1'
-const cleanups: Cleanup[] = []
+export const title = 'setTimeout'
 
-export function prescript() {
-  initLevel(level, cleanups)
-  cleanups.push(clearAllTimeouts)
+export const prescript = `
+${loadPlayer}
+${loadExit}
 
-  cleanups.push(
-    addCursorKeys(
-      add([sprite(Sprite.player), pos(50, 50), area(), Sprite.player]),
-    ).cancel,
-  )
+const player = add([sprite('player'), pos(50, 50), area(), 'player'])
 
-  add([text('Wait for the exit')])
-}
+${registerPlayerKeys()}
+${registerWinCondition(level)}
+
+add([text('Wait for the exit')])
+`
 
 export const script = `
 /**
@@ -31,5 +33,3 @@ setTimeout(() => {
   add([sprite('exit'), pos(center()), area(), 'exit'])
 }, 5 * MINUTE)
 `
-
-export function postscript() {}

@@ -1,24 +1,23 @@
-import { initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import { loadExit, loadPlayer, registerWinCondition } from '../templates'
 
 export const level = 7
 export const title = 'Functions'
-const cleanups: Cleanup[] = []
 
-export function prescript() {
-  initLevel(level, cleanups)
+export const prescript = `
+${loadPlayer}
+${loadExit}
 
-  add([sprite(Sprite.player), pos(0, 36), area(), Sprite.player])
-  add([sprite(Sprite.exit), pos(center().x, 500), area(), Sprite.exit])
+add([sprite('player'), pos(0, 36), area(), 'player'])
+add([sprite('exit'), pos(center().x, 500), area(), 'exit'])
 
-  cleanups.push(
-    onKeyPress(() => {
-      debug.log('Keypress disabled!')
-    }).cancel,
-  )
+onKeyPress(() => {
+  debug.log('Keypress disabled!')
+})
 
-  add([text('Move me')])
-}
+${registerWinCondition(level)}
+
+add([text('Move me')])
+`
 
 export const script = `
 /**
@@ -26,15 +25,15 @@ export const script = `
  */
 
 const player = get('player')[0]
+player.move(0, 0)
 
 function movePlayer() {
-  player.move(0, 0)
+  // how can we move the player?
 }
 
 player.onUpdate(() => movePlayer())
 `
 
-export function postscript() {
-  const player = get('player')[0]
-  player.moveTo(0, 36)
-}
+export const postscript = `
+get('player')[0].moveTo(0, 36)
+`

@@ -1,33 +1,35 @@
-import { initLevel } from '../helpers'
-import { Cleanup, Sprite } from '../types'
+import { loadExit, loadPlayer, registerWinCondition } from '../templates'
 
 export const level = 6
 export const title = 'Objects'
-const cleanups: Cleanup[] = []
 
-export function prescript() {
-  initLevel(level, cleanups)
+export const prescript = `
+${loadPlayer}
+${loadExit}
 
-  add([sprite(Sprite.player), pos(0, 36), area(), body(), Sprite.player])
-  add([sprite(Sprite.exit), pos(516, 516), area(), Sprite.exit])
+const player = add([sprite('player'), pos(0, 36), area(), body(), 'player'])
+add([sprite('exit'), pos(516, 516), area(), 'exit'])
 
-  cleanups.push(
-    onKeyPress(() => {
-      debug.log('Keypress disabled!')
-    }).cancel,
-  )
+onKeyPress(() => {
+  debug.log('Keypress disabled!')
+})
 
-  add([text('Reposition me')])
-}
+${registerWinCondition(level)}
+
+add([text('Reposition me')])
+`
 
 export const script = `
 /**
  * Objects are a collection of properties or key-value pairs
  */
 
-const player = get('player')[0]
-player.pos.x = 0
-player.pos.y = 36
-`
+const coordinates = {
+  x: 0,
+  y: 36,
+}
 
-export function postscript() {}
+const player = get('player')[0]
+player.pos.x = coordinates.x
+player.pos.y = coordinates.y
+`
