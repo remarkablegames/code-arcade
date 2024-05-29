@@ -1,6 +1,6 @@
 export function addEventListeners(callback: () => void) {
   const buttons = document.querySelectorAll(
-    '.run',
+    'main button',
   ) as NodeListOf<HTMLButtonElement>
 
   buttons.forEach((oldButton) => {

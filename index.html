@@ -47,15 +47,18 @@
   <body>
     <noscript>You need to enable JavaScript to play this game.</noscript>
 
-    <main>
-      <h1 class="title desktop">Code Arcade</h1>
-      <div class="container">
-        <h1 class="title mobile">Code Arcade</h1>
-        <iframe id="game"></iframe>
-        <div id="editor"></div>
-        <button class="run mobile">► Run</button>
+    <main class="flex justify-center xl:center">
+      <div class="flex max-xl:hidden">
+        <h1 class="basis-1/2">Code Arcade</h1>
+        <button>► Run</button>
       </div>
-      <button class="run desktop">► Run</button>
+
+      <div class="xl:flex">
+        <h1 class="xl:hidden">Code Arcade</h1>
+        <iframe></iframe>
+        <div id="editor"></div>
+        <button class="xl:hidden">► Run</button>
+      </div>
     </main>
 
     <script type="module" src="src/index.ts"></script>
