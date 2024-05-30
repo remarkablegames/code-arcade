@@ -1,4 +1,4 @@
-import{l as e,a as o,b as t}from"./sprites-D6SpC4j5.js";import{a as r}from"./texts-qyIFEy4l.js";import"./index-DrAo2JJy.js";const a=8;const l="Functions";const n=`
+import{l as e,a as o,b as t}from"./sprites-BjVUeMvX.js";import{a as r}from"./texts-qyIFEy4l.js";import"./index-D5AZ38lH.js";const a=8;const l="Functions";const n=`
 ${e()}
 ${o()}
 
@@ -12,19 +12,18 @@ onKeyPress(() => {
 ${t(a)}
 
 ${r("Move me")}
-`;const c=`
+`;const d=`
 /**
  * Functions are blocks of code designed to perform a task
  */
 
 const player = get('player')[0]
-player.move(0, 0)
 
 function movePlayer() {
-  // how can we move the player?
+  player.move(0, 0)
 }
 
 player.onUpdate(() => movePlayer())
-`;const d=`
+`;const c=`
 get('player')[0].moveTo(0, 36)
-`;export{a as level,d as postscript,n as prescript,c as script,l as title};
+`;export{a as level,c as postscript,n as prescript,d as script,l as title};
