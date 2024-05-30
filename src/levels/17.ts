@@ -8,12 +8,10 @@ import {
   registerWinCondition,
 } from '../templates'
 
-export const level = 11
-export const title = 'For Loop'
+export const level = 17
+export const title = 'JSON.stringify'
 
-const password = Array.from(Array(42).keys())
-  .map(() => 'answer')
-  .join('')
+const password = JSON.stringify({ level, year: new Date().getFullYear() })
 
 export const prescript = `
 ${loadPlayer()}
@@ -27,18 +25,18 @@ ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Repeat the password')}
+${addText('Stringify the password')}
 `
 
 export const script = `
 /**
- * For loops repeat a block of code
+ * JSON.stringify() is a method that converts data into a string
  */
 
 const key = get('key')[0]
 
-// password = 'answer' repeated 42 times
-let password = 'answer' + 'answer'
+// password = JSON string of object containing "level" and "year"
+let password
 
 key.password = password
 `

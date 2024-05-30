@@ -9,11 +9,9 @@ import {
 } from '../templates'
 
 export const level = 10
-export const title = 'For Loop'
+export const title = 'Variables'
 
-const password = Array.from(Array(42).keys())
-  .map(() => 'answer')
-  .join('')
+const password = (new Date().getFullYear() + level) * 31337
 
 export const prescript = `
 ${loadPlayer()}
@@ -21,24 +19,25 @@ ${loadExit()}
 ${loadKey()}
 
 add([sprite('player'), pos(100, 100), area(), 'player'])
-add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
+add([sprite('key'), pos(center()), area(), 'key', { password: ${password} }])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Repeat the password')}
+${addText('Update password & go to key')}
 `
 
 export const script = `
 /**
- * For loops repeat a block of code
+ * Variables store data
+ * 'const' cannot be reassigned, whereas 'let' can be reassigned
  */
 
 const key = get('key')[0]
 
-// password = 'answer' repeated 42 times
-let password = 'answer' + 'answer'
+// password = (current_year + current_level_number) * 31337
+let password
 
 key.password = password
 `

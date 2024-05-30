@@ -1,27 +1,25 @@
 import {
   addText,
-  loadBlock,
-  loadEnemy,
   loadExit,
   loadHit,
   loadPlayer,
+  loadSpike,
   registerPlayerKeys,
   registerWinCondition,
 } from '../templates'
 
 export const level = 12
-export const title = 'Loops'
+export const title = 'forEach'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
-${loadBlock()}
-${loadEnemy()}
 ${loadHit()}
+${loadSpike()}
 
 add([
   sprite('player'),
-  pos(40, 60),
+  pos(40, 80),
   area(),
   body(),
   anchor('center'),
@@ -33,74 +31,72 @@ add([sprite('exit'), pos(500, 500), area(), 'exit'])
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-const ENEMY_SPEED = 500
+const map = [
+  '          ',
+  '          ',
+  '^^^^^  ^^^',
+  '          ',
+  '^  ^^^^   ',
+  '^      ^^^',
+  '   ^      ',
+  '^^^^ ^^^  ',
+]
 
-let cancelEnemyUpdate;
+const SPIKES_COUNT = map.join('').split(' ').join('').length
+const TILE_SIZE = 64
 
-function addEnemy() {
-  const enemy = add([
-    sprite('enemy'),
-    pos(center()),
-    area(),
-    body(),
-    'enemy',
-  ])
-
-  cancelEnemyUpdate = enemy.onUpdate(() => {
-    const player = get('player')[0]
-    if (player) {
-      const dir = player.pos.sub(enemy.pos).unit()
-      enemy.move(dir.scale(ENEMY_SPEED))
+map.forEach((row, rowIndex) => {
+  row.split('').forEach((column, columnIndex) => {
+    if (column === '^') {
+      add([
+        sprite('spike'),
+        area(),
+        pos(TILE_SIZE * columnIndex, TILE_SIZE * rowIndex),
+        opacity(0),
+        'spike',
+      ])
     }
-  }).cancel
+  })
+})
 
-  return enemy
-}
-
-addEnemy()
-
-onCollide('player', 'enemy', (player, enemy) => {
-  if (typeof cancelEnemyUpdate === 'function') {
-    cancelEnemyUpdate()
-  }
+onCollide('player', 'spike', (player, spike) => {
   play('hit')
+  spike.opacity = 1
   player.destroy()
   addKaboom(player.pos)
 })
 
-onDestroy('enemy', () => {
-  addEnemy()
+onUpdate(() => {
+  const player = get('player')[0]
+  if (!player) {
+    return
+  }
+
+  const { x, y } = player.pos
+  if (x < 0 || y < 0 || x > width() || y > height()) {
+    player.moveTo(40, 80)
+  }
+
+  if (get('spike').length < SPIKES_COUNT) {
+    throw new Error('There must be ' + SPIKES_COUNT + ' spikes!')
+  }
 })
 
-${addText('Protect yourself')}
+${addText('Invisible spikes')}
 `
 
 export const script = `
 /**
- * Can you build a fortress to protect yourself?
+ * forEach() is an iterative method
  */
 
-const block = {
-  width: 64,
-  height: 64,
-}
-
-add([
-  sprite('block'),
-  pos(block.width * 6, block.height * 6),
-  area(),
-  body({ isStatic: true }),
-])
+const spikes = get('spike')
+spikes[0].opacity = 0
 `
 
 export const postscript = `
-const player = get('player')[0]
-if (player) {
-  player.moveTo(40, 60)
-}
-
-const enemy = get('enemy')[0]
-if (enemy) {
-  enemy.moveTo(center())
+const exit = get('exit')[0]
+if (exit) {
+  exit.moveTo(500, 500)
 }
 `

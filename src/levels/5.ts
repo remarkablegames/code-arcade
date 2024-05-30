@@ -7,30 +7,29 @@ import {
 } from '../templates'
 
 export const level = 5
-export const title = 'Booleans'
+export const title = 'Numbers'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 
-add([sprite('player'), pos(center()), area(), 'player'])
+add([sprite('player'), pos(500, 500), area(), 'player'])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-${addText('Exit is not truthy')}
+${addText('Exit is not in view?')}
 `
 
 export const script = `
 /**
- * Booleans can either be true or false
+ * Numbers represent floating-point numbers like 42 or -13.37
  */
 
-if (false) {
-  add([
-    sprite('exit'),
-    area(),
-    'exit',
-  ])
-}
+add([
+  sprite('exit'),
+  area(),
+  'exit',
+  pos(-9999, -9999),
+])
 `

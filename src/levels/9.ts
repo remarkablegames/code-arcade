@@ -1,43 +1,43 @@
 import {
   addText,
   loadExit,
-  loadKey,
   loadPlayer,
-  registerPasswordCheck,
-  registerPlayerKeys,
   registerWinCondition,
 } from '../templates'
 
 export const level = 9
-export const title = 'Variables'
-
-const password = (new Date().getFullYear() + level) * 31337
+export const title = 'Functions'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
-${loadKey()}
 
-add([sprite('player'), pos(100, 100), area(), 'player'])
-add([sprite('key'), pos(center()), area(), 'key', { password: ${password} }])
+add([sprite('player'), pos(0, 36), area(), 'player'])
+add([sprite('exit'), pos(center().x, 500), area(), 'exit'])
 
-${registerPlayerKeys()}
+onKeyPress(() => {
+  debug.log('Keypress disabled!')
+})
+
 ${registerWinCondition(level)}
-${registerPasswordCheck(password)}
 
-${addText('Update password & go to key')}
+${addText('Move me')}
 `
 
 export const script = `
 /**
- * Variables store data
- * 'const' cannot be reassigned, whereas 'let' can be reassigned
+ * Functions are blocks of code designed to perform a task
  */
 
-const key = get('key')[0]
+const player = get('player')[0]
 
-// password = (current_year + current_level_number) * 31337
-let password
+function movePlayer() {
+  player.move(0, 0)
+}
 
-key.password = password
+player.onUpdate(() => movePlayer())
+`
+
+export const postscript = `
+get('player')[0].moveTo(0, 36)
 `

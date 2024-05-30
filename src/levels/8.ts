@@ -6,14 +6,14 @@ import {
 } from '../templates'
 
 export const level = 8
-export const title = 'Functions'
+export const title = 'Objects'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 
-add([sprite('player'), pos(0, 36), area(), 'player'])
-add([sprite('exit'), pos(center().x, 500), area(), 'exit'])
+const player = add([sprite('player'), pos(0, 36), area(), body(), 'player'])
+add([sprite('exit'), pos(516, 516), area(), 'exit'])
 
 onKeyPress(() => {
   debug.log('Keypress disabled!')
@@ -21,23 +21,20 @@ onKeyPress(() => {
 
 ${registerWinCondition(level)}
 
-${addText('Move me')}
+${addText('Reposition me')}
 `
 
 export const script = `
 /**
- * Functions are blocks of code designed to perform a task
+ * Objects are a collection of properties or key-value pairs
  */
 
-const player = get('player')[0]
-
-function movePlayer() {
-  player.move(0, 0)
+const coordinates = {
+  x: 0,
+  y: 36,
 }
 
-player.onUpdate(() => movePlayer())
-`
-
-export const postscript = `
-get('player')[0].moveTo(0, 36)
+const player = get('player')[0]
+player.pos.x = coordinates.x
+player.pos.y = coordinates.y
 `

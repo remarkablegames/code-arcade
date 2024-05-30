@@ -1,42 +1,70 @@
 import {
-  addText,
   loadExit,
   loadKey,
   loadPlayer,
-  registerPasswordCheck,
+  loadSignal,
   registerPlayerKeys,
   registerWinCondition,
 } from '../templates'
 
 export const level = 16
-export const title = 'JSON.stringify'
-
-const password = JSON.stringify({ level, year: new Date().getFullYear() })
+export const title = 'Timer'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 ${loadKey()}
+${loadSignal()}
 
-add([sprite('player'), pos(100, 100), area(), 'player'])
-add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
+add([sprite('player'), pos(center()), area(), 'player'])
+
+let keys = 420
+
+const getMessage = () => 'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
+
+const message = add([text(getMessage())])
+
+function addKey() {
+  add([
+    sprite('key'),
+    pos(randi(width()), randi(height())),
+    area(),
+    anchor('center'),
+    'key',
+  ])
+}
+
+addKey()
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
-${registerPasswordCheck(password)}
 
-${addText('Stringify the password')}
+onCollide('key', 'player', (key) => {
+  play('signal', { volume: 0.2, speed: 2 })
+  keys--
+  key.destroy()
+  message.text = getMessage()
+
+  if (keys) {
+    addKey()
+  } else {
+    add([sprite('exit'), pos(center()), area(), 'exit'])
+  }
+})
+
+onAdd('exit', () => {
+  if (keys) {
+    destroyAll('exit')
+  }
+})
 `
 
 export const script = `
 /**
- * JSON.stringify() is a method that converts data into a string
+ * Can we speed this up?
  */
 
+const player = get('player')[0]
 const key = get('key')[0]
-
-// password = JSON string of object containing "level" and "year"
-let password
-
-key.password = password
+// player.moveTo(key.pos)
 `

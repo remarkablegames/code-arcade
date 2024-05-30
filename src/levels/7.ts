@@ -1,40 +1,64 @@
 import {
   addText,
+  loadBlock,
   loadExit,
   loadPlayer,
+  registerPlayerKeys,
   registerWinCondition,
 } from '../templates'
 
 export const level = 7
-export const title = 'Objects'
+export const title = 'Arrays'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
+${loadBlock()}
 
-const player = add([sprite('player'), pos(0, 36), area(), body(), 'player'])
-add([sprite('exit'), pos(516, 516), area(), 'exit'])
+add([sprite('player'), pos(center()), area(), body(), 'player'])
+add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
-onKeyPress(() => {
-  debug.log('Keypress disabled!')
-})
-
+${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-${addText('Reposition me')}
+${addText('Trapped in arrays')}
+
+onUpdate(() => {
+  const map = get('map')[0]
+  if (!map?.map?.length) {
+    throw new Error('Map must be valid')
+  }
+})
 `
 
 export const script = `
 /**
- * Objects are a collection of properties or key-value pairs
+ * Arrays are an ordered list of data
  */
 
-const coordinates = {
-  x: 0,
-  y: 36,
-}
+const map = [
+  '#######',
+  '#     #',
+  '#     #',
+  '#     #',
+  '#     #',
+  '#######',
+]
 
-const player = get('player')[0]
-player.pos.x = coordinates.x
-player.pos.y = coordinates.y
+add(['map', { map }])
+`
+
+export const postscript = `
+addLevel(get('map')[0].map, {
+  tileWidth: 64,
+  tileHeight: 64,
+  pos: vec2(64, 64),
+  tiles: {
+    '#': () => [
+      sprite('block'),
+      area(),
+      body({ isStatic: true }),
+    ],
+  }
+})
 `

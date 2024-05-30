@@ -1,70 +1,48 @@
 import {
+  addText,
   loadExit,
-  loadKey,
   loadPlayer,
-  loadSignal,
   registerPlayerKeys,
   registerWinCondition,
 } from '../templates'
 
 export const level = 15
-export const title = 'Timer'
+export const title = 'setInterval'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
-${loadKey()}
-${loadSignal()}
 
-add([sprite('player'), pos(center()), area(), 'player'])
+add([sprite('player'), pos(center()), area(), anchor('center'), 'player'])
+${registerPlayerKeys(50)}
 
-let keys = 420
+const exit = add([
+  sprite('exit'),
+  pos(),
+  area(),
+  anchor('center'),
+  'exit',
+])
 
-const getMessage = () => 'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
-
-const message = add([text(getMessage())])
-
-function addKey() {
-  add([
-    sprite('key'),
-    pos(randi(width()), randi(height())),
-    area(),
-    anchor('center'),
-    'key',
-  ])
-}
-
-addKey()
-
-${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-onCollide('key', 'player', (key) => {
-  play('signal', { volume: 0.2, speed: 2 })
-  keys--
-  key.destroy()
-  message.text = getMessage()
-
-  if (keys) {
-    addKey()
-  } else {
-    add([sprite('exit'), pos(center()), area(), 'exit'])
-  }
-})
-
-onAdd('exit', () => {
-  if (keys) {
-    destroyAll('exit')
-  }
-})
+${addText('Exit in a loop')}
 `
 
 export const script = `
 /**
- * Can we speed this up?
+ * setInterval() calls a function at specified intervals
  */
 
-const player = get('player')[0]
-const key = get('key')[0]
-// player.moveTo(key.pos)
+const MILLISECOND = 1
+const SECOND = MILLISECOND * 1000
+
+const exit = get('exit')[0]
+
+setInterval(() => {
+  exit.moveTo(
+    randi(width()),
+    randi(height()),
+  )
+}, SECOND)
 `

@@ -6,27 +6,29 @@ import {
 } from '../templates'
 
 export const level = 3
-export const title = 'Strings'
+export const title = 'Errors'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 
-add([sprite('player'), pos(center()), area(), 'player'])
+add([sprite('player'), pos(50, 50), area(), 'player'])
+add([sprite('exit'), pos(center()), area(), 'exit'])
 
-${registerPlayerKeys()}
 ${registerWinCondition(level)}
 `
 
 export const script = `
 /**
- * Strings are text inside single or double quotes
+ * Errors interfere with the execution of the program
  */
 
-add([
-  // fix the error below
-  sprite('exite'),
-  area(),
-  "exit",
-])
+onUpdate(() => {
+  throw new Error('Remove the error')
+})
+
+`
+
+export const postscript = `
+${registerPlayerKeys()}
 `

@@ -1,5 +1,4 @@
 import {
-  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -7,29 +6,28 @@ import {
 } from '../templates'
 
 export const level = 4
-export const title = 'Numbers'
+export const title = 'Strings'
 
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 
-add([sprite('player'), pos(500, 500), area(), 'player'])
+add([sprite('player'), pos(center()), area(), 'player'])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
-
-${addText('Exit is not in view?')}
 `
 
 export const script = `
 /**
- * Numbers represent floating-point numbers like 42 or -13.37
+ * Strings are text inside single or double quotes
  */
 
+const exit = 'exite'
+
 add([
-  sprite('exit'),
+  sprite(exit),
   area(),
-  'exit',
-  pos(-9999, -9999),
+  "exit",
 ])
 `
