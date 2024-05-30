@@ -1,4 +1,5 @@
 export * from './events'
 export * from './layouts'
+export * from './sounds'
 export * from './sprites'
 export * from './texts'

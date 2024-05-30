@@ -1,4 +1,5 @@
 import { GAME_ID } from '../constants'
+import { loadBlip, loadPowerup } from './sounds'
 
 /**
  * Creates cursor keys for player.
@@ -34,6 +35,28 @@ onKeyDown((key) => {
     case 'd':
       player.move(${speed}, 0)
       break
+  }
+})
+`
+
+/**
+ * Registers password check.
+ *
+ * @param password - Password.
+ * @returns - Game script.
+ */
+export const registerPasswordCheck = (password: string | number) => `
+${loadBlip()}
+${loadPowerup()}
+
+onCollide('key', 'player', (key) => {
+  if (key.password === ${typeof password === 'string' ? JSON.stringify(password) : password}) {
+    play('powerup', { volume: 0.5 })
+    key.destroy()
+    add([sprite('exit'), pos(500, 500), area(), 'exit'])
+  } else {
+    play('blip', { volume: 0.5 })
+    debug.log('Incorrect password')
   }
 })
 `

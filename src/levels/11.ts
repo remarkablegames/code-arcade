@@ -1,6 +1,7 @@
 import {
   addText,
   loadExit,
+  loadHit,
   loadPlayer,
   registerPlayerKeys,
   registerWinCondition,
@@ -12,8 +13,8 @@ export const title = 'forEach'
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
+${loadHit()}
 loadSprite('spike', 'sprites/spike.png')
-loadSound('explode', 'sounds/hit.mp3')
 
 add([
   sprite('player'),
@@ -58,7 +59,7 @@ map.forEach((row, rowIndex) => {
 })
 
 onCollide('player', 'spike', (player, spike) => {
-  play('explode')
+  play('hit')
   spike.opacity = 1
   player.destroy()
   addKaboom(player.pos)

@@ -1,7 +1,9 @@
 import {
   addText,
   loadExit,
+  loadKey,
   loadPlayer,
+  registerPasswordCheck,
   registerPlayerKeys,
   registerWinCondition,
 } from '../templates'
@@ -14,23 +16,14 @@ const password = JSON.stringify({ level, year: new Date().getFullYear() })
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
-loadSprite('key', 'sprites/key.png')
+${loadKey()}
 
 add([sprite('player'), pos(100, 100), area(), 'player'])
-
 add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
-
-onCollide('key', 'player', (key) => {
-  if (key.password === '${password}') {
-    key.destroy()
-    add([sprite('exit'), pos(500, 500), area(), 'exit'])
-  } else {
-    debug.log('Incorrect password')
-  }
-})
+${registerPasswordCheck(password)}
 
 ${addText('Stringify the password')}
 `
@@ -42,7 +35,7 @@ export const script = `
 
 const key = get('key')[0]
 
-// password = JSON string of object containing 'level' and 'year'
+// password = JSON string of object containing "level" and "year"
 let password
 
 key.password = password

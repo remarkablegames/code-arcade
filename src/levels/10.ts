@@ -1,7 +1,9 @@
 import {
   addText,
   loadExit,
+  loadKey,
   loadPlayer,
+  registerPasswordCheck,
   registerPlayerKeys,
   registerWinCondition,
 } from '../templates'
@@ -16,23 +18,14 @@ const password = Array.from(Array(42).keys())
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
-loadSprite('key', 'sprites/key.png')
+${loadKey()}
 
 add([sprite('player'), pos(100, 100), area(), 'player'])
-
 add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
-
-onCollide('key', 'player', (key) => {
-  if (key.password === '${password}') {
-    key.destroy()
-    add([sprite('exit'), pos(500, 500), area(), 'exit'])
-  } else {
-    debug.log('Incorrect password')
-  }
-})
+${registerPasswordCheck(password)}
 
 ${addText('Repeat the password')}
 `
