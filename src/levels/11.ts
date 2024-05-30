@@ -93,3 +93,10 @@ export const script = `
 const spikes = get('spike')
 spikes[0].opacity = 0
 `
+
+export const postscript = `
+const exit = get('exit')[0]
+if (exit) {
+  exit.moveTo(500, 500)
+}
+`

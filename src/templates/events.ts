@@ -80,4 +80,16 @@ onCollide('player', 'exit', () => {
     })
   })
 })
+
+onAdd('player', (player) => {
+  if (get('player').length) {
+    player.destroy()
+  }
+})
+
+onAdd('exit', (exit) => {
+  if (get('exit').length) {
+    exit.destroy()
+  }
+})
 `
