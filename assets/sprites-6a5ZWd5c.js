@@ -1,4 +1,4 @@
-import{G as o}from"./index-DN4CyoXJ.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const r=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const p=(e=320)=>`
+import{G as o}from"./index-DLb_gdsO.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const r=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const l=(e=320)=>`
 onKeyDown((key) => {
   const player = get('player')[0]
 
@@ -28,7 +28,7 @@ onKeyDown((key) => {
       break
   }
 })
-`;const l=e=>`
+`;const p=e=>`
 ${s()}
 ${a()}
 
@@ -55,4 +55,16 @@ onCollide('player', 'exit', () => {
     })
   })
 })
-`;const n=()=>`loadSprite('block', 'sprites/steel.png')`;const d=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const y=()=>`loadSprite('exit', 'sprites/door.png')`;const c=()=>`loadSprite('key', 'sprites/key.png')`;const g=()=>`loadSprite('player', 'sprites/bean.png')`;const k=()=>`loadSprite('spike', 'sprites/spike.png')`;export{y as a,i as b,c,l as d,r as e,k as f,n as g,d as h,g as l,p as r};
+
+onAdd('player', (player) => {
+  if (get('player').length) {
+    player.destroy()
+  }
+})
+
+onAdd('exit', (exit) => {
+  if (get('exit').length) {
+    exit.destroy()
+  }
+})
+`;const n=()=>`loadSprite('block', 'sprites/steel.png')`;const d=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const y=()=>`loadSprite('exit', 'sprites/door.png')`;const c=()=>`loadSprite('key', 'sprites/key.png')`;const g=()=>`loadSprite('player', 'sprites/bean.png')`;const k=()=>`loadSprite('spike', 'sprites/spike.png')`;export{y as a,i as b,c,p as d,r as e,k as f,n as g,d as h,g as l,l as r};

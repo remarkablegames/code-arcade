@@ -1,8 +1,8 @@
-import{l as e,a as o,e as a,f as r,r as s,b as t}from"./sprites-COPK4Gqt.js";import{a as i}from"./texts-qyIFEy4l.js";import"./index-DN4CyoXJ.js";const p=11;const d="forEach";const y=`
+import{l as e,a as o,e as t,f as i,r as s,b as a}from"./sprites-6a5ZWd5c.js";import{a as r}from"./texts-qyIFEy4l.js";import"./index-DLb_gdsO.js";const p=11;const d="forEach";const y=`
 ${e()}
 ${o()}
-${a()}
-${r()}
+${t()}
+${i()}
 
 add([
   sprite('player'),
@@ -16,7 +16,7 @@ add([
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
 ${s()}
-${t(p)}
+${a(p)}
 
 const map = [
   '          ',
@@ -69,7 +69,7 @@ onUpdate(() => {
   }
 })
 
-${i("Invisible spikes")}
+${r("Invisible spikes")}
 `;const m=`
 /**
  * forEach() is an iterative method
@@ -77,4 +77,9 @@ ${i("Invisible spikes")}
 
 const spikes = get('spike')
 spikes[0].opacity = 0
-`;export{p as level,y as prescript,m as script,d as title};
+`;const x=`
+const exit = get('exit')[0]
+if (exit) {
+  exit.moveTo(500, 500)
+}
+`;export{p as level,x as postscript,y as prescript,m as script,d as title};
