@@ -3,6 +3,7 @@ import {
   loadExit,
   loadHit,
   loadPlayer,
+  loadSpike,
   registerPlayerKeys,
   registerWinCondition,
 } from '../templates'
@@ -14,7 +15,7 @@ export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 ${loadHit()}
-loadSprite('spike', 'sprites/spike.png')
+${loadSpike()}
 
 add([
   sprite('player'),

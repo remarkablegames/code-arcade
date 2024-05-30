@@ -1,5 +1,6 @@
 import {
   addText,
+  loadBlock,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -11,8 +12,8 @@ export const title = 'Arrays'
 
 export const prescript = `
 ${loadPlayer()}
-loadSprite('wall', 'sprites/steel.png')
 ${loadExit()}
+${loadBlock()}
 
 add([sprite('player'), pos(center()), area(), body(), 'player'])
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
@@ -54,7 +55,7 @@ addLevel(get('map')[0].map, {
   pos: vec2(64, 64),
   tiles: {
     '#': () => [
-      sprite('wall'),
+      sprite('block'),
       area(),
       body({ isStatic: true }),
     ],

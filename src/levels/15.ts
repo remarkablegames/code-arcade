@@ -1,5 +1,6 @@
 import {
   loadExit,
+  loadKey,
   loadPlayer,
   registerPlayerKeys,
   registerWinCondition,
@@ -11,7 +12,7 @@ export const title = 'Timer'
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
-loadSprite('key', 'sprites/key.png')
+${loadKey()}
 
 add([sprite('player'), pos(center()), area(), 'player'])
 

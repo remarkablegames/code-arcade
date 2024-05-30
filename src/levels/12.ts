@@ -1,6 +1,9 @@
 import {
   addText,
+  loadBlock,
+  loadEnemy,
   loadExit,
+  loadHit,
   loadPlayer,
   registerPlayerKeys,
   registerWinCondition,
@@ -12,8 +15,9 @@ export const title = 'Loops'
 export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
-loadSprite('enemy', 'sprites/ghosty.png')
-loadSprite('wall', 'sprites/steel.png')
+${loadBlock()}
+${loadEnemy()}
+${loadHit()}
 
 add([
   sprite('player'),
@@ -59,6 +63,7 @@ onCollide('player', 'enemy', (player, enemy) => {
   if (typeof cancelEnemyUpdate === 'function') {
     cancelEnemyUpdate()
   }
+  play('hit')
   player.destroy()
   addKaboom(player.pos)
 })
@@ -75,14 +80,14 @@ export const script = `
  * Can you build a fortress to protect yourself?
  */
 
-const wall = {
+const block = {
   width: 64,
   height: 64,
 }
 
 add([
-  sprite('wall'),
-  pos(wall.width * 6, wall.height * 6),
+  sprite('block'),
+  pos(block.width * 6, block.height * 6),
   area(),
   body({ isStatic: true }),
 ])
