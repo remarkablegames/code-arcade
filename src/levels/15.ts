@@ -13,12 +13,11 @@ ${loadPlayer()}
 ${loadExit()}
 loadSprite('key', 'sprites/key.png')
 
-const player = add([sprite('player'), pos(center()), area(), 'player'])
+add([sprite('player'), pos(center()), area(), 'player'])
 
 let keys = 420
 
-const getMessage = () =>
-  'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
+const getMessage = () => 'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
 
 const message = add([text(getMessage())])
 

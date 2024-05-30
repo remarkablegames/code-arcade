@@ -13,7 +13,7 @@ ${loadPlayer()}
 ${loadExit()}
 loadSprite('spike', 'sprites/spike.png')
 
-const player = add([
+add([
   sprite('player'),
   pos(40, 80),
   area(),
@@ -62,6 +62,12 @@ onCollide('player', 'spike', (player, spike) => {
 })
 
 onUpdate(() => {
+  const player = get('player')[0]
+
+  if (!player) {
+    return
+  }
+
   const { x, y } = player.pos
 
   if (x < 0 || y < 0 || x > width() || y > height()) {

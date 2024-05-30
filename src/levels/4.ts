@@ -12,7 +12,7 @@ export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 
-const player = add([sprite('player'), pos(500, 500), area(), 'player'])
+add([sprite('player'), pos(500, 500), area(), 'player'])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}

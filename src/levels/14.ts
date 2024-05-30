@@ -12,11 +12,12 @@ export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 
-const player = add([sprite('player'), pos(50, 80), area(), anchor('center'), 'player'])
+add([sprite('player'), pos(center()), area(), anchor('center'), 'player'])
+${registerPlayerKeys(50)}
 
 const exit = add([
   sprite('exit'),
-  pos(center()),
+  pos(),
   area(),
   anchor('center'),
   'exit',
@@ -43,9 +44,4 @@ setInterval(() => {
     randi(height()),
   )
 }, SECOND)
-`
-
-export const postscript = `
-const player = get('player')[0]
-${registerPlayerKeys(50)}
 `

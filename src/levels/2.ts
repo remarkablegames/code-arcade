@@ -36,8 +36,5 @@ add([
 `
 
 export const postscript = `
-const player = get('player')[0]
-if (player) {
 ${registerPlayerKeys()}
-}
 `

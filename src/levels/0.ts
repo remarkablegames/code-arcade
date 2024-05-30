@@ -12,7 +12,7 @@ export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 
-const player = add([sprite('player'), pos(50, center().y), area(), 'player'])
+add([sprite('player'), pos(50, center().y), area(), 'player'])
 add([sprite('exit'), pos(500, center().y), area(), 'exit'])
 
 ${registerPlayerKeys()}

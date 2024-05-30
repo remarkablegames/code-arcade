@@ -14,7 +14,7 @@ ${loadExit()}
 loadSprite('enemy', 'sprites/ghosty.png')
 loadSprite('wall', 'sprites/steel.png')
 
-const player = add([
+add([
   sprite('player'),
   pos(40, 60),
   area(),
@@ -42,6 +42,7 @@ function addEnemy() {
   ])
 
   cancelEnemyUpdate = enemy.onUpdate(() => {
+    const player = get('player')[0]
     if (player) {
       const dir = player.pos.sub(enemy.pos).unit()
       enemy.move(dir.scale(ENEMY_SPEED))
@@ -87,7 +88,13 @@ add([
 `
 
 export const postscript = `
-  if (get('enemy').length) {
-    get('enemy')[0].moveTo(center())
-  }
+const player = get('player')[0]
+if (player) {
+  player.moveTo(40, 60)
+}
+
+const enemy = get('enemy')[0]
+if (enemy) {
+  enemy.moveTo(center())
+}
 `

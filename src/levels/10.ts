@@ -17,7 +17,7 @@ ${loadPlayer()}
 ${loadExit()}
 loadSprite('key', 'sprites/key.png')
 
-const player = add([sprite('player'), pos(100, 100), area(), 'player'])
+add([sprite('player'), pos(100, 100), area(), 'player'])
 
 add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
 

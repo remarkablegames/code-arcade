@@ -8,6 +8,12 @@ import { GAME_ID } from '../constants'
  */
 export const registerPlayerKeys = (speed = 320) => `
 onKeyDown((key) => {
+  const player = get('player')[0]
+
+  if (!player) {
+    return
+  }
+
   switch (key) {
     case 'up':
     case 'w':
