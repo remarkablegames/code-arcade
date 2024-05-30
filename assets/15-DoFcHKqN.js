@@ -1,7 +1,8 @@
-import{l as e,a as s,c as t,r as a,b as r}from"./sprites-6a5ZWd5c.js";import"./index-DLb_gdsO.js";const o=15;const d="Timer";const l=`
+import{l as e,a as s,c as t,i as a,r,b as o}from"./sprites-D6SpC4j5.js";import"./index-DrAo2JJy.js";const i=15;const l="Timer";const n=`
 ${e()}
 ${s()}
 ${t()}
+${a()}
 
 add([sprite('player'), pos(center()), area(), 'player'])
 
@@ -23,10 +24,11 @@ function addKey() {
 
 addKey()
 
-${a()}
-${r(o)}
+${r()}
+${o(i)}
 
 onCollide('key', 'player', (key) => {
+  play('signal', { volume: 0.2, speed: 2 })
   keys--
   key.destroy()
   message.text = getMessage()
@@ -43,7 +45,7 @@ onAdd('exit', () => {
     destroyAll('exit')
   }
 })
-`;const n=`
+`;const p=`
 /**
  * Can we speed this up?
  */
@@ -51,4 +53,4 @@ onAdd('exit', () => {
 const player = get('player')[0]
 const key = get('key')[0]
 // player.moveTo(key.pos)
-`;export{o as level,l as prescript,n as script,d as title};
+`;export{i as level,n as prescript,p as script,l as title};

@@ -1,4 +1,4 @@
-import{G as o}from"./index-DLb_gdsO.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const r=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const l=(e=320)=>`
+import{G as o}from"./index-DrAo2JJy.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const l=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const r=()=>`loadSound('signal', 'sounds/signal.mp3')`;const p=(e=320)=>`
 onKeyDown((key) => {
   const player = get('player')[0]
 
@@ -28,7 +28,7 @@ onKeyDown((key) => {
       break
   }
 })
-`;const p=e=>`
+`;const i=e=>`
 ${s()}
 ${a()}
 
@@ -42,7 +42,7 @@ onCollide('key', 'player', (key) => {
     debug.log('Incorrect password')
   }
 })
-`;const i=e=>`
+`;const n=e=>`
 loadSound('exit', 'sounds/wooosh.mp3')
 
 onCollide('player', 'exit', () => {
@@ -57,14 +57,14 @@ onCollide('player', 'exit', () => {
 })
 
 onAdd('player', (player) => {
-  if (get('player').length) {
+  if (get('player').length > 1) {
     player.destroy()
   }
 })
 
 onAdd('exit', (exit) => {
-  if (get('exit').length) {
+  if (get('exit').length > 1) {
     exit.destroy()
   }
 })
-`;const n=()=>`loadSprite('block', 'sprites/steel.png')`;const d=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const y=()=>`loadSprite('exit', 'sprites/door.png')`;const c=()=>`loadSprite('key', 'sprites/key.png')`;const g=()=>`loadSprite('player', 'sprites/bean.png')`;const k=()=>`loadSprite('spike', 'sprites/spike.png')`;export{y as a,i as b,c,p as d,r as e,k as f,n as g,d as h,g as l,l as r};
+`;const d=()=>`loadSprite('block', 'sprites/steel.png')`;const y=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const c=()=>`loadSprite('exit', 'sprites/door.png')`;const g=()=>`loadSprite('key', 'sprites/key.png')`;const u=()=>`loadSprite('player', 'sprites/bean.png')`;const k=()=>`loadSprite('spike', 'sprites/spike.png')`;export{c as a,n as b,g as c,i as d,l as e,k as f,d as g,y as h,r as i,u as l,p as r};
