@@ -1,4 +1,4 @@
-import{G as a}from"./index-WTQywSR1.js";const s=(e=320)=>`
+import{G as a}from"./index-BZnxxq9W.js";const r=(e=320)=>`
 onKeyDown((key) => {
   const player = get('player')[0]
 
@@ -28,11 +28,17 @@ onKeyDown((key) => {
       break
   }
 })
-`;const o=e=>`
+`;const s=e=>`
+loadSound('exit', 'sounds/wooosh.mp3')
+
 onCollide('player', 'exit', () => {
-  parent.postMessage({
-    source: '${a}',
-    level: ${e+1},
+  play('exit')
+
+  wait(0.2, () => {
+    window.parent.postMessage({
+      source: '${a}',
+      level: ${e+1},
+    })
   })
 })
-`;const t=()=>`loadSprite('exit', 'sprites/door.png')`;const l=()=>`loadSprite('player', 'sprites/bean.png')`;export{t as a,o as b,l,s as r};
+`;const t=()=>`loadSprite('exit', 'sprites/door.png')`;const l=()=>`loadSprite('player', 'sprites/bean.png')`;export{t as a,s as b,l,r};

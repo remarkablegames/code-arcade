@@ -1,4 +1,4 @@
-import{l as e,a as s,r as t,b as a}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const r=15;const i="Timer";const d=`
+import{l as e,a as s,r as t,b as a}from"./sprites-CqAi-61g.js";import"./index-BZnxxq9W.js";const r=15;const i="Timer";const d=`
 ${e()}
 ${s()}
 loadSprite('key', 'sprites/key.png')

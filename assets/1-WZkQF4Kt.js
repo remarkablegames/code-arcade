@@ -1,4 +1,4 @@
-import{l as e,a as t,r as o,b as s}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const i=1;const n="Single-line comments";const l=`
+import{l as e,a as t,r as o,b as s}from"./sprites-CqAi-61g.js";import"./index-BZnxxq9W.js";const i=1;const n="Single-line comments";const l=`
 ${e()}
 ${t()}
 

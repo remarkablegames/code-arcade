@@ -1,4 +1,4 @@
-import{l as r,a as t,r as a,b as o}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const s=16;const p="JSON.stringify";const e=JSON.stringify({level:s,year:new Date().getFullYear()});const n=`
+import{l as r,a as t,r as a,b as o}from"./sprites-CqAi-61g.js";import"./index-BZnxxq9W.js";const s=16;const p="JSON.stringify";const e=JSON.stringify({level:s,year:new Date().getFullYear()});const n=`
 ${r()}
 ${t()}
 loadSprite('key', 'sprites/key.png')
