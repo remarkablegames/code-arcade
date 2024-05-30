@@ -1,7 +1,7 @@
-import{l as e,a as s,r as t,b as a}from"./sprites-CKW4rCNR.js";import"./index-CrWy8xcs.js";const r=15;const i="Timer";const d=`
+import{l as e,a as s,c as t,r as a,b as r}from"./sprites-COPK4Gqt.js";import"./index-DN4CyoXJ.js";const o=15;const d="Timer";const l=`
 ${e()}
 ${s()}
-loadSprite('key', 'sprites/key.png')
+${t()}
 
 add([sprite('player'), pos(center()), area(), 'player'])
 
@@ -23,8 +23,8 @@ function addKey() {
 
 addKey()
 
-${t()}
-${a(r)}
+${a()}
+${r(o)}
 
 onCollide('key', 'player', (key) => {
   keys--
@@ -43,7 +43,7 @@ onAdd('exit', () => {
     destroyAll('exit')
   }
 })
-`;const p=`
+`;const n=`
 /**
  * Can we speed this up?
  */
@@ -51,4 +51,4 @@ onAdd('exit', () => {
 const player = get('player')[0]
 const key = get('key')[0]
 // player.moveTo(key.pos)
-`;export{r as level,d as prescript,p as script,i as title};
+`;export{o as level,l as prescript,n as script,d as title};

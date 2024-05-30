@@ -1,15 +1,15 @@
-import{l as a,a as e,r as t,b as r}from"./sprites-CKW4rCNR.js";import{a as s}from"./texts-qyIFEy4l.js";import"./index-CrWy8xcs.js";const p=6;const l="Arrays";const n=`
+import{l as a,a as t,g as e,r,b as s}from"./sprites-COPK4Gqt.js";import{a as o}from"./texts-qyIFEy4l.js";import"./index-DN4CyoXJ.js";const p=6;const n="Arrays";const c=`
 ${a()}
-loadSprite('wall', 'sprites/steel.png')
+${t()}
 ${e()}
 
 add([sprite('player'), pos(center()), area(), body(), 'player'])
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
-${t()}
-${r(p)}
+${r()}
+${s(p)}
 
-${s("Trapped in arrays")}
+${o("Trapped in arrays")}
 
 onUpdate(() => {
   const map = get('map')[0]
@@ -32,17 +32,17 @@ const map = [
 ]
 
 add(['map', { map }])
-`;const c=`
+`;const y=`
 addLevel(get('map')[0].map, {
   tileWidth: 64,
   tileHeight: 64,
   pos: vec2(64, 64),
   tiles: {
     '#': () => [
-      sprite('wall'),
+      sprite('block'),
       area(),
       body({ isStatic: true }),
     ],
   }
 })
-`;export{p as level,c as postscript,n as prescript,m as script,l as title};
+`;export{p as level,y as postscript,c as prescript,m as script,n as title};

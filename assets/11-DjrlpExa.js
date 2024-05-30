@@ -1,8 +1,8 @@
-import{l as e,a as o,e as r,r as s,b as i}from"./sprites-CKW4rCNR.js";import{a as t}from"./texts-qyIFEy4l.js";import"./index-CrWy8xcs.js";const a=11;const c="forEach";const d=`
+import{l as e,a as o,e as a,f as r,r as s,b as t}from"./sprites-COPK4Gqt.js";import{a as i}from"./texts-qyIFEy4l.js";import"./index-DN4CyoXJ.js";const p=11;const d="forEach";const y=`
 ${e()}
 ${o()}
+${a()}
 ${r()}
-loadSprite('spike', 'sprites/spike.png')
 
 add([
   sprite('player'),
@@ -16,7 +16,7 @@ add([
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
 ${s()}
-${i(a)}
+${t(p)}
 
 const map = [
   '          ',
@@ -69,12 +69,12 @@ onUpdate(() => {
   }
 })
 
-${t("Invisible spikes")}
-`;const y=`
+${i("Invisible spikes")}
+`;const m=`
 /**
  * forEach() is an iterative method
  */
 
 const spikes = get('spike')
 spikes[0].opacity = 0
-`;export{a as level,d as prescript,y as script,c as title};
+`;export{p as level,y as prescript,m as script,d as title};
