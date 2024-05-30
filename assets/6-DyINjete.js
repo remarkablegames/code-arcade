@@ -1,4 +1,4 @@
-import{l as e,a as t,r,b as a}from"./sprites-BjVUeMvX.js";import{a as s}from"./texts-qyIFEy4l.js";import"./index-D5AZ38lH.js";const o=5;const p="Booleans";const d=`
+import{l as e,a as t,r,b as a}from"./sprites-DtmJiuCK.js";import{a as s}from"./texts-qyIFEy4l.js";import"./index-CEPyo8Ci.js";const o=6;const p="Booleans";const d=`
 ${e()}
 ${t()}
 

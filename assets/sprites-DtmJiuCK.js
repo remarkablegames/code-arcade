@@ -1,4 +1,4 @@
-import{G as o}from"./index-D5AZ38lH.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const l=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const r=()=>`loadSound('signal', 'sounds/signal.mp3')`;const p=(e=320)=>`
+import{G as o}from"./index-CEPyo8Ci.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const l=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const r=()=>`loadSound('signal', 'sounds/signal.mp3')`;const p=(e=320)=>`
 onKeyDown((key) => {
   const player = get('player')[0]
 
