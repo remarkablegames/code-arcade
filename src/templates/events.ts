@@ -82,13 +82,13 @@ onCollide('player', 'exit', () => {
 })
 
 onAdd('player', (player) => {
-  if (get('player').length) {
+  if (get('player').length > 1) {
     player.destroy()
   }
 })
 
 onAdd('exit', (exit) => {
-  if (get('exit').length) {
+  if (get('exit').length > 1) {
     exit.destroy()
   }
 })

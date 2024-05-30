@@ -2,6 +2,7 @@ import {
   loadExit,
   loadKey,
   loadPlayer,
+  loadSignal,
   registerPlayerKeys,
   registerWinCondition,
 } from '../templates'
@@ -13,6 +14,7 @@ export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 ${loadKey()}
+${loadSignal()}
 
 add([sprite('player'), pos(center()), area(), 'player'])
 
@@ -38,6 +40,7 @@ ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
 onCollide('key', 'player', (key) => {
+  play('signal', { volume: 0.2, speed: 2 })
   keys--
   key.destroy()
   message.text = getMessage()
