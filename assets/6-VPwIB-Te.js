@@ -1,4 +1,4 @@
-import{l as a,a as e,r as t,b as r}from"./sprites-DIKLQSSL.js";import{a as s}from"./texts-qyIFEy4l.js";import"./index-U8zA4yR0.js";const p=6;const l="Arrays";const n=`
+import{l as a,a as e,r as t,b as r}from"./sprites-CKW4rCNR.js";import{a as s}from"./texts-qyIFEy4l.js";import"./index-CrWy8xcs.js";const p=6;const l="Arrays";const n=`
 ${a()}
 loadSprite('wall', 'sprites/steel.png')
 ${e()}

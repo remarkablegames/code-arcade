@@ -1,8 +1,8 @@
-import{l as e,a as o,r as p,b as s}from"./sprites-DIKLQSSL.js";import{a as r}from"./texts-qyIFEy4l.js";import"./index-U8zA4yR0.js";const i=11;const l="forEach";const d=`
+import{l as e,a as o,e as r,r as s,b as i}from"./sprites-CKW4rCNR.js";import{a as t}from"./texts-qyIFEy4l.js";import"./index-CrWy8xcs.js";const a=11;const c="forEach";const d=`
 ${e()}
 ${o()}
+${r()}
 loadSprite('spike', 'sprites/spike.png')
-loadSound('explode', 'sounds/hit.mp3')
 
 add([
   sprite('player'),
@@ -15,8 +15,8 @@ add([
 
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
-${p()}
-${s(i)}
+${s()}
+${i(a)}
 
 const map = [
   '          ',
@@ -47,7 +47,7 @@ map.forEach((row, rowIndex) => {
 })
 
 onCollide('player', 'spike', (player, spike) => {
-  play('explode')
+  play('hit')
   spike.opacity = 1
   player.destroy()
   addKaboom(player.pos)
@@ -69,12 +69,12 @@ onUpdate(() => {
   }
 })
 
-${r("Invisible spikes")}
-`;const c=`
+${t("Invisible spikes")}
+`;const y=`
 /**
  * forEach() is an iterative method
  */
 
 const spikes = get('spike')
 spikes[0].opacity = 0
-`;export{i as level,d as prescript,c as script,l as title};
+`;export{a as level,d as prescript,y as script,c as title};

@@ -1,4 +1,4 @@
-import{l as e,a as t,r as a,b as o}from"./sprites-DIKLQSSL.js";import{a as r}from"./texts-qyIFEy4l.js";import"./index-U8zA4yR0.js";const n=12;const l="Loops";const i=`
+import{l as e,a as t,r as a,b as o}from"./sprites-CKW4rCNR.js";import{a as r}from"./texts-qyIFEy4l.js";import"./index-CrWy8xcs.js";const n=12;const l="Loops";const i=`
 ${e()}
 ${t()}
 loadSprite('enemy', 'sprites/ghosty.png')
