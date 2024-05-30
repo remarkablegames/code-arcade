@@ -1,9 +1,9 @@
-import{l as r,a,r as t,b as o}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const s=9;const l="Variables";const e=(new Date().getFullYear()+s)*31337;const i=`
+import{l as r,a,r as t,b as o}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const s=9;const i="Variables";const e=(new Date().getFullYear()+s)*31337;const l=`
 ${r()}
 ${a()}
 loadSprite('key', 'sprites/key.png')
 
-const player = add([sprite('player'), pos(100, 100), area(), 'player'])
+add([sprite('player'), pos(100, 100), area(), 'player'])
 add([sprite('key'), pos(center()), area(), 'key', { password: ${e} }])
 
 ${t()}
@@ -31,4 +31,4 @@ const key = get('key')[0]
 let password
 
 key.password = password
-`;export{s as level,i as prescript,n as script,l as title};
+`;export{s as level,l as prescript,n as script,i as title};

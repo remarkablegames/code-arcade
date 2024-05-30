@@ -1,8 +1,8 @@
-import{l as e,a as t,r,b as a}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const s=5;const l="Booleans";const n=`
+import{l as e,a as t,r,b as a}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const s=5;const l="Booleans";const n=`
 ${e()}
 ${t()}
 
-const player = add([sprite('player'), pos(center()), area(), 'player'])
+add([sprite('player'), pos(center()), area(), 'player'])
 
 ${r()}
 ${a(s)}

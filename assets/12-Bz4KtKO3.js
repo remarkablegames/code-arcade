@@ -1,10 +1,10 @@
-import{l as e,a as t,r as a,b as o}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const n=12;const l="Loops";const p=`
+import{l as e,a as t,r as a,b as o}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const n=12;const y="Loops";const l=`
 ${e()}
 ${t()}
 loadSprite('enemy', 'sprites/ghosty.png')
 loadSprite('wall', 'sprites/steel.png')
 
-const player = add([
+add([
   sprite('player'),
   pos(40, 60),
   area(),
@@ -32,6 +32,7 @@ function addEnemy() {
   ])
 
   cancelEnemyUpdate = enemy.onUpdate(() => {
+    const player = get('player')[0]
     if (player) {
       const dir = player.pos.sub(enemy.pos).unit()
       enemy.move(dir.scale(ENEMY_SPEED))
@@ -56,7 +57,7 @@ onDestroy('enemy', () => {
 })
 
 add([text('Protect yourself')])
-`;const y=`
+`;const p=`
 /**
  * Can you build a fortress to protect yourself?
  */
@@ -72,8 +73,14 @@ add([
   area(),
   body({ isStatic: true }),
 ])
-`;const d=`
-  if (get('enemy').length) {
-    get('enemy')[0].moveTo(center())
-  }
-`;export{n as level,d as postscript,p as prescript,y as script,l as title};
+`;const i=`
+const player = get('player')[0]
+if (player) {
+  player.moveTo(40, 60)
+}
+
+const enemy = get('enemy')[0]
+if (enemy) {
+  enemy.moveTo(center())
+}
+`;export{n as level,i as postscript,l as prescript,p as script,y as title};

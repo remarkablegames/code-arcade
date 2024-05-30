@@ -1,8 +1,8 @@
-import{l as e,a as o,r as t,b as s}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const r=0;const n="console.log";const c=`
+import{l as e,a as o,r as t,b as s}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const r=0;const i="console.log";const n=`
 ${e()}
 ${o()}
 
-const player = add([sprite('player'), pos(50, center().y), area(), 'player'])
+add([sprite('player'), pos(50, center().y), area(), 'player'])
 add([sprite('exit'), pos(500, center().y), area(), 'exit'])
 
 ${t()}
@@ -10,11 +10,11 @@ ${s(r)}
 
 add([text('WASD or arrow keys to move')])
 add([text('Goal: reach the exit'), pos(0, 64), color(0, 0, 0)])
-`;const i=`
+`;const c=`
 /**
  * console.log() outputs a message to the console
  */
 
 // change the message below and press "Run"
 console.log('Hello, World!')
-`;export{r as level,c as prescript,i as script,n as title};
+`;export{r as level,n as prescript,c as script,i as title};

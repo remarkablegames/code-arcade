@@ -1,5 +1,11 @@
-import{G as a}from"./index-x1ppZCB-.js";const s=(e=320)=>`
+import{G as a}from"./index-WTQywSR1.js";const s=(e=320)=>`
 onKeyDown((key) => {
+  const player = get('player')[0]
+
+  if (!player) {
+    return
+  }
+
   switch (key) {
     case 'up':
     case 'w':

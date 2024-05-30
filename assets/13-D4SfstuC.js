@@ -1,11 +1,11 @@
-import{l as e,a as t,r as s,b as r}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const o=13;const n="setTimeout";const c=`
+import{l as e,a as t,r as s,b as r}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const i=13;const n="setTimeout";const c=`
 ${e()}
 ${t()}
 
-const player = add([sprite('player'), pos(50, 50), area(), 'player'])
+add([sprite('player'), pos(50, 50), area(), 'player'])
 
 ${s()}
-${r(o)}
+${r(i)}
 
 add([text('Wait for the exit')])
 `;const p=`
@@ -20,4 +20,4 @@ const MINUTE = SECOND * 60
 setTimeout(() => {
   add([sprite('exit'), pos(center()), area(), 'exit'])
 }, 5 * MINUTE)
-`;export{o as level,c as prescript,p as script,n as title};
+`;export{i as level,c as prescript,p as script,n as title};

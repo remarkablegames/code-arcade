@@ -1,18 +1,19 @@
-import{l as t,a as e,b as r,r as a}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const s=14;const n="setInterval";const c=`
+import{l as t,a as e,r,b as a}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const i=14;const o="setInterval";const c=`
 ${t()}
 ${e()}
 
-const player = add([sprite('player'), pos(50, 80), area(), anchor('center'), 'player'])
+add([sprite('player'), pos(center()), area(), anchor('center'), 'player'])
+${r(50)}
 
 const exit = add([
   sprite('exit'),
-  pos(center()),
+  pos(),
   area(),
   anchor('center'),
   'exit',
 ])
 
-${r(s)}
+${a(i)}
 
 add([text('Exit in a loop')])
 `;const l=`
@@ -31,7 +32,4 @@ setInterval(() => {
     randi(height()),
   )
 }, SECOND)
-`;const p=`
-const player = get('player')[0]
-${a(50)}
-`;export{s as level,p as postscript,c as prescript,l as script,n as title};
+`;export{i as level,c as prescript,l as script,o as title};

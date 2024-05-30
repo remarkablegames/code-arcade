@@ -1,9 +1,9 @@
-import{l as e,a as o,r as s,b as i}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const t=11;const a="forEach";const n=`
+import{l as e,a as o,r,b as s}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const t=11;const a="forEach";const n=`
 ${e()}
 ${o()}
 loadSprite('spike', 'sprites/spike.png')
 
-const player = add([
+add([
   sprite('player'),
   pos(40, 80),
   area(),
@@ -14,8 +14,8 @@ const player = add([
 
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
-${s()}
-${i(t)}
+${r()}
+${s(t)}
 
 const map = [
   '          ',
@@ -52,6 +52,12 @@ onCollide('player', 'spike', (player, spike) => {
 })
 
 onUpdate(() => {
+  const player = get('player')[0]
+
+  if (!player) {
+    return
+  }
+
   const { x, y } = player.pos
 
   if (x < 0 || y < 0 || x > width() || y > height()) {

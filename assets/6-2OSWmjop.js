@@ -1,9 +1,9 @@
-import{l as e,a as t,r as a,b as r}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const s=6;const o="Arrays";const l=`
+import{l as e,a as t,r as a,b as r}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const s=6;const o="Arrays";const d=`
 ${e()}
 loadSprite('wall', 'sprites/steel.png')
 ${t()}
 
-const player = add([sprite('player'), pos(center()), area(), body(), 'player'])
+add([sprite('player'), pos(center()), area(), body(), 'player'])
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
 ${a()}
@@ -16,7 +16,7 @@ onUpdate(() => {
     throw new Error('Map must be valid')
   }
 })
-`;const d=`
+`;const l=`
 /**
  * Arrays are an ordered list of data
  */
@@ -44,4 +44,4 @@ addLevel(get('map')[0].map, {
     ],
   }
 })
-`;export{s as level,n as postscript,l as prescript,d as script,o as title};
+`;export{s as level,n as postscript,d as prescript,l as script,o as title};

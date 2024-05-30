@@ -1,8 +1,8 @@
-import{l as e,a as t,r as o,b as s}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const i=1;const n="Single-line comments";const l=`
+import{l as e,a as t,r as o,b as s}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const i=1;const n="Single-line comments";const l=`
 ${e()}
 ${t()}
 
-const player = add([sprite('player'), pos(50, 50), area(), 'player'])
+add([sprite('player'), pos(50, 50), area(), 'player'])
 
 ${o()}
 ${s(i)}

@@ -1,14 +1,13 @@
-import{l as e,a as s,r as t,b as a}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const r=15;const i="Timer";const d=`
+import{l as e,a as s,r as t,b as a}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const r=15;const i="Timer";const d=`
 ${e()}
 ${s()}
 loadSprite('key', 'sprites/key.png')
 
-const player = add([sprite('player'), pos(center()), area(), 'player'])
+add([sprite('player'), pos(center()), area(), 'player'])
 
 let keys = 420
 
-const getMessage = () =>
-  'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
+const getMessage = () => 'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
 
 const message = add([text(getMessage())])
 

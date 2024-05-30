@@ -1,9 +1,9 @@
-import{l as r,a as s,r as a,b as o}from"./sprites-CZYdguN4.js";import"./index-x1ppZCB-.js";const t=10;const i="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
+import{l as r,a as s,r as a,b as o}from"./sprites-Byab-hWy.js";import"./index-WTQywSR1.js";const t=10;const i="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
 ${r()}
 ${s()}
 loadSprite('key', 'sprites/key.png')
 
-const player = add([sprite('player'), pos(100, 100), area(), 'player'])
+add([sprite('player'), pos(100, 100), area(), 'player'])
 
 add([sprite('key'), pos(center()), area(), 'key', { password: '${e}' }])
 
