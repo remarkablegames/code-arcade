@@ -1,4 +1,9 @@
-import { loadExit, loadPlayer, registerWinCondition } from '../templates'
+import {
+  addText,
+  loadExit,
+  loadPlayer,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 7
 export const title = 'Objects'
@@ -16,7 +21,7 @@ onKeyPress(() => {
 
 ${registerWinCondition(level)}
 
-add([text('Reposition me')])
+${addText('Reposition me')}
 `
 
 export const script = `

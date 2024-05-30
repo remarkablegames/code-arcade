@@ -1,4 +1,5 @@
 import {
+  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -25,7 +26,7 @@ const exit = add([
 
 ${registerWinCondition(level)}
 
-add([text('Exit in a loop')])
+${addText('Exit in a loop')}
 `
 
 export const script = `

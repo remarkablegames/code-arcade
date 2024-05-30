@@ -1,4 +1,5 @@
 import {
+  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -17,7 +18,7 @@ add([sprite('player'), pos(50, 50), area(), 'player'])
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-add([text('Wait for the exit')])
+${addText('Wait for the exit')}
 `
 
 export const script = `

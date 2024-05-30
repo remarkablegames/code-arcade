@@ -1,4 +1,5 @@
 import {
+  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -17,7 +18,7 @@ add([sprite('player'), pos(500, 500), area(), 'player'])
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-add([text('Exit is not in view?')])
+${addText('Exit is not in view?')}
 `
 
 export const script = `

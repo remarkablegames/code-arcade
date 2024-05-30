@@ -1,4 +1,5 @@
 import {
+  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -33,7 +34,7 @@ onCollide('key', 'player', (key) => {
   }
 })
 
-add([text('Repeat the password')])
+${addText('Repeat the password')}
 `
 
 export const script = `

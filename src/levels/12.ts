@@ -1,4 +1,5 @@
 import {
+  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -66,7 +67,7 @@ onDestroy('enemy', () => {
   addEnemy()
 })
 
-add([text('Protect yourself')])
+${addText('Protect yourself')}
 `
 
 export const script = `

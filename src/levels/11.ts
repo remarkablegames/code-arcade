@@ -1,4 +1,5 @@
 import {
+  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -79,7 +80,7 @@ onUpdate(() => {
   }
 })
 
-add([text('Invisible spikes')])
+${addText('Invisible spikes')}
 `
 
 export const script = `

@@ -1,4 +1,5 @@
 import {
+  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -19,10 +20,11 @@ add([sprite('exit'), pos(500, 500), area(), 'exit'])
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-add([text('Trapped in arrays')])
+${addText('Trapped in arrays')}
 
 onUpdate(() => {
-  if (!get('map')[0]?.map?.length) {
+  const map = get('map')[0]
+  if (!map?.map?.length) {
     throw new Error('Map must be valid')
   }
 })

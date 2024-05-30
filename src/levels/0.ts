@@ -1,4 +1,5 @@
 import {
+  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -18,7 +19,7 @@ add([sprite('exit'), pos(500, center().y), area(), 'exit'])
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-add([text('WASD or arrow keys to move')])
+${addText('WASD or arrow keys to move')}
 add([text('Goal: reach the exit'), pos(0, 64), color(0, 0, 0)])
 `
 

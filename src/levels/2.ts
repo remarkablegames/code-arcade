@@ -1,4 +1,5 @@
 import {
+  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -16,7 +17,7 @@ add([sprite('exit'), pos(center()), area(), 'exit'])
 
 ${registerWinCondition(level)}
 
-add([text('Uncomment the player')])
+${addText('Uncomment the player')}
 `
 
 export const script = `

@@ -1,4 +1,5 @@
 import {
+  addText,
   loadExit,
   loadPlayer,
   registerPlayerKeys,
@@ -17,7 +18,7 @@ add([sprite('player'), pos(center()), area(), 'player'])
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 
-add([text('Exit is not truthy')])
+${addText('Exit is not truthy')}
 `
 
 export const script = `
