@@ -1,4 +1,4 @@
-import{l as t,a as e,r,b as a}from"./sprites-CqAi-61g.js";import"./index-BZnxxq9W.js";const i=14;const o="setInterval";const c=`
+import{l as t,a as e,r,b as a}from"./sprites-DIKLQSSL.js";import{a as i}from"./texts-qyIFEy4l.js";import"./index-U8zA4yR0.js";const s=14;const l="setInterval";const p=`
 ${t()}
 ${e()}
 
@@ -13,10 +13,10 @@ const exit = add([
   'exit',
 ])
 
-${a(i)}
+${a(s)}
 
-add([text('Exit in a loop')])
-`;const l=`
+${i("Exit in a loop")}
+`;const d=`
 /**
  * setInterval() calls a function at specified intervals
  */
@@ -32,4 +32,4 @@ setInterval(() => {
     randi(height()),
   )
 }, SECOND)
-`;export{i as level,c as prescript,l as script,o as title};
+`;export{s as level,p as prescript,d as script,l as title};

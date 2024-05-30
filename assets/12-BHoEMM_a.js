@@ -1,4 +1,4 @@
-import{l as e,a as t,r as a,b as o}from"./sprites-CqAi-61g.js";import"./index-BZnxxq9W.js";const n=12;const y="Loops";const l=`
+import{l as e,a as t,r as a,b as o}from"./sprites-DIKLQSSL.js";import{a as r}from"./texts-qyIFEy4l.js";import"./index-U8zA4yR0.js";const n=12;const l="Loops";const i=`
 ${e()}
 ${t()}
 loadSprite('enemy', 'sprites/ghosty.png')
@@ -56,8 +56,8 @@ onDestroy('enemy', () => {
   addEnemy()
 })
 
-add([text('Protect yourself')])
-`;const p=`
+${r("Protect yourself")}
+`;const d=`
 /**
  * Can you build a fortress to protect yourself?
  */
@@ -73,7 +73,7 @@ add([
   area(),
   body({ isStatic: true }),
 ])
-`;const i=`
+`;const c=`
 const player = get('player')[0]
 if (player) {
   player.moveTo(40, 60)
@@ -83,4 +83,4 @@ const enemy = get('enemy')[0]
 if (enemy) {
   enemy.moveTo(center())
 }
-`;export{n as level,i as postscript,l as prescript,p as script,y as title};
+`;export{n as level,c as postscript,i as prescript,d as script,l as title};

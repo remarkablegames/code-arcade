@@ -1,4 +1,4 @@
-import{l as r,a as s,r as a,b as o}from"./sprites-CqAi-61g.js";import"./index-BZnxxq9W.js";const t=10;const i="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
+import{l as r,a as s,r as a,b as o}from"./sprites-DIKLQSSL.js";import{a as t}from"./texts-qyIFEy4l.js";import"./index-U8zA4yR0.js";const p=10;const l="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const n=`
 ${r()}
 ${s()}
 loadSprite('key', 'sprites/key.png')
@@ -8,7 +8,7 @@ add([sprite('player'), pos(100, 100), area(), 'player'])
 add([sprite('key'), pos(center()), area(), 'key', { password: '${e}' }])
 
 ${a()}
-${o(t)}
+${o(p)}
 
 onCollide('key', 'player', (key) => {
   if (key.password === '${e}') {
@@ -19,8 +19,8 @@ onCollide('key', 'player', (key) => {
   }
 })
 
-add([text('Repeat the password')])
-`;const l=`
+${t("Repeat the password")}
+`;const c=`
 /**
  * For loops repeat a block of code
  */
@@ -31,4 +31,4 @@ const key = get('key')[0]
 let password = 'answer' + 'answer'
 
 key.password = password
-`;export{t as level,y as prescript,l as script,i as title};
+`;export{p as level,n as prescript,c as script,l as title};

@@ -1,22 +1,23 @@
-import{l as e,a as t,r as a,b as r}from"./sprites-CqAi-61g.js";import"./index-BZnxxq9W.js";const s=6;const o="Arrays";const d=`
-${e()}
+import{l as a,a as e,r as t,b as r}from"./sprites-DIKLQSSL.js";import{a as s}from"./texts-qyIFEy4l.js";import"./index-U8zA4yR0.js";const p=6;const l="Arrays";const n=`
+${a()}
 loadSprite('wall', 'sprites/steel.png')
-${t()}
+${e()}
 
 add([sprite('player'), pos(center()), area(), body(), 'player'])
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
-${a()}
-${r(s)}
+${t()}
+${r(p)}
 
-add([text('Trapped in arrays')])
+${s("Trapped in arrays")}
 
 onUpdate(() => {
-  if (!get('map')[0]?.map?.length) {
+  const map = get('map')[0]
+  if (!map?.map?.length) {
     throw new Error('Map must be valid')
   }
 })
-`;const l=`
+`;const m=`
 /**
  * Arrays are an ordered list of data
  */
@@ -31,7 +32,7 @@ const map = [
 ]
 
 add(['map', { map }])
-`;const n=`
+`;const c=`
 addLevel(get('map')[0].map, {
   tileWidth: 64,
   tileHeight: 64,
@@ -44,4 +45,4 @@ addLevel(get('map')[0].map, {
     ],
   }
 })
-`;export{s as level,n as postscript,d as prescript,l as script,o as title};
+`;export{p as level,c as postscript,n as prescript,m as script,l as title};

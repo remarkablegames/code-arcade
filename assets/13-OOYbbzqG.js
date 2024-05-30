@@ -1,14 +1,14 @@
-import{l as e,a as t,r as s,b as r}from"./sprites-CqAi-61g.js";import"./index-BZnxxq9W.js";const i=13;const n="setTimeout";const c=`
+import{l as e,a as t,r,b as s}from"./sprites-DIKLQSSL.js";import{a as o}from"./texts-qyIFEy4l.js";import"./index-U8zA4yR0.js";const i=13;const c="setTimeout";const l=`
 ${e()}
 ${t()}
 
 add([sprite('player'), pos(50, 50), area(), 'player'])
 
-${s()}
-${r(i)}
+${r()}
+${s(i)}
 
-add([text('Wait for the exit')])
-`;const p=`
+${o("Wait for the exit")}
+`;const d=`
 /**
  * setTimeout() executes a function once the timer expires
  */
@@ -20,4 +20,4 @@ const MINUTE = SECOND * 60
 setTimeout(() => {
   add([sprite('exit'), pos(center()), area(), 'exit'])
 }, 5 * MINUTE)
-`;export{i as level,c as prescript,p as script,n as title};
+`;export{i as level,l as prescript,d as script,c as title};

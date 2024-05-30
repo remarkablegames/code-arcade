@@ -1,4 +1,4 @@
-import{l as e,a as o,b as t}from"./sprites-CqAi-61g.js";import"./index-BZnxxq9W.js";const r=8;const p="Functions";const i=`
+import{l as e,a as o,b as t}from"./sprites-DIKLQSSL.js";import{a as r}from"./texts-qyIFEy4l.js";import"./index-U8zA4yR0.js";const a=8;const l="Functions";const n=`
 ${e()}
 ${o()}
 
@@ -9,10 +9,10 @@ onKeyPress(() => {
   debug.log('Keypress disabled!')
 })
 
-${t(r)}
+${t(a)}
 
-add([text('Move me')])
-`;const l=`
+${r("Move me")}
+`;const c=`
 /**
  * Functions are blocks of code designed to perform a task
  */
@@ -25,6 +25,6 @@ function movePlayer() {
 }
 
 player.onUpdate(() => movePlayer())
-`;const n=`
+`;const d=`
 get('player')[0].moveTo(0, 36)
-`;export{r as level,n as postscript,i as prescript,l as script,p as title};
+`;export{a as level,d as postscript,n as prescript,c as script,l as title};

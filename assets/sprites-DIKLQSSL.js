@@ -1,4 +1,4 @@
-import{G as a}from"./index-BZnxxq9W.js";const r=(e=320)=>`
+import{G as a}from"./index-U8zA4yR0.js";const r=(e=320)=>`
 onKeyDown((key) => {
   const player = get('player')[0]
 

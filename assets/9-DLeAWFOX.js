@@ -1,5 +1,5 @@
-import{l as r,a,r as t,b as o}from"./sprites-CqAi-61g.js";import"./index-BZnxxq9W.js";const s=9;const i="Variables";const e=(new Date().getFullYear()+s)*31337;const l=`
-${r()}
+import{l as s,a,r as t,b as o}from"./sprites-DIKLQSSL.js";import{a as p}from"./texts-qyIFEy4l.js";import"./index-U8zA4yR0.js";const r=9;const n="Variables";const e=(new Date().getFullYear()+r)*31337;const y=`
+${s()}
 ${a()}
 loadSprite('key', 'sprites/key.png')
 
@@ -7,7 +7,7 @@ add([sprite('player'), pos(100, 100), area(), 'player'])
 add([sprite('key'), pos(center()), area(), 'key', { password: ${e} }])
 
 ${t()}
-${o(s)}
+${o(r)}
 
 onCollide('key', 'player', (key) => {
   if (key.password === ${e}) {
@@ -18,8 +18,8 @@ onCollide('key', 'player', (key) => {
   }
 })
 
-add([text('Update password & go to key')])
-`;const n=`
+${p("Update password & go to key")}
+`;const c=`
 /**
  * Variables store data
  * 'const' cannot be reassigned, whereas 'let' can be reassigned
@@ -31,4 +31,4 @@ const key = get('key')[0]
 let password
 
 key.password = password
-`;export{s as level,l as prescript,n as script,i as title};
+`;export{r as level,y as prescript,c as script,n as title};
