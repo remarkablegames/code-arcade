@@ -45,10 +45,16 @@ onKeyDown((key) => {
  * @returns - Game script.
  */
 export const registerWinCondition = (level: number) => `
+loadSound('exit', 'sounds/wooosh.mp3')
+
 onCollide('player', 'exit', () => {
-  parent.postMessage({
-    source: '${GAME_ID}',
-    level: ${level + 1},
+  play('exit')
+
+  wait(0.2, () => {
+    window.parent.postMessage({
+      source: '${GAME_ID}',
+      level: ${level + 1},
+    })
   })
 })
 `

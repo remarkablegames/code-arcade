@@ -23,6 +23,7 @@ body {
 
 <script>
 kaboom()
+
 window.onerror = (message) => {
   debug.log(message)
 }
@@ -31,6 +32,7 @@ console.log = (...args) => {
   log(...args)
   debug.log(args.join(' '))
 }
+
 ${code}
 </script>
 </body>

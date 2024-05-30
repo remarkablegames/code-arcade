@@ -12,6 +12,7 @@ export const prescript = `
 ${loadPlayer()}
 ${loadExit()}
 loadSprite('spike', 'sprites/spike.png')
+loadSound('explode', 'sounds/hit.mp3')
 
 add([
   sprite('player'),
@@ -56,6 +57,7 @@ map.forEach((row, rowIndex) => {
 })
 
 onCollide('player', 'spike', (player, spike) => {
+  play('explode')
   spike.opacity = 1
   player.destroy()
   addKaboom(player.pos)
@@ -63,13 +65,11 @@ onCollide('player', 'spike', (player, spike) => {
 
 onUpdate(() => {
   const player = get('player')[0]
-
   if (!player) {
     return
   }
 
   const { x, y } = player.pos
-
   if (x < 0 || y < 0 || x > width() || y > height()) {
     player.moveTo(40, 80)
   }
