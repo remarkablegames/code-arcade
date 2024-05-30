@@ -30,10 +30,9 @@ export const script = `
  */
 
 const player = get('player')[0]
-player.move(0, 0)
 
 function movePlayer() {
-  // how can we move the player?
+  player.move(0, 0)
 }
 
 player.onUpdate(() => movePlayer())
