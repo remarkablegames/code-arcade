@@ -1,4 +1,4 @@
-import{l as e,a as t,r as o,b as s}from"./sprites-DtmJiuCK.js";import{a as i}from"./texts-qyIFEy4l.js";import"./index-CEPyo8Ci.js";const r=1;const m="Single-line comments";const c=`
+import{l as e,a as t,r as o,b as s}from"./sprites-DHOrPU-j.js";import{a as i}from"./texts-qyIFEy4l.js";import"./index-kkyszdDf.js";const r=1;const m="Single-line comments";const c=`
 ${e()}
 ${t()}
 
@@ -9,7 +9,7 @@ ${s(r)}
 
 ${i("Uncomment the exit")}
 `;const p=`
-// Single-line comments start with 2 forward slashes
+// A single-line comment starts with 2 forward slashes
 
 // console.log('This is commented out')
 console.log('This is not commented out')

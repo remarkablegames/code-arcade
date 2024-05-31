@@ -1,4 +1,4 @@
-import{l as e,a as o,b as r}from"./sprites-DtmJiuCK.js";import{a as s}from"./texts-qyIFEy4l.js";import"./index-CEPyo8Ci.js";const t=8;const l="Objects";const c=`
+import{l as e,a as o,b as s}from"./sprites-DHOrPU-j.js";import{a as t}from"./texts-qyIFEy4l.js";import"./index-kkyszdDf.js";const r=8;const l="Objects";const n=`
 ${e()}
 ${o()}
 
@@ -9,12 +9,12 @@ onKeyPress(() => {
   debug.log('Keypress disabled!')
 })
 
-${r(t)}
+${s(r)}
 
-${s("Reposition me")}
-`;const d=`
+${t("Reposition me")}
+`;const c=`
 /**
- * Objects are a collection of properties or key-value pairs
+ * An object is a collection of properties (key-value pairs)
  */
 
 const coordinates = {
@@ -25,4 +25,4 @@ const coordinates = {
 const player = get('player')[0]
 player.pos.x = coordinates.x
 player.pos.y = coordinates.y
-`;export{t as level,c as prescript,d as script,l as title};
+`;export{r as level,n as prescript,c as script,l as title};

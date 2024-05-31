@@ -1,4 +1,4 @@
-import{l as a,a as t,g as e,r,b as s}from"./sprites-DtmJiuCK.js";import{a as o}from"./texts-qyIFEy4l.js";import"./index-CEPyo8Ci.js";const p=7;const n="Arrays";const c=`
+import{l as a,a as t,g as e,r,b as s}from"./sprites-DHOrPU-j.js";import{a as p}from"./texts-qyIFEy4l.js";import"./index-kkyszdDf.js";const o=7;const m="Arrays";const n=`
 ${a()}
 ${t()}
 ${e()}
@@ -7,9 +7,9 @@ add([sprite('player'), pos(center()), area(), body(), 'player'])
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
 ${r()}
-${s(p)}
+${s(o)}
 
-${o("Trapped in arrays")}
+${p("Trapped in arrays")}
 
 onUpdate(() => {
   const map = get('map')[0]
@@ -17,9 +17,9 @@ onUpdate(() => {
     throw new Error('Map must be valid')
   }
 })
-`;const m=`
+`;const c=`
 /**
- * Arrays are an ordered list of data
+ * An array is an ordered list of data
  */
 
 const map = [
@@ -30,6 +30,8 @@ const map = [
   '#     #',
   '#######',
 ]
+
+map[6] = map[0]
 
 add(['map', { map }])
 `;const y=`
@@ -45,4 +47,4 @@ addLevel(get('map')[0].map, {
     ],
   }
 })
-`;export{p as level,y as postscript,c as prescript,m as script,n as title};
+`;export{o as level,y as postscript,n as prescript,c as script,m as title};

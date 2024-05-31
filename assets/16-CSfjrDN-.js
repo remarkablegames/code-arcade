@@ -1,4 +1,4 @@
-import{l as e,a as s,c as t,i as a,r,b as o}from"./sprites-DtmJiuCK.js";import"./index-CEPyo8Ci.js";const i=16;const l="Timer";const n=`
+import{l as e,a as s,c as t,i as a,r,b as o}from"./sprites-DHOrPU-j.js";import"./index-kkyszdDf.js";const i=16;const l="Timer";const n=`
 ${e()}
 ${s()}
 ${t()}
@@ -47,7 +47,7 @@ onAdd('exit', () => {
 })
 `;const p=`
 /**
- * Can we speed this up?
+ * Can we speed things up?
  */
 
 const player = get('player')[0]

@@ -1,4 +1,4 @@
-import{l as e,a as r,r as t,b as i}from"./sprites-DtmJiuCK.js";import{a as s}from"./texts-qyIFEy4l.js";import"./index-CEPyo8Ci.js";const a=5;const l="Numbers";const d=`
+import{l as e,a as r,r as t,b as i}from"./sprites-DHOrPU-j.js";import{a as s}from"./texts-qyIFEy4l.js";import"./index-kkyszdDf.js";const a=5;const l="Numbers";const d=`
 ${e()}
 ${r()}
 
@@ -10,7 +10,7 @@ ${i(a)}
 ${s("Exit is not in view?")}
 `;const m=`
 /**
- * Numbers represent floating-point numbers like 42 or -13.37
+ * A number represents floating-point digits like 42 or -13.37
  */
 
 add([

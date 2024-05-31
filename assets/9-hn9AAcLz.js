@@ -1,4 +1,4 @@
-import{l as e,a as o,b as t}from"./sprites-DtmJiuCK.js";import{a as r}from"./texts-qyIFEy4l.js";import"./index-CEPyo8Ci.js";const a=9;const l="Functions";const n=`
+import{l as e,a as o,b as t}from"./sprites-DHOrPU-j.js";import{a as r}from"./texts-qyIFEy4l.js";import"./index-kkyszdDf.js";const a=9;const l="Functions";const n=`
 ${e()}
 ${o()}
 
@@ -14,7 +14,7 @@ ${t(a)}
 ${r("Move me")}
 `;const d=`
 /**
- * Functions are blocks of code designed to perform a task
+ * A function is a block of code designed to perform a task
  */
 
 const player = get('player')[0]

@@ -1,4 +1,4 @@
-import{l as e,a as t,r,b as i}from"./sprites-DtmJiuCK.js";import"./index-CEPyo8Ci.js";const s=4;const n="Strings";const l=`
+import{l as e,a as t,r,b as i}from"./sprites-DHOrPU-j.js";import"./index-kkyszdDf.js";const s=4;const n="Strings";const l=`
 ${e()}
 ${t()}
 
@@ -8,7 +8,7 @@ ${r()}
 ${i(s)}
 `;const p=`
 /**
- * Strings are text inside single or double quotes
+ * A string is text inside single or double quotes
  */
 
 const exit = 'exite'
