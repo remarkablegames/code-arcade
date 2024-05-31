@@ -4,7 +4,6 @@ import {
   addEventListeners,
   editorView,
   getLevel,
-  iife,
   renderLevel,
 } from '../helpers'
 import { wrapGame } from '../templates'
@@ -39,9 +38,7 @@ export async function go(levelNumber: number) {
 
   function run() {
     const script = editorView.state.doc.toString()
-    iframe.srcdoc = wrapGame(
-      [iife(level.prescript), iife(script), iife(level.postscript)].join('\n'),
-    )
+    iframe.srcdoc = wrapGame({ ...level, script })
   }
 
   run()

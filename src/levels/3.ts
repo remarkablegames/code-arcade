@@ -23,10 +23,7 @@ export const script = `
  * Errors interfere with the execution of the program
  */
 
-onUpdate(() => {
-  throw new Error('Remove the error')
-})
-
+throw new Error('Remove the error')
 `
 
 export const postscript = `

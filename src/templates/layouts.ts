@@ -1,4 +1,13 @@
-export const wrapGame = (code: string) => `
+import { iife } from '../helpers'
+import type { Level } from '../types'
+
+/**
+ * Wraps code to be rendered inside inline iframe.
+ *
+ * @param level - Prescript, script, and postscript.
+ * @returns - Markup.
+ */
+export const wrapGame = ({ prescript, script, postscript }: Level) => `
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +42,11 @@ console.log = (...args) => {
   debug.log(args.join(' '))
 }
 
-${code}
+${iife(prescript)}
+onLoad(() => {
+  ${iife(script)}
+  ${iife(postscript)}
+})
 </script>
 </body>
 </html>
