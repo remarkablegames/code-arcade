@@ -1,4 +1,4 @@
-import{l as r,a as e,b as t,r as o}from"./sprites-2V4iAjb-.js";import"./index-BaUw5eD3.js";const s=3;const p="Errors";const n=`
+import{l as r,a as e,b as t,r as o}from"./sprites-CZS14QdD.js";import"./index-BsPrIeLj.js";const s=3;const p="Errors";const n=`
 ${r()}
 ${e()}
 
@@ -11,10 +11,7 @@ ${t(s)}
  * Errors interfere with the execution of the program
  */
 
-onUpdate(() => {
-  throw new Error('Remove the error')
-})
-
+throw new Error('Remove the error')
 `;const l=`
 ${o()}
 `;export{s as level,l as postscript,n as prescript,c as script,p as title};
