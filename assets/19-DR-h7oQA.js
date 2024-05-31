@@ -1,4 +1,4 @@
-import{l as s,a as o,c as r,r as a,b as t,d as i}from"./sprites-CZS14QdD.js";import"./index-BsPrIeLj.js";import{a as l}from"./texts-qyIFEy4l.js";const p=19;const n="Fullfilled Promise";const e=btoa(String(Date.now()));const u=`
+import{l as s,a as o,c as r,r as a,b as t,d as i}from"./sprites-X-fX4rmQ.js";import"./index-DrkCDwxr.js";import{a as l}from"./texts-qyIFEy4l.js";const m=19;const n="Fullfilled Promise";const e=btoa(String(Date.now()));const u=`
 ${s()}
 ${o()}
 ${r()}
@@ -7,7 +7,7 @@ add([sprite('player'), pos(100, 100), area(), 'player'])
 add([sprite('key'), pos(center()), area(), 'key', { promise: Promise.resolve('${e}') }])
 
 ${a()}
-${t(p)}
+${t(m)}
 ${i(e)}
 
 ${l("Pass the Promise")}
@@ -27,4 +27,4 @@ examplePromise.then((value) => {
 
 // set \`key.password\` to the resolved value of \`key.promise\`
 console.log('is promise?', key.promise instanceof Promise)
-`;export{p as level,u as prescript,P as script,n as title};
+`;export{m as level,u as prescript,P as script,n as title};

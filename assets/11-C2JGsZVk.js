@@ -1,4 +1,4 @@
-import{l as r,a as s,c as a,r as o,b as t,d as p}from"./sprites-CZS14QdD.js";import"./index-BsPrIeLj.js";import{a as d}from"./texts-qyIFEy4l.js";const i=11;const c="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const w=`
+import{l as r,a as s,c as a,r as o,b as t,d as p}from"./sprites-X-fX4rmQ.js";import"./index-DrkCDwxr.js";import{a as d}from"./texts-qyIFEy4l.js";const i=11;const y="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const w=`
 ${r()}
 ${s()}
 ${a()}
@@ -11,7 +11,7 @@ ${t(i)}
 ${p(e)}
 
 ${d("Repeat the password")}
-`;const k=`
+`;const m=`
 /**
  * A for loop repeats a block of code
  */
@@ -22,4 +22,4 @@ const key = get('key')[0]
 let password = 'answer' + 'answer'
 
 key.password = password
-`;export{i as level,w as prescript,k as script,c as title};
+`;export{i as level,w as prescript,m as script,y as title};

@@ -1,4 +1,4 @@
-import{l as t,a as e,b as o,r as s}from"./sprites-CZS14QdD.js";import"./index-BsPrIeLj.js";import{a as i}from"./texts-qyIFEy4l.js";const r=2;const c="Multi-line comments";const p=`
+import{l as t,a as e,b as o,r as s}from"./sprites-X-fX4rmQ.js";import"./index-DrkCDwxr.js";import{a as i}from"./texts-qyIFEy4l.js";const r=2;const c="Multi-line comments";const m=`
 ${t()}
 ${e()}
 
@@ -7,7 +7,7 @@ add([sprite('exit'), pos(center()), area(), 'exit'])
 ${o(r)}
 
 ${i("Uncomment the player")}
-`;const m=`
+`;const p=`
 // Multi-line comments start with /* and end with */
 
 /* console.log('This is commented out') */
@@ -23,4 +23,4 @@ add([
 */
 `;const d=`
 ${s()}
-`;export{r as level,d as postscript,p as prescript,m as script,c as title};
+`;export{r as level,d as postscript,m as prescript,p as script,c as title};

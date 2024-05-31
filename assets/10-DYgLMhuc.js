@@ -1,4 +1,4 @@
-import{l as a,a as r,c as t,r as o,b as d,d as p}from"./sprites-CZS14QdD.js";import"./index-BsPrIeLj.js";import{a as n}from"./texts-qyIFEy4l.js";const s=10;const y="Variables";const e=(new Date().getFullYear()+s)*31337;const w=`
+import{l as a,a as r,c as t,r as o,b as d,d as n}from"./sprites-X-fX4rmQ.js";import"./index-DrkCDwxr.js";import{a as p}from"./texts-qyIFEy4l.js";const s=10;const y="Variables";const e=(new Date().getFullYear()+s)*31337;const w=`
 ${a()}
 ${r()}
 ${t()}
@@ -8,9 +8,9 @@ add([sprite('key'), pos(center()), area(), 'key', { password: ${e} }])
 
 ${o()}
 ${d(s)}
-${p(e)}
+${n(e)}
 
-${n("Update password & go to key")}
+${p("Update password & go to key")}
 `;const g=`
 /**
  * A variable stores data

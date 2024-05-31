@@ -1,4 +1,4 @@
-import{l as r,a as e,b as t,r as o}from"./sprites-CZS14QdD.js";import"./index-BsPrIeLj.js";const s=3;const p="Errors";const n=`
+import{l as r,a as e,b as t,r as o}from"./sprites-X-fX4rmQ.js";import"./index-DrkCDwxr.js";const s=3;const p="Errors";const n=`
 ${r()}
 ${e()}
 

@@ -1,11 +1,11 @@
-import{l as e,a as t,r,b as a}from"./sprites-CZS14QdD.js";import"./index-BsPrIeLj.js";import{a as o}from"./texts-qyIFEy4l.js";const s=6;const p="Booleans";const d=`
+import{l as e,a as t,r,b as a}from"./sprites-X-fX4rmQ.js";import"./index-DrkCDwxr.js";import{a as o}from"./texts-qyIFEy4l.js";const i=6;const p="Booleans";const d=`
 ${e()}
 ${t()}
 
 add([sprite('player'), pos(center()), area(), 'player'])
 
 ${r()}
-${a(s)}
+${a(i)}
 
 ${o("Exit is not truthy")}
 `;const c=`
@@ -20,4 +20,4 @@ if (false) {
     'exit',
   ])
 }
-`;export{s as level,d as prescript,c as script,p as title};
+`;export{i as level,d as prescript,c as script,p as title};

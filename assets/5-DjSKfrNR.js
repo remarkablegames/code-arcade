@@ -1,10 +1,10 @@
-import{l as e,a as r,r as t,b as i}from"./sprites-CZS14QdD.js";import"./index-BsPrIeLj.js";import{a as s}from"./texts-qyIFEy4l.js";const a=5;const l="Numbers";const d=`
+import{l as e,a as t,r,b as i}from"./sprites-X-fX4rmQ.js";import"./index-DrkCDwxr.js";import{a as s}from"./texts-qyIFEy4l.js";const a=5;const l="Numbers";const d=`
 ${e()}
-${r()}
+${t()}
 
 add([sprite('player'), pos(500, 500), area(), 'player'])
 
-${t()}
+${r()}
 ${i(a)}
 
 ${s("Exit is not in view?")}
