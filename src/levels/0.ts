@@ -2,7 +2,7 @@ import {
   addText,
   loadExit,
   loadPlayer,
-  registerPlayerKeys,
+  registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
@@ -16,7 +16,7 @@ ${loadExit()}
 add([sprite('player'), pos(50, center().y), area(), 'player'])
 add([sprite('exit'), pos(500, center().y), area(), 'exit'])
 
-${registerPlayerKeys()}
+${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
 ${addText('WASD or arrow keys to move')}

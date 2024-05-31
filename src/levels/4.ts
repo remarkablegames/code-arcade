@@ -1,7 +1,7 @@
 import {
   loadExit,
   loadPlayer,
-  registerPlayerKeys,
+  registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
@@ -14,7 +14,7 @@ ${loadExit()}
 
 add([sprite('player'), pos(center()), area(), 'player'])
 
-${registerPlayerKeys()}
+${registerPlayerMovement()}
 ${registerWinCondition(level)}
 `
 

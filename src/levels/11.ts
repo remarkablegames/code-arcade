@@ -4,7 +4,7 @@ import {
   loadKey,
   loadPlayer,
   registerPasswordCheck,
-  registerPlayerKeys,
+  registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
@@ -23,7 +23,7 @@ ${loadKey()}
 add([sprite('player'), pos(100, 100), area(), 'player'])
 add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
 
-${registerPlayerKeys()}
+${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 

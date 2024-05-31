@@ -5,7 +5,7 @@ import {
   loadExit,
   loadHit,
   loadPlayer,
-  registerPlayerKeys,
+  registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
@@ -30,7 +30,7 @@ add([
 
 add([sprite('exit'), pos(500, 500), area(), 'exit'])
 
-${registerPlayerKeys()}
+${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
 const ENEMY_SPEED = 500

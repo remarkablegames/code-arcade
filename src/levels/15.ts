@@ -2,7 +2,7 @@ import {
   addText,
   loadExit,
   loadPlayer,
-  registerPlayerKeys,
+  registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
@@ -14,7 +14,7 @@ ${loadPlayer()}
 ${loadExit()}
 
 add([sprite('player'), pos(center()), area(), anchor('center'), 'player'])
-${registerPlayerKeys(50)}
+${registerPlayerMovement(50)}
 
 const exit = add([
   sprite('exit'),

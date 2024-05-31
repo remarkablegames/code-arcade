@@ -2,7 +2,7 @@ import {
   addText,
   loadExit,
   loadPlayer,
-  registerPlayerKeys,
+  registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
@@ -37,5 +37,5 @@ add([
 `
 
 export const postscript = `
-${registerPlayerKeys()}
+${registerPlayerMovement()}
 `

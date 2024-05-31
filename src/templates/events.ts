@@ -7,10 +7,9 @@ import { loadBlip, loadPowerup } from './sounds'
  * @param speed - Pixels per second.
  * @returns - Game script.
  */
-export const registerPlayerKeys = (speed = 320) => `
+export const registerPlayerMovement = (speed = 320) => `
 onKeyDown((key) => {
   const player = get('player')[0]
-
   if (!player) {
     return
   }

@@ -3,7 +3,7 @@ import {
   loadKey,
   loadPlayer,
   loadSignal,
-  registerPlayerKeys,
+  registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
@@ -36,7 +36,7 @@ function addKey() {
 
 addKey()
 
-${registerPlayerKeys()}
+${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
 onCollide('key', 'player', (key) => {

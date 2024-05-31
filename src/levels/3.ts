@@ -1,7 +1,7 @@
 import {
   loadExit,
   loadPlayer,
-  registerPlayerKeys,
+  registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
@@ -27,5 +27,5 @@ throw new Error('Remove the error')
 `
 
 export const postscript = `
-${registerPlayerKeys()}
+${registerPlayerMovement()}
 `

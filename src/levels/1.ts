@@ -2,7 +2,7 @@ import {
   addText,
   loadExit,
   loadPlayer,
-  registerPlayerKeys,
+  registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
@@ -15,7 +15,7 @@ ${loadExit()}
 
 add([sprite('player'), pos(50, 50), area(), 'player'])
 
-${registerPlayerKeys()}
+${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
 ${addText('Uncomment the exit')}
