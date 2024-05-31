@@ -1,15 +1,12 @@
-import{l as a,a as t,g as e,r,b as o}from"./sprites-BrmzA_Ln.js";import"./index-CXtlFtJb.js";import{a as p}from"./texts-qyIFEy4l.js";const s=7;const m="Arrays";const n=`
+import{h as a,a as t,b as e,r,c as s}from"./sprites-M-owXaHm.js";import"./index-7cZA0KuL.js";import{a as o}from"./texts-qyIFEy4l.js";const p=7;const n="Arrays";const c=`
 ${a()}
-${t()}
-${e()}
-
-add([sprite('player'), pos(center()), area(), body(), 'player'])
-add([sprite('exit'), pos(500, 500), area(), 'exit'])
+${t({pos:"center()"})}
+${e({pos:"550, 550"})}
 
 ${r()}
-${o(s)}
+${s(p)}
 
-${p("Trapped in arrays")}
+${o("Trapped in arrays")}
 
 onUpdate(() => {
   const map = get('map')[0]
@@ -17,7 +14,7 @@ onUpdate(() => {
     throw new Error('Map must be valid')
   }
 })
-`;const c=`
+`;const l=`
 /**
  * An array is an ordered list of data
  */
@@ -34,7 +31,7 @@ const map = [
 map[6] = map[0]
 
 add(['map', { map }])
-`;const y=`
+`;const g=`
 addLevel(get('map')[0].map, {
   tileWidth: 64,
   tileHeight: 64,
@@ -47,4 +44,4 @@ addLevel(get('map')[0].map, {
     ],
   }
 })
-`;export{s as level,y as postscript,n as prescript,c as script,m as title};
+`;export{p as level,g as postscript,c as prescript,l as script,n as title};

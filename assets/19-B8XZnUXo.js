@@ -1,9 +1,8 @@
-import{l as s,a as o,c as r,r as a,b as t,d as i}from"./sprites-BrmzA_Ln.js";import"./index-CXtlFtJb.js";import{a as l}from"./texts-qyIFEy4l.js";const m=19;const n="Fullfilled Promise";const e=btoa(String(Date.now()));const u=`
+import{l as s,d as o,a as r,r as a,c as t,e as i}from"./sprites-M-owXaHm.js";import"./index-7cZA0KuL.js";import{a as l}from"./texts-qyIFEy4l.js";const m=19;const n="Fullfilled Promise";const e=btoa(String(Date.now()));const u=`
 ${s()}
 ${o()}
-${r()}
 
-add([sprite('player'), pos(100, 100), area(), 'player'])
+${r({pos:"100, 100"})}
 add([sprite('key'), pos(center()), area(), 'key', { promise: Promise.resolve('${e}') }])
 
 ${a()}

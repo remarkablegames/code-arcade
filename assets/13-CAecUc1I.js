@@ -1,23 +1,13 @@
-import{l as e,a as o,g as t,h as a,e as n,r,b as y}from"./sprites-BrmzA_Ln.js";import"./index-CXtlFtJb.js";import{a as s}from"./texts-qyIFEy4l.js";const l=13;const i="Loops";const m=`
+import{h as e,i as t,f as o,a,b as n,r,c as y}from"./sprites-M-owXaHm.js";import"./index-7cZA0KuL.js";import{a as s}from"./texts-qyIFEy4l.js";const c=13;const d="Loops";const m=`
 ${e()}
-${o()}
 ${t()}
+${o()}
+
 ${a()}
 ${n()}
 
-add([
-  sprite('player'),
-  pos(40, 60),
-  area(),
-  body(),
-  anchor('center'),
-  'player',
-])
-
-add([sprite('exit'), pos(500, 500), area(), 'exit'])
-
 ${r()}
-${y(l)}
+${y(c)}
 
 const ENEMY_SPEED = 500
 
@@ -78,11 +68,16 @@ add([
 `;const f=`
 const player = get('player')[0]
 if (player) {
-  player.moveTo(40, 60)
+  player.moveTo(50, 70)
 }
 
 const enemy = get('enemy')[0]
 if (enemy) {
   enemy.moveTo(center())
 }
-`;export{l as level,f as postscript,m as prescript,E as script,i as title};
+
+const exit = get('exit')[0]
+if (exit) {
+  exit.moveTo(550, 550)
+}
+`;export{c as level,f as postscript,m as prescript,E as script,d as title};

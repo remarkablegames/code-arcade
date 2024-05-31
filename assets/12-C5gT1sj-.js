@@ -1,22 +1,12 @@
-import{l as e,a as o,e as t,f as i,r as s,b as a}from"./sprites-BrmzA_Ln.js";import"./index-CXtlFtJb.js";import{a as r}from"./texts-qyIFEy4l.js";const p=12;const d="forEach";const y=`
+import{f as e,g as o,a as t,b as i,r as s,c as r}from"./sprites-M-owXaHm.js";import"./index-7cZA0KuL.js";import{a}from"./texts-qyIFEy4l.js";const p=12;const y="forEach";const d=`
 ${e()}
 ${o()}
+
 ${t()}
 ${i()}
 
-add([
-  sprite('player'),
-  pos(40, 80),
-  area(),
-  body(),
-  anchor('center'),
-  'player',
-])
-
-add([sprite('exit'), pos(500, 500), area(), 'exit'])
-
 ${s()}
-${a(p)}
+${r(p)}
 
 const map = [
   '          ',
@@ -69,7 +59,7 @@ onUpdate(() => {
   }
 })
 
-${r("Invisible spikes")}
+${a("Invisible spikes")}
 `;const m=`
 /**
  * forEach() is an iterative method
@@ -77,9 +67,14 @@ ${r("Invisible spikes")}
 
 const spikes = get('spike')
 spikes[0].opacity = 0
-`;const x=`
+`;const E=`
 const exit = get('exit')[0]
 if (exit) {
-  exit.moveTo(500, 500)
+  exit.moveTo(550, 550)
 }
-`;export{p as level,x as postscript,y as prescript,m as script,d as title};
+
+const player = get('player')[0]
+if (player) {
+  player.moveTo(50, 70)
+}
+`;export{p as level,E as postscript,d as prescript,m as script,y as title};

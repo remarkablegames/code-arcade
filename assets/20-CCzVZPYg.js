@@ -1,17 +1,16 @@
-import{l as o,a as r,c as s,r as a,b as t,d as i}from"./sprites-BrmzA_Ln.js";import"./index-CXtlFtJb.js";import{a as l}from"./texts-qyIFEy4l.js";const c=20;const n="Rejected Promise";const e=btoa(String(Date.now()));const P=`
+import{l as o,d as s,a as r,r as t,c as a,e as i}from"./sprites-M-owXaHm.js";import"./index-7cZA0KuL.js";import{a as c}from"./texts-qyIFEy4l.js";const l=20;const n="Rejected Promise";const e=btoa(String(Date.now()));const P=`
 ${o()}
-${r()}
 ${s()}
 
-add([sprite('player'), pos(100, 100), area(), 'player'])
+${r({pos:"100, 100"})}
 add([sprite('key'), pos(center()), area(), 'key', { promise: Promise.reject('${e}') }])
 
-${a()}
-${t(c)}
+${t()}
+${a(l)}
 ${i(e)}
 
-${l("Catch the Promise")}
-`;const y=`
+${c("Catch the Promise")}
+`;const u=`
 /**
  * A Promise produces a value in the future
  * If a Promise failed, it will produce a rejected value
@@ -27,4 +26,4 @@ examplePromise.catch((value) => {
 
 // set \`key.password\` to the rejected value of \`key.promise\`
 console.log('is promise?', key.promise instanceof Promise)
-`;export{c as level,P as prescript,y as script,n as title};
+`;export{l as level,P as prescript,u as script,n as title};

@@ -1,4 +1,12 @@
-import{G as o}from"./index-CXtlFtJb.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const l=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const r=()=>`loadSound('signal', 'sounds/signal.mp3')`;const p=(e=320)=>`
+import{G as o}from"./index-7cZA0KuL.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const p=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const n=()=>`loadSound('signal', 'sounds/signal.mp3')`;const i=()=>`
+onKeyPress(() => {
+  debug.log('Key press disabled!')
+})
+
+onMousePress(() => {
+  debug.log('Mouse press disabled!')
+})
+`;const d=(e=320)=>`
 onKeyDown((key) => {
   const player = get('player')[0]
   if (!player) {
@@ -36,7 +44,7 @@ onMouseDown(() => {
 
   player.moveTo(mousePos(), ${e})
 })
-`;const i=e=>`
+`;const y=e=>`
 ${s()}
 ${a()}
 
@@ -50,7 +58,7 @@ onCollide('key', 'player', (key) => {
     debug.log('Incorrect password')
   }
 })
-`;const n=e=>`
+`;const c=e=>`
 loadSound('exit', 'sounds/wooosh.mp3')
 
 onCollide('player', 'exit', () => {
@@ -75,4 +83,10 @@ onAdd('exit', (exit) => {
     exit.destroy()
   }
 })
-`;const d=()=>`loadSprite('block', 'sprites/steel.png')`;const y=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const c=()=>`loadSprite('exit', 'sprites/door.png')`;const g=()=>`loadSprite('key', 'sprites/key.png')`;const u=()=>`loadSprite('player', 'sprites/bean.png')`;const k=()=>`loadSprite('spike', 'sprites/spike.png')`;export{c as a,n as b,g as c,i as d,l as e,k as f,d as g,y as h,r as i,u as l,p as r};
+`;const g=({pos:e=""}={})=>`
+${r()}
+add([sprite('exit'), anchor('center'), area(), pos(${e}), 'exit'])
+`;const u=({pos:e=""}={})=>`
+${t()}
+add([sprite('player'), anchor('center'), area(), body(), pos(${e}), 'player'])
+`;const m=()=>`loadSprite('block', 'sprites/steel.png')`;const r=()=>`loadSprite('exit', 'sprites/door.png')`;const k=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const b=()=>`loadSprite('key', 'sprites/key.png')`;const t=()=>`loadSprite('player', 'sprites/bean.png')`;const x=()=>`loadSprite('spike', 'sprites/spike.png')`;export{u as a,g as b,c,b as d,y as e,p as f,x as g,m as h,k as i,n as j,t as k,r as l,i as m,d as r};

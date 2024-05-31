@@ -1,10 +1,9 @@
-import{l as e,a as s,c as t,i as a,r as o,b as r}from"./sprites-BrmzA_Ln.js";import"./index-CXtlFtJb.js";const i=16;const l="Repetition is key";const n=`
+import{l as e,d as s,j as t,a,r as o,c as i}from"./sprites-M-owXaHm.js";import"./index-7cZA0KuL.js";const r=16;const n="Repetition is key";const l=`
 ${e()}
 ${s()}
 ${t()}
-${a()}
 
-add([sprite('player'), pos(center()), area(), 'player'])
+${a({pos:"center()"})}
 
 let keys = 420
 
@@ -25,7 +24,7 @@ function addKey() {
 addKey()
 
 ${o()}
-${r(i)}
+${i(r)}
 
 onCollide('key', 'player', (key) => {
   play('signal', { volume: 0.2, speed: 2 })
@@ -53,4 +52,4 @@ onAdd('exit', () => {
 const player = get('player')[0]
 const key = get('key')[0]
 // player.moveTo(key.pos)
-`;export{i as level,n as prescript,p as script,l as title};
+`;export{r as level,l as prescript,p as script,n as title};
