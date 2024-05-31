@@ -1,4 +1,4 @@
-import{G as o}from"./index-DrkCDwxr.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const l=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const r=()=>`loadSound('signal', 'sounds/signal.mp3')`;const p=(e=320)=>`
+import{G as o}from"./index-CXtlFtJb.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const l=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const r=()=>`loadSound('signal', 'sounds/signal.mp3')`;const p=(e=320)=>`
 onKeyDown((key) => {
   const player = get('player')[0]
   if (!player) {
@@ -26,6 +26,15 @@ onKeyDown((key) => {
       player.move(${e}, 0)
       break
   }
+})
+
+onMouseDown(() => {
+  const player = get('player')[0]
+  if (!player) {
+    return
+  }
+
+  player.moveTo(mousePos(), ${e})
 })
 `;const i=e=>`
 ${s()}
