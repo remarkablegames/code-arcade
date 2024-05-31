@@ -2,7 +2,7 @@ import { GAME_ID } from '../constants'
 import { loadBlip, loadPowerup } from './sounds'
 
 /**
- * Creates cursor keys for player.
+ * Registers player movement with keyboard and mouse.
  *
  * @param speed - Pixels per second.
  * @returns - Game script.
@@ -35,6 +35,15 @@ onKeyDown((key) => {
       player.move(${speed}, 0)
       break
   }
+})
+
+onMouseDown(() => {
+  const player = get('player')[0]
+  if (!player) {
+    return
+  }
+
+  player.moveTo(mousePos(), ${speed})
 })
 `
 
