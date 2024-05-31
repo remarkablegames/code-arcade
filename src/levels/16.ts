@@ -61,7 +61,7 @@ onAdd('exit', () => {
 
 export const script = `
 /**
- * Can we speed this up?
+ * Can we speed things up?
  */
 
 const player = get('player')[0]

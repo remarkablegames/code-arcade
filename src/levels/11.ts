@@ -32,7 +32,7 @@ ${addText('Repeat the password')}
 
 export const script = `
 /**
- * For loops repeat a block of code
+ * A for loop repeats a block of code
  */
 
 const key = get('key')[0]

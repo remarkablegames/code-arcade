@@ -30,7 +30,7 @@ ${addText('Update password & go to key')}
 
 export const script = `
 /**
- * Variables store data
+ * A variable stores data
  * 'const' cannot be reassigned, whereas 'let' can be reassigned
  */
 

@@ -23,7 +23,7 @@ ${addText('Exit is not truthy')}
 
 export const script = `
 /**
- * Booleans can either be true or false
+ * A boolean can either be true or false
  */
 
 if (false) {

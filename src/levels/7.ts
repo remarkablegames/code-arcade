@@ -33,7 +33,7 @@ onUpdate(() => {
 
 export const script = `
 /**
- * Arrays are an ordered list of data
+ * An array is an ordered list of data
  */
 
 const map = [
@@ -44,6 +44,8 @@ const map = [
   '#     #',
   '#######',
 ]
+
+map[6] = map[0]
 
 add(['map', { map }])
 `

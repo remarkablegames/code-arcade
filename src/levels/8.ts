@@ -26,7 +26,7 @@ ${addText('Reposition me')}
 
 export const script = `
 /**
- * Objects are a collection of properties or key-value pairs
+ * An object is a collection of properties (key-value pairs)
  */
 
 const coordinates = {

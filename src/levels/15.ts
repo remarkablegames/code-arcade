@@ -31,7 +31,7 @@ ${addText('Exit in a loop')}
 
 export const script = `
 /**
- * setInterval() calls a function at specified intervals
+ * setInterval() calls a function at specified periods
  */
 
 const MILLISECOND = 1

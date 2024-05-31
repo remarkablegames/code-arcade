@@ -26,7 +26,7 @@ ${addText('Move me')}
 
 export const script = `
 /**
- * Functions are blocks of code designed to perform a task
+ * A function is a block of code designed to perform a task
  */
 
 const player = get('player')[0]

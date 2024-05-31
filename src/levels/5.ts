@@ -23,7 +23,7 @@ ${addText('Exit is not in view?')}
 
 export const script = `
 /**
- * Numbers represent floating-point numbers like 42 or -13.37
+ * A number represents floating-point digits like 42 or -13.37
  */
 
 add([
