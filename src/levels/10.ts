@@ -1,8 +1,8 @@
 import {
+  addPlayer,
   addText,
   loadExit,
   loadKey,
-  loadPlayer,
   registerPasswordCheck,
   registerPlayerMovement,
   registerWinCondition,
@@ -14,11 +14,10 @@ export const title = 'Variables'
 const password = (new Date().getFullYear() + level) * 31337
 
 export const prescript = `
-${loadPlayer()}
 ${loadExit()}
 ${loadKey()}
+${addPlayer({ pos: '100, 100' })}
 
-add([sprite('player'), pos(100, 100), area(), 'player'])
 add([sprite('key'), pos(center()), area(), 'key', { password: ${password} }])
 
 ${registerPlayerMovement()}

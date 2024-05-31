@@ -1,7 +1,7 @@
 import {
+  addPlayer,
   addText,
   loadExit,
-  loadPlayer,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
@@ -10,10 +10,8 @@ export const level = 1
 export const title = 'Single-line comments'
 
 export const prescript = `
-${loadPlayer()}
+${addPlayer({ pos: '50, 100' })}
 ${loadExit()}
-
-add([sprite('player'), pos(50, 50), area(), 'player'])
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}

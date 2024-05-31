@@ -1,6 +1,6 @@
 import {
+  addPlayer,
   loadExit,
-  loadPlayer,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
@@ -9,10 +9,8 @@ export const level = 4
 export const title = 'Strings'
 
 export const prescript = `
-${loadPlayer()}
+${addPlayer({ pos: 'center()' })}
 ${loadExit()}
-
-add([sprite('player'), pos(center()), area(), 'player'])
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}

@@ -1,8 +1,8 @@
 import {
+  addPlayer,
   addText,
   loadExit,
   loadKey,
-  loadPlayer,
   registerPasswordCheck,
   registerPlayerMovement,
   registerWinCondition,
@@ -14,11 +14,10 @@ export const title = 'Fullfilled Promise'
 const password = btoa(String(Date.now()))
 
 export const prescript = `
-${loadPlayer()}
 ${loadExit()}
 ${loadKey()}
 
-add([sprite('player'), pos(100, 100), area(), 'player'])
+${addPlayer({ pos: '100, 100' })}
 add([sprite('key'), pos(center()), area(), 'key', { promise: Promise.resolve('${password}') }])
 
 ${registerPlayerMovement()}

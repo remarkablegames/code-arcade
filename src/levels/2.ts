@@ -1,6 +1,6 @@
 import {
+  addExit,
   addText,
-  loadExit,
   loadPlayer,
   registerPlayerMovement,
   registerWinCondition,
@@ -11,12 +11,8 @@ export const title = 'Multi-line comments'
 
 export const prescript = `
 ${loadPlayer()}
-${loadExit()}
-
-add([sprite('exit'), pos(center()), area(), 'exit'])
-
+${addExit({ pos: 'center()' })}
 ${registerWinCondition(level)}
-
 ${addText('Uncomment the player')}
 `
 

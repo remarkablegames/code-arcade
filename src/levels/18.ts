@@ -1,8 +1,8 @@
 import {
+  addPlayer,
   addText,
   loadExit,
   loadKey,
-  loadPlayer,
   registerPasswordCheck,
   registerPlayerMovement,
   registerWinCondition,
@@ -15,11 +15,10 @@ const password = btoa(String(Date.now()))
 const passwordJSON = JSON.stringify({ password })
 
 export const prescript = `
-${loadPlayer()}
 ${loadExit()}
 ${loadKey()}
 
-add([sprite('player'), pos(100, 100), area(), 'player'])
+${addPlayer({ pos: '100, 100' })}
 add([sprite('key'), pos(center()), area(), 'key', { password: '${passwordJSON}' }])
 
 ${registerPlayerMovement()}

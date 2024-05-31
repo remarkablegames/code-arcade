@@ -1,8 +1,8 @@
 import {
+  addPlayer,
   addText,
   loadExit,
   loadKey,
-  loadPlayer,
   registerPasswordCheck,
   registerPlayerMovement,
   registerWinCondition,
@@ -14,11 +14,10 @@ export const title = 'JSON.stringify'
 const password = JSON.stringify({ level, year: new Date().getFullYear() })
 
 export const prescript = `
-${loadPlayer()}
 ${loadExit()}
 ${loadKey()}
 
-add([sprite('player'), pos(100, 100), area(), 'player'])
+${addPlayer({ pos: '100, 100' })}
 add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
 
 ${registerPlayerMovement()}

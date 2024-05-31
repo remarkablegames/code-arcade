@@ -1,7 +1,7 @@
 import {
+  addPlayer,
   loadExit,
   loadKey,
-  loadPlayer,
   loadSignal,
   registerPlayerMovement,
   registerWinCondition,
@@ -11,12 +11,11 @@ export const level = 16
 export const title = 'Repetition is key'
 
 export const prescript = `
-${loadPlayer()}
 ${loadExit()}
 ${loadKey()}
 ${loadSignal()}
 
-add([sprite('player'), pos(center()), area(), 'player'])
+${addPlayer({ pos: 'center()' })}
 
 let keys = 420
 

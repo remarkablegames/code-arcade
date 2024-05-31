@@ -1,7 +1,7 @@
 import {
+  addExit,
+  addPlayer,
   addText,
-  loadExit,
-  loadPlayer,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
@@ -10,11 +10,8 @@ export const level = 0
 export const title = 'console.log'
 
 export const prescript = `
-${loadPlayer()}
-${loadExit()}
-
-add([sprite('player'), pos(50, center().y), area(), 'player'])
-add([sprite('exit'), pos(500, center().y), area(), 'exit'])
+${addPlayer({ pos: '50, 150' })}
+${addExit({ pos: '500, center().y' })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}

@@ -1,10 +1,10 @@
 import {
+  addExit,
+  addPlayer,
   addText,
   loadBlock,
   loadEnemy,
-  loadExit,
   loadHit,
-  loadPlayer,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
@@ -13,22 +13,12 @@ export const level = 13
 export const title = 'Loops'
 
 export const prescript = `
-${loadPlayer()}
-${loadExit()}
 ${loadBlock()}
 ${loadEnemy()}
 ${loadHit()}
 
-add([
-  sprite('player'),
-  pos(40, 60),
-  area(),
-  body(),
-  anchor('center'),
-  'player',
-])
-
-add([sprite('exit'), pos(500, 500), area(), 'exit'])
+${addPlayer()}
+${addExit()}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
@@ -96,11 +86,16 @@ add([
 export const postscript = `
 const player = get('player')[0]
 if (player) {
-  player.moveTo(40, 60)
+  player.moveTo(50, 70)
 }
 
 const enemy = get('enemy')[0]
 if (enemy) {
   enemy.moveTo(center())
+}
+
+const exit = get('exit')[0]
+if (exit) {
+  exit.moveTo(550, 550)
 }
 `

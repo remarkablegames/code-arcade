@@ -1,19 +1,11 @@
-import {
-  addText,
-  loadExit,
-  loadPlayer,
-  registerWinCondition,
-} from '../templates'
+import { addExit, addPlayer, addText, registerWinCondition } from '../templates'
 
 export const level = 8
 export const title = 'Objects'
 
 export const prescript = `
-${loadPlayer()}
-${loadExit()}
-
-const player = add([sprite('player'), pos(0, 36), area(), body(), 'player'])
-add([sprite('exit'), pos(516, 516), area(), 'exit'])
+${addPlayer()}
+${addExit({ pos: '550, 550' })}
 
 onKeyPress(() => {
   debug.log('Keypress disabled!')
@@ -30,8 +22,8 @@ export const script = `
  */
 
 const coordinates = {
-  x: 0,
-  y: 36,
+  x: 50,
+  y: 75,
 }
 
 const player = get('player')[0]

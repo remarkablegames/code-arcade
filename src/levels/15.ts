@@ -1,7 +1,7 @@
 import {
+  addExit,
+  addPlayer,
   addText,
-  loadExit,
-  loadPlayer,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
@@ -10,20 +10,10 @@ export const level = 15
 export const title = 'setInterval'
 
 export const prescript = `
-${loadPlayer()}
-${loadExit()}
+${addPlayer({ pos: 'center()' })}
+${addExit()}
 
-add([sprite('player'), pos(center()), area(), anchor('center'), 'player'])
 ${registerPlayerMovement(50)}
-
-const exit = add([
-  sprite('exit'),
-  pos(),
-  area(),
-  anchor('center'),
-  'exit',
-])
-
 ${registerWinCondition(level)}
 
 ${addText('Exit in a loop')}

@@ -1,8 +1,8 @@
 import {
+  addExit,
+  addPlayer,
   addText,
   loadBlock,
-  loadExit,
-  loadPlayer,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
@@ -11,12 +11,9 @@ export const level = 7
 export const title = 'Arrays'
 
 export const prescript = `
-${loadPlayer()}
-${loadExit()}
 ${loadBlock()}
-
-add([sprite('player'), pos(center()), area(), body(), 'player'])
-add([sprite('exit'), pos(500, 500), area(), 'exit'])
+${addPlayer({ pos: 'center()' })}
+${addExit({ pos: '550, 550' })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}

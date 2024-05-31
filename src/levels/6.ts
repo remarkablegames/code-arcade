@@ -1,7 +1,7 @@
 import {
+  addPlayer,
   addText,
   loadExit,
-  loadPlayer,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
@@ -10,10 +10,8 @@ export const level = 6
 export const title = 'Booleans'
 
 export const prescript = `
-${loadPlayer()}
+${addPlayer({ pos: 'center()' })}
 ${loadExit()}
-
-add([sprite('player'), pos(center()), area(), 'player'])
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}

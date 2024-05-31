@@ -1,8 +1,8 @@
 import {
+  addExit,
+  addPlayer,
   addText,
-  loadExit,
   loadHit,
-  loadPlayer,
   loadSpike,
   registerPlayerMovement,
   registerWinCondition,
@@ -12,21 +12,11 @@ export const level = 12
 export const title = 'forEach'
 
 export const prescript = `
-${loadPlayer()}
-${loadExit()}
 ${loadHit()}
 ${loadSpike()}
 
-add([
-  sprite('player'),
-  pos(40, 80),
-  area(),
-  body(),
-  anchor('center'),
-  'player',
-])
-
-add([sprite('exit'), pos(500, 500), area(), 'exit'])
+${addPlayer()}
+${addExit()}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
@@ -97,6 +87,11 @@ spikes[0].opacity = 0
 export const postscript = `
 const exit = get('exit')[0]
 if (exit) {
-  exit.moveTo(500, 500)
+  exit.moveTo(550, 550)
+}
+
+const player = get('player')[0]
+if (player) {
+  player.moveTo(50, 70)
 }
 `

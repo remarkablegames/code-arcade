@@ -1,7 +1,7 @@
 import {
+  addPlayer,
   addText,
   loadExit,
-  loadPlayer,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
@@ -10,10 +10,8 @@ export const level = 14
 export const title = 'setTimeout'
 
 export const prescript = `
-${loadPlayer()}
 ${loadExit()}
-
-add([sprite('player'), pos(50, 50), area(), 'player'])
+${addPlayer({ pos: '100, 100' })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
