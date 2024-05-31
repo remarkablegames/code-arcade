@@ -1,4 +1,10 @@
-import { addExit, addPlayer, addText, registerWinCondition } from '../templates'
+import {
+  addExit,
+  addPlayer,
+  addText,
+  registerDisableMovement,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 9
 export const title = 'Functions'
@@ -7,10 +13,7 @@ export const prescript = `
 ${addPlayer()}
 ${addExit({ pos: 'center().x, 550' })}
 
-onKeyPress(() => {
-  debug.log('Keypress disabled!')
-})
-
+${registerDisableMovement()}
 ${registerWinCondition(level)}
 
 ${addText('Move me')}

@@ -2,6 +2,21 @@ import { GAME_ID } from '../constants'
 import { loadBlip, loadPowerup } from './sounds'
 
 /**
+ * Registers disable movement with keyboard and mouse.
+ *
+ * @returns - Game script.
+ */
+export const registerDisableMovement = () => `
+onKeyPress(() => {
+  debug.log('Key press disabled!')
+})
+
+onMousePress(() => {
+  debug.log('Mouse press disabled!')
+})
+`
+
+/**
  * Registers player movement with keyboard and mouse.
  *
  * @param speed - Pixels per second.
