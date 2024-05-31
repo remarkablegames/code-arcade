@@ -1,4 +1,4 @@
-import{l as r,a,c as t,r as o,b as i,d as n}from"./sprites-DHOrPU-j.js";import{a as d}from"./texts-qyIFEy4l.js";import"./index-kkyszdDf.js";const e=17;const c="JSON.stringify";const s=JSON.stringify({level:e,year:new Date().getFullYear()});const g=`
+import{l as r,a,c as t,r as o,b as i,d as n}from"./sprites-Bi3WeMWQ.js";import{a as d}from"./texts-qyIFEy4l.js";import"./index-lv7y_SZO.js";const e=17;const c="JSON.stringify";const s=JSON.stringify({level:e,year:new Date().getFullYear()});const g=`
 ${r()}
 ${a()}
 ${t()}
@@ -13,7 +13,7 @@ ${n(s)}
 ${d("Stringify the password")}
 `;const w=`
 /**
- * JSON.stringify() is a method that converts data into a string
+ * JSON.stringify() converts data into a string
  */
 
 const key = get('key')[0]

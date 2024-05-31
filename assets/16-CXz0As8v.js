@@ -1,4 +1,4 @@
-import{l as e,a as s,c as t,i as a,r,b as o}from"./sprites-DHOrPU-j.js";import"./index-kkyszdDf.js";const i=16;const l="Timer";const n=`
+import{l as e,a as s,c as t,i as a,r as o,b as r}from"./sprites-Bi3WeMWQ.js";import"./index-lv7y_SZO.js";const i=16;const l="Repetition is key";const n=`
 ${e()}
 ${s()}
 ${t()}
@@ -24,8 +24,8 @@ function addKey() {
 
 addKey()
 
-${r()}
-${o(i)}
+${o()}
+${r(i)}
 
 onCollide('key', 'player', (key) => {
   play('signal', { volume: 0.2, speed: 2 })
