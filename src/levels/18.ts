@@ -8,10 +8,11 @@ import {
   registerWinCondition,
 } from '../templates'
 
-export const level = 17
-export const title = 'JSON.stringify'
+export const level = 18
+export const title = 'JSON.parse'
 
-const password = JSON.stringify({ level, year: new Date().getFullYear() })
+const password = btoa(String(Date.now()))
+const passwordJSON = JSON.stringify({ password })
 
 export const prescript = `
 ${loadPlayer()}
@@ -19,23 +20,24 @@ ${loadExit()}
 ${loadKey()}
 
 add([sprite('player'), pos(100, 100), area(), 'player'])
-add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
+add([sprite('key'), pos(center()), area(), 'key', { password: '${passwordJSON}' }])
 
 ${registerPlayerKeys()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Stringify the password')}
+${addText('Parse the password')}
 `
 
 export const script = `
 /**
- * JSON.stringify() converts data into a string
+ * JSON.parse() converts string into data
  */
 
 const key = get('key')[0]
 
-// password = JSON string of object containing "level" and "year"
+// parse the password from \`key.password\`
+console.log(key.password)
 let password
 
 key.password = password

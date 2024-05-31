@@ -8,7 +8,7 @@ import {
 } from '../templates'
 
 export const level = 16
-export const title = 'Timer'
+export const title = 'Repetition is key'
 
 export const prescript = `
 ${loadPlayer()}
