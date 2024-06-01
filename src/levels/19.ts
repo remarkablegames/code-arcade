@@ -9,34 +9,33 @@ import {
 } from '../templates'
 
 export const level = 19
-export const title = 'JSON.parse'
-export const hint = 'console.log(key.json)'
+export const title = 'JSON.stringify'
+export const hint = '{ level: _, year: _ }'
 
-const password = btoa(String(Date.now()))
-const json = JSON.stringify({ password })
+const password = JSON.stringify({ level, year: new Date().getFullYear() })
 
 export const prescript = `
 ${loadExit()}
 ${loadKey()}
 
 ${addPlayer({ pos: '100, 100' })}
-add([sprite('key'), pos(center()), area(), 'key', { json: '${json}' }])
+add([sprite('key'), pos(center()), area(), 'key', { password: '${password}' }])
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Parse the password')}
+${addText('Stringify the password')}
 `
 
 export const script = `
 /**
- * JSON.parse() converts string into data
+ * JSON.stringify() converts data into a string
  */
 
 const key = get('key')[0]
 
-// parse the "password" from \`key.json\`
+// password = JSON string of object containing "level" and "year"
 let password
 
 key.password = password
