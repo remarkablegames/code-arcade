@@ -62,12 +62,12 @@ onDestroy('enemy', () => {
   addEnemy()
 })
 
-${addText('Protect yourself')}
+${addText('Block yourself')}
 `
 
 export const script = `
 /**
- * Can you build a fortress to protect yourself?
+ * Can you build a fortress to block the enemy?
  */
 
 const block = {
@@ -75,12 +75,16 @@ const block = {
   height: 64,
 }
 
-add([
-  sprite('block'),
-  pos(block.width * 6, block.height * 6),
-  area(),
-  body({ isStatic: true }),
-])
+function addBlock(x, y) {
+  add([
+    sprite('block'),
+    pos(x, y),
+    area(),
+    body({ isStatic: true }),
+  ])
+}
+
+addBlock(block.width * 3, block.height * 3)
 `
 
 export const postscript = `

@@ -80,8 +80,9 @@ export const script = `
  * forEach() is an iterative method
  */
 
+// hint: there are 25 spikes in this level
 const spikes = get('spike')
-spikes[0].opacity = 0
+spikes[0].opacity = 1
 `
 
 export const postscript = `

@@ -35,12 +35,17 @@ export const script = `
 
 const key = get('key')[0]
 
-// example of a successful Promise
+// example of successful Promise
 const examplePromise = Promise.resolve('some value')
 examplePromise.then((value) => {
   console.log(value)
+  key.password = value
 })
 
 // set \`key.password\` to the resolved value of \`key.promise\`
-console.log('is promise?', key.promise instanceof Promise)
+console.log('is promise?', isPromise(key.promise))
+
+function isPromise(value) {
+  return value instanceof Promise
+}
 `

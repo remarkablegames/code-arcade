@@ -2,7 +2,7 @@
  * Loads and adds exit.
  *
  * @param options - Options.
- * @returns - Game code.
+ * @returns - Script.
  */
 export const addExit = ({ pos = '' } = {}) => `
 ${loadExit()}
@@ -13,7 +13,7 @@ add([sprite('exit'), anchor('center'), area(), pos(${pos}), 'exit'])
  * Loads and adds player.
  *
  * @param options - Options.
- * @returns - Game code.
+ * @returns - Script.
  */
 export const addPlayer = ({ pos = '' } = {}) => `
 ${loadPlayer()}

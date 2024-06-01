@@ -35,12 +35,17 @@ export const script = `
 
 const key = get('key')[0]
 
-// example of a failed Promise
+// example of failed Promise
 const examplePromise = Promise.reject('some value')
 examplePromise.catch((value) => {
   console.log(value)
+  key.password = value
 })
 
 // set \`key.password\` to the rejected value of \`key.promise\`
-console.log('is promise?', key.promise instanceof Promise)
+console.log('is promise?', isPromise(key.promise))
+
+function isPromise(value) {
+  return value instanceof Promise
+}
 `

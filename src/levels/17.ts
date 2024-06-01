@@ -34,7 +34,7 @@ export const script = `
 
 const key = get('key')[0]
 
-// password = JSON string of object containing "level" and "year"
+// password = JSON string of object containing key-value pairs of "level" and "year"
 let password
 
 key.password = password

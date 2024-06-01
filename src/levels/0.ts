@@ -17,7 +17,7 @@ ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
 ${addText('WASD or arrow keys to move')}
-add([text('Goal: reach the exit'), pos(0, 64), color(0, 0, 0)])
+${addText('Goal: reach the exit', { pos: '0, height() - 32' })}
 `
 
 export const script = `

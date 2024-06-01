@@ -34,5 +34,5 @@ setInterval(() => {
     randi(width()),
     randi(height()),
   )
-}, SECOND)
+}, 2 * SECOND)
 `

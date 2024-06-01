@@ -11,12 +11,12 @@ export const title = 'setTimeout'
 
 export const prescript = `
 ${loadExit()}
-${addPlayer({ pos: '100, 100' })}
+${addPlayer({ pos: 'center()' })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
-${addText('Wait for the exit')}
+${addText('Wait for exit?')}
 `
 
 export const script = `
@@ -28,7 +28,8 @@ const MILLISECOND = 1
 const SECOND = MILLISECOND * 1000
 const MINUTE = SECOND * 60
 
+// can we speed this up?
 setTimeout(() => {
-  add([sprite('exit'), pos(center()), area(), 'exit'])
+  add([sprite('exit'), area(), 'exit'])
 }, 5 * MINUTE)
 `

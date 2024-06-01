@@ -2,7 +2,6 @@ import {
   addPlayer,
   loadExit,
   loadKey,
-  loadSignal,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
@@ -13,7 +12,6 @@ export const title = 'Repetition is key'
 export const prescript = `
 ${loadExit()}
 ${loadKey()}
-${loadSignal()}
 
 ${addPlayer({ pos: 'center()' })}
 
@@ -39,7 +37,6 @@ ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
 onCollide('key', 'player', (key) => {
-  play('signal', { volume: 0.2, speed: 2 })
   keys--
   key.destroy()
   message.text = getMessage()
@@ -63,7 +60,9 @@ export const script = `
  * Can we speed things up?
  */
 
-const player = get('player')[0]
-const key = get('key')[0]
-// player.moveTo(key.pos)
+function collectKey() {
+  const player = get('player')[0]
+  const key = get('key')[0]
+  key && player.moveTo(key.pos)
+}
 `

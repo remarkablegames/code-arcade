@@ -16,7 +16,7 @@ ${loadExit()}
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
-${addText('Exit is not in view?')}
+${addText('Exit not in view?')}
 `
 
 export const script = `
