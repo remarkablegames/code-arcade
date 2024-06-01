@@ -1,4 +1,4 @@
-import{a as t,l as e,r as i,c as s}from"./sprites-tfR4wh1N.js";import"./index-BTVd75Gu.js";const r=4;const a="Strings";const c=`
+import{a as t,l as e,r as i,c as s}from"./sprites-DyQZo6jA.js";import"./index-Bxcebhqn.js";const r=4;const a="Strings";const c=`
 ${t({pos:"center()"})}
 ${e()}
 
