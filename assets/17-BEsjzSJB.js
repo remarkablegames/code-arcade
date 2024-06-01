@@ -1,4 +1,4 @@
-import{l as r,d as t,a,r as o,c as i,e as n}from"./sprites-M-owXaHm.js";import"./index-7cZA0KuL.js";import{a as d}from"./texts-qyIFEy4l.js";const e=17;const l="JSON.stringify";const s=JSON.stringify({level:e,year:new Date().getFullYear()});const g=`
+import{l as r,d as t,a,r as o,c as i,e as n}from"./sprites-tfR4wh1N.js";import"./index-BTVd75Gu.js";import{a as d}from"./texts-D4Uwcsjn.js";const e=17;const l="JSON.stringify";const s=JSON.stringify({level:e,year:new Date().getFullYear()});const g=`
 ${r()}
 ${t()}
 
@@ -17,7 +17,7 @@ ${d("Stringify the password")}
 
 const key = get('key')[0]
 
-// password = JSON string of object containing "level" and "year"
+// password = JSON string of object containing key-value pairs of "level" and "year"
 let password
 
 key.password = password

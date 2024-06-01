@@ -1,13 +1,13 @@
-import{h as e,i as t,f as o,a,b as n,r,c as y}from"./sprites-M-owXaHm.js";import"./index-7cZA0KuL.js";import{a as s}from"./texts-qyIFEy4l.js";const c=13;const d="Loops";const m=`
+import{h as e,i as o,f as t,a as n,b as a,r as y,c as r}from"./sprites-tfR4wh1N.js";import"./index-BTVd75Gu.js";import{a as c}from"./texts-D4Uwcsjn.js";const s=13;const p="Loops";const m=`
 ${e()}
-${t()}
 ${o()}
+${t()}
 
-${a()}
 ${n()}
+${a()}
 
-${r()}
-${y(c)}
+${y()}
+${r(s)}
 
 const ENEMY_SPEED = 500
 
@@ -48,10 +48,10 @@ onDestroy('enemy', () => {
   addEnemy()
 })
 
-${s("Protect yourself")}
+${c("Block yourself")}
 `;const E=`
 /**
- * Can you build a fortress to protect yourself?
+ * Can you build a fortress to block the enemy?
  */
 
 const block = {
@@ -59,12 +59,16 @@ const block = {
   height: 64,
 }
 
-add([
-  sprite('block'),
-  pos(block.width * 6, block.height * 6),
-  area(),
-  body({ isStatic: true }),
-])
+function addBlock(x, y) {
+  add([
+    sprite('block'),
+    pos(x, y),
+    area(),
+    body({ isStatic: true }),
+  ])
+}
+
+addBlock(block.width * 3, block.height * 3)
 `;const f=`
 const player = get('player')[0]
 if (player) {
@@ -80,4 +84,4 @@ const exit = get('exit')[0]
 if (exit) {
   exit.moveTo(550, 550)
 }
-`;export{c as level,f as postscript,m as prescript,E as script,d as title};
+`;export{s as level,f as postscript,m as prescript,E as script,p as title};

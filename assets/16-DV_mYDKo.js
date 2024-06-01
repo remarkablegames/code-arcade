@@ -1,9 +1,8 @@
-import{l as e,d as s,j as t,a,r as o,c as i}from"./sprites-M-owXaHm.js";import"./index-7cZA0KuL.js";const r=16;const n="Repetition is key";const l=`
+import{l as e,d as t,a as s,r as o,c as a}from"./sprites-tfR4wh1N.js";import"./index-BTVd75Gu.js";const r=16;const d="Repetition is key";const n=`
 ${e()}
-${s()}
 ${t()}
 
-${a({pos:"center()"})}
+${s({pos:"center()"})}
 
 let keys = 420
 
@@ -24,10 +23,9 @@ function addKey() {
 addKey()
 
 ${o()}
-${i(r)}
+${a(r)}
 
 onCollide('key', 'player', (key) => {
-  play('signal', { volume: 0.2, speed: 2 })
   keys--
   key.destroy()
   message.text = getMessage()
@@ -44,12 +42,14 @@ onAdd('exit', () => {
     destroyAll('exit')
   }
 })
-`;const p=`
+`;const l=`
 /**
  * Can we speed things up?
  */
 
-const player = get('player')[0]
-const key = get('key')[0]
-// player.moveTo(key.pos)
-`;export{r as level,l as prescript,p as script,n as title};
+function collectKey() {
+  const player = get('player')[0]
+  const key = get('key')[0]
+  key && player.moveTo(key.pos)
+}
+`;export{r as level,n as prescript,l as script,d as title};

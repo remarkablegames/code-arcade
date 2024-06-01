@@ -1,4 +1,4 @@
-import{a as t,b as e,r as i,c as o}from"./sprites-M-owXaHm.js";import"./index-7cZA0KuL.js";import{a as r}from"./texts-qyIFEy4l.js";const s=15;const d="setInterval";const l=`
+import{a as t,b as e,r as i,c as o}from"./sprites-tfR4wh1N.js";import"./index-BTVd75Gu.js";import{a as r}from"./texts-D4Uwcsjn.js";const s=15;const d="setInterval";const l=`
 ${t({pos:"center()"})}
 ${e()}
 
@@ -21,5 +21,5 @@ setInterval(() => {
     randi(width()),
     randi(height()),
   )
-}, SECOND)
+}, 2 * SECOND)
 `;export{s as level,l as prescript,p as script,d as title};
