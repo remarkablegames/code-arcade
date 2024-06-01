@@ -1,4 +1,4 @@
-import{l as t,d as r,a,r as o,c as i,e as n}from"./sprites-CsXiAj9t.js";import"./index-CR5-BJ4V.js";import{a as d}from"./texts-D4Uwcsjn.js";const s=17;const y="JSON.stringify";const g="{ level: _, year: _ }";const e=JSON.stringify({level:s,year:new Date().getFullYear()});const w=`
+import{l as t,d as r,a,r as o,c as i,e as n}from"./sprites-9QqjVnbm.js";import"./index-BirVoFn6.js";import{a as d}from"./texts-D4Uwcsjn.js";const s=18;const y="JSON.stringify";const g="{ level: _, year: _ }";const e=JSON.stringify({level:s,year:new Date().getFullYear()});const w=`
 ${t()}
 ${r()}
 

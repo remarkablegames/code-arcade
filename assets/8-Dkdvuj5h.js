@@ -1,4 +1,4 @@
-import{a as e,b as o,k as t,c as s}from"./sprites-CsXiAj9t.js";import"./index-CR5-BJ4V.js";import{a as r}from"./texts-D4Uwcsjn.js";const a=8;const p="Objects";const l="Change the coordinates";const d=`
+import{a as e,b as o,k as t,c as s}from"./sprites-9QqjVnbm.js";import"./index-BirVoFn6.js";import{a as r}from"./texts-D4Uwcsjn.js";const a=8;const p="Objects";const l="Change the coordinates";const d=`
 ${e()}
 ${o({pos:"550, 550"})}
 
