@@ -1,13 +1,4 @@
-import{f as e,g as t,a as o,b as i,r as s,c as r}from"./sprites-DyQZo6jA.js";import"./index-Bxcebhqn.js";import{a}from"./texts-D4Uwcsjn.js";const p=12;const y="forEach";const d=`
-${e()}
-${t()}
-
-${o()}
-${i()}
-
-${s()}
-${r(p)}
-
+import{f as o,g as s,a as i,b as p,r,c as a}from"./sprites-CsXiAj9t.js";import"./index-CR5-BJ4V.js";import{a as n}from"./texts-D4Uwcsjn.js";const l=12;const m="forEach";const t=`
 const map = [
   '          ',
   '          ',
@@ -18,8 +9,17 @@ const map = [
   '   ^      ',
   '^^^^ ^^^  ',
 ]
+`;const e=t.split("^").length-1;const k=`There's ${e} spikes`;const f=`
+${o()}
+${s()}
 
-const SPIKES_COUNT = map.join('').split(' ').join('').length
+${i()}
+${p()}
+
+${r()}
+${a(l)}
+
+${t}
 const TILE_SIZE = 64
 
 map.forEach((row, rowIndex) => {
@@ -54,21 +54,21 @@ onUpdate(() => {
     player.moveTo(40, 80)
   }
 
-  if (get('spike').length < SPIKES_COUNT) {
-    throw new Error('There must be ' + SPIKES_COUNT + ' spikes!')
+  if (get('spike').length < ${e}) {
+    throw new Error('There must be ' + ${e} + ' spikes!')
   }
 })
 
-${a("Invisible spikes")}
-`;const m=`
+${n("Invisible spikes")}
+`;const h=`
 /**
  * forEach() is an iterative method
  */
 
-// hint: there are 25 spikes in this level
 const spikes = get('spike')
-spikes[0].opacity = 1
-`;const h=`
+const firstSpike = spikes[0]
+firstSpike.opacity = 1
+`;const x=`
 const exit = get('exit')[0]
 if (exit) {
   exit.moveTo(550, 550)
@@ -78,4 +78,4 @@ const player = get('player')[0]
 if (player) {
   player.moveTo(50, 70)
 }
-`;export{p as level,h as postscript,d as prescript,m as script,y as title};
+`;export{k as hint,l as level,x as postscript,f as prescript,h as script,m as title};

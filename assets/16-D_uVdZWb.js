@@ -1,4 +1,4 @@
-import{l as e,d as t,a as s,r as o,c as a}from"./sprites-DyQZo6jA.js";import"./index-Bxcebhqn.js";const r=16;const d="Repetition is key";const n=`
+import{l as e,d as t,a as s,r as o,c as a}from"./sprites-CsXiAj9t.js";import"./index-CR5-BJ4V.js";const r=16;const n="Repetition is key";const y="Use setInterval()";const l=`
 ${e()}
 ${t()}
 
@@ -8,7 +8,8 @@ let keys = 420
 
 const getMessage = () => 'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
 
-const message = add([text(getMessage())])
+add([rect(width(), 32), color(0, 0, 0), z(100)])
+const message = add([text(getMessage()), z(100)])
 
 function addKey() {
   add([
@@ -42,7 +43,7 @@ onAdd('exit', () => {
     destroyAll('exit')
   }
 })
-`;const l=`
+`;const c=`
 /**
  * Can we speed things up?
  */
@@ -52,4 +53,4 @@ function collectKey() {
   const key = get('key')[0]
   key && player.moveTo(key.pos)
 }
-`;export{r as level,n as prescript,l as script,d as title};
+`;export{y as hint,r as level,l as prescript,c as script,n as title};

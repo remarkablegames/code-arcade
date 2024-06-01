@@ -1,6 +1,6 @@
-import{h as a,a as t,b as e,r,c as s}from"./sprites-DyQZo6jA.js";import"./index-Bxcebhqn.js";import{a as o}from"./texts-D4Uwcsjn.js";const p=7;const n="Arrays";const c=`
-${a()}
-${t({pos:"center()"})}
+import{h as t,a,b as e,r,c as s}from"./sprites-CsXiAj9t.js";import"./index-CR5-BJ4V.js";import{a as o}from"./texts-D4Uwcsjn.js";const p=7;const m="Arrays";const c="Edit the map";const l=`
+${t()}
+${a({pos:"center()"})}
 ${e({pos:"550, 550"})}
 
 ${r()}
@@ -14,7 +14,7 @@ onUpdate(() => {
     throw new Error('Map must be valid')
   }
 })
-`;const l=`
+`;const h=`
 /**
  * An array is an ordered list of data
  */
@@ -28,7 +28,7 @@ const map = [
   '#######',
 ]
 
-map[6] = map[0]
+map.push(map[0])
 
 add(['map', { map }])
 `;const g=`
@@ -44,4 +44,4 @@ addLevel(get('map')[0].map, {
     ],
   }
 })
-`;export{p as level,g as postscript,c as prescript,l as script,n as title};
+`;export{c as hint,p as level,g as postscript,l as prescript,h as script,m as title};

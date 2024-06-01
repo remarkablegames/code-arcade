@@ -1,4 +1,4 @@
-import{h as e,i as o,f as t,a as n,b as a,r as y,c as r}from"./sprites-DyQZo6jA.js";import"./index-Bxcebhqn.js";import{a as c}from"./texts-D4Uwcsjn.js";const s=13;const p="Loops";const m=`
+import{h as e,i as o,f as t,a as n,b as a,r as y,c as r}from"./sprites-CsXiAj9t.js";import"./index-CR5-BJ4V.js";import{a as s}from"./texts-D4Uwcsjn.js";const c=13;const p="Loops";const m="Use for loops to add blocks around enemy";const E=`
 ${e()}
 ${o()}
 ${t()}
@@ -7,7 +7,7 @@ ${n()}
 ${a()}
 
 ${y()}
-${r(s)}
+${r(c)}
 
 const ENEMY_SPEED = 500
 
@@ -48,8 +48,8 @@ onDestroy('enemy', () => {
   addEnemy()
 })
 
-${c("Block yourself")}
-`;const E=`
+${s("Block yourself")}
+`;const f=`
 /**
  * Can you build a fortress to block the enemy?
  */
@@ -69,7 +69,7 @@ function addBlock(x, y) {
 }
 
 addBlock(block.width * 3, block.height * 3)
-`;const f=`
+`;const b=`
 const player = get('player')[0]
 if (player) {
   player.moveTo(50, 70)
@@ -84,4 +84,4 @@ const exit = get('exit')[0]
 if (exit) {
   exit.moveTo(550, 550)
 }
-`;export{s as level,f as postscript,m as prescript,E as script,p as title};
+`;export{m as hint,c as level,b as postscript,E as prescript,f as script,p as title};

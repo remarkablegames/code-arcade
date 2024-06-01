@@ -1,4 +1,4 @@
-import{l as s,d as r,a as o,r as a,c as t,e as p}from"./sprites-DyQZo6jA.js";import"./index-Bxcebhqn.js";import{a as d}from"./texts-D4Uwcsjn.js";const i=11;const l="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
+import{l as s,d as r,a as o,r as a,c as t,e as p}from"./sprites-CsXiAj9t.js";import"./index-CR5-BJ4V.js";import{a as d}from"./texts-D4Uwcsjn.js";const i=11;const l="For Loop";const e=Array.from(Array(42).keys()).map(()=>"answer").join("");const y=`
 ${s()}
 ${r()}
 ${o({pos:"100, 100"})}
