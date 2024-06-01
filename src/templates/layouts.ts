@@ -1,3 +1,4 @@
+import { GAME_ID } from '../constants'
 import { iife } from '../helpers'
 import type { Level } from '../types'
 
@@ -46,6 +47,13 @@ ${iife(prescript)}
 onLoad(() => {
   ${iife(script)}
   ${iife(postscript)}
+})
+
+window.addEventListener('message', (event) => {
+  if (event.data?.source !== '${GAME_ID}') {
+    return
+  }
+  debug.log('[HINT] ' + (event.data.hint ?? 'No hint'))
 })
 </script>
 </body>

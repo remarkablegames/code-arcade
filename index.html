@@ -50,14 +50,20 @@
     <main class="flex justify-center xl:center">
       <div class="flex max-xl:hidden">
         <h1 class="basis-1/2 self-end">Code Arcade</h1>
-        <button>► Run</button>
+        <div class="flex justify-between w-1/2">
+          <button class="btn-primary">► Run</button>
+          <button class="btn-secondary">ⓘ Hint</button>
+        </div>
       </div>
 
       <div class="xl:flex">
         <h1 class="xl:hidden">Code Arcade</h1>
         <iframe></iframe>
         <div id="editor"></div>
-        <button class="xl:hidden">► Run</button>
+        <div class="xl:hidden">
+          <button class="btn-primary">► Run</button>
+          <button class="btn-secondary">ⓘ Hint</button>
+        </div>
       </div>
     </main>
 

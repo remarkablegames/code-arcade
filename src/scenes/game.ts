@@ -43,7 +43,14 @@ export async function go(levelNumber: number) {
 
   run()
 
-  addEventListeners(run)
+  function hint() {
+    iframe.contentWindow?.postMessage({
+      source: GAME_ID,
+      hint: level.hint,
+    })
+  }
+
+  addEventListeners(run, hint)
 }
 
 /**

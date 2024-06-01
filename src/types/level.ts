@@ -4,4 +4,5 @@ export interface Level {
   prescript?: string
   script?: string
   postscript?: string
+  hint?: string
 }

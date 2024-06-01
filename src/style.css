@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  button {
-    @apply bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded;
-  }
-
   h1 {
     @apply font-mono text-3xl;
   }
@@ -14,6 +10,16 @@
   iframe {
     width: 600px;
     height: 600px;
+  }
+}
+
+@layer base {
+  .btn-primary {
+    @apply bg-green-500 hover:bg-green-400 text-white font-bold py-2 px-4 border-b-4 border-green-700 hover:border-green-500 rounded;
+  }
+
+  .btn-secondary {
+    @apply bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded;
   }
 }
 
