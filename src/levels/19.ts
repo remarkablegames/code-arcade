@@ -10,6 +10,7 @@ import {
 
 export const level = 19
 export const title = 'Fullfilled Promise'
+export const hint = 'key.promise.then(...)'
 
 const password = btoa(String(Date.now()))
 

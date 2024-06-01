@@ -8,6 +8,7 @@ import {
 
 export const level = 14
 export const title = 'setTimeout'
+export const hint = '2nd argument of setTimeout() is delay in ms'
 
 export const prescript = `
 ${loadExit()}
@@ -16,7 +17,7 @@ ${addPlayer({ pos: 'center()' })}
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
-${addText('Wait for exit?')}
+${addText('How to not wait?')}
 `
 
 export const script = `
@@ -28,7 +29,6 @@ const MILLISECOND = 1
 const SECOND = MILLISECOND * 1000
 const MINUTE = SECOND * 60
 
-// can we speed this up?
 setTimeout(() => {
   add([sprite('exit'), area(), 'exit'])
 }, 5 * MINUTE)

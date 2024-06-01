@@ -8,6 +8,7 @@ import {
 
 export const level = 6
 export const title = 'Booleans'
+export const hint = "What's the opposite of false?"
 
 export const prescript = `
 ${addPlayer({ pos: 'center()' })}

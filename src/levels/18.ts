@@ -10,6 +10,7 @@ import {
 
 export const level = 18
 export const title = 'JSON.parse'
+export const hint = 'console.log(key.json)'
 
 const password = btoa(String(Date.now()))
 const json = JSON.stringify({ password })
@@ -36,7 +37,6 @@ export const script = `
 const key = get('key')[0]
 
 // parse the "password" from \`key.json\`
-// console.log(key.json)
 let password
 
 key.password = password

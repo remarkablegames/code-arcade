@@ -9,6 +9,7 @@ import {
 
 export const level = 7
 export const title = 'Arrays'
+export const hint = 'Edit the map'
 
 export const prescript = `
 ${loadBlock()}
@@ -42,7 +43,7 @@ const map = [
   '#######',
 ]
 
-map[6] = map[0]
+map.push(map[0])
 
 add(['map', { map }])
 `

@@ -11,16 +11,7 @@ import {
 export const level = 12
 export const title = 'forEach'
 
-export const prescript = `
-${loadHit()}
-${loadSpike()}
-
-${addPlayer()}
-${addExit()}
-
-${registerPlayerMovement()}
-${registerWinCondition(level)}
-
+const map = `
 const map = [
   '          ',
   '          ',
@@ -31,8 +22,22 @@ const map = [
   '   ^      ',
   '^^^^ ^^^  ',
 ]
+`
+const spikesCount = map.split('^').length - 1
 
-const SPIKES_COUNT = map.join('').split(' ').join('').length
+export const hint = `There's ${spikesCount} spikes`
+
+export const prescript = `
+${loadHit()}
+${loadSpike()}
+
+${addPlayer()}
+${addExit()}
+
+${registerPlayerMovement()}
+${registerWinCondition(level)}
+
+${map}
 const TILE_SIZE = 64
 
 map.forEach((row, rowIndex) => {
@@ -67,8 +72,8 @@ onUpdate(() => {
     player.moveTo(40, 80)
   }
 
-  if (get('spike').length < SPIKES_COUNT) {
-    throw new Error('There must be ' + SPIKES_COUNT + ' spikes!')
+  if (get('spike').length < ${spikesCount}) {
+    throw new Error('There must be ' + ${spikesCount} + ' spikes!')
   }
 })
 
@@ -80,9 +85,9 @@ export const script = `
  * forEach() is an iterative method
  */
 
-// hint: there are 25 spikes in this level
 const spikes = get('spike')
-spikes[0].opacity = 1
+const firstSpike = spikes[0]
+firstSpike.opacity = 1
 `
 
 export const postscript = `

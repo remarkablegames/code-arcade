@@ -11,6 +11,7 @@ import {
 
 export const level = 13
 export const title = 'Loops'
+export const hint = 'Use for loops to add blocks around enemy'
 
 export const prescript = `
 ${loadBlock()}

@@ -10,6 +10,7 @@ import {
 
 export const level = 20
 export const title = 'Rejected Promise'
+export const hint = 'key.promise.catch(...)'
 
 const password = btoa(String(Date.now()))
 

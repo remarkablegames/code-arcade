@@ -8,6 +8,7 @@ import {
 
 export const level = 16
 export const title = 'Repetition is key'
+export const hint = 'Use setInterval()'
 
 export const prescript = `
 ${loadExit()}
@@ -19,7 +20,8 @@ let keys = 420
 
 const getMessage = () => 'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
 
-const message = add([text(getMessage())])
+add([rect(width(), 32), color(0, 0, 0), z(100)])
+const message = add([text(getMessage()), z(100)])
 
 function addKey() {
   add([

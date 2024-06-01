@@ -19,9 +19,6 @@ ${addText('Uncomment the player')}
 export const script = `
 // Multi-line comments start with /* and end with */
 
-/* console.log('This is commented out') */
-console.log('This is not commented out')
-
 /*
 add([
   sprite('player'),

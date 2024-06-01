@@ -8,16 +8,16 @@ import {
 
 export const level = 0
 export const title = 'console.log'
+export const hint = 'Reach the exit'
 
 export const prescript = `
-${addPlayer({ pos: '50, 150' })}
-${addExit({ pos: '500, center().y' })}
+${addPlayer({ pos: '50, center().y' })}
+${addExit({ pos: 'width() - 50, center().y' })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
 ${addText('WASD or arrow keys to move')}
-${addText('Goal: reach the exit', { pos: '0, height() - 32' })}
 `
 
 export const script = `

@@ -8,6 +8,7 @@ import {
 
 export const level = 15
 export const title = 'setInterval'
+export const hint = '2nd argument of setInterval() is delay in ms'
 
 export const prescript = `
 ${addPlayer({ pos: 'center()' })}

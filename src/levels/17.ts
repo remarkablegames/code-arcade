@@ -10,6 +10,7 @@ import {
 
 export const level = 17
 export const title = 'JSON.stringify'
+export const hint = '{ level: _, year: _ }'
 
 const password = JSON.stringify({ level, year: new Date().getFullYear() })
 
@@ -34,7 +35,7 @@ export const script = `
 
 const key = get('key')[0]
 
-// password = JSON string of object containing key-value pairs of "level" and "year"
+// password = JSON string of object containing "level" and "year"
 let password
 
 key.password = password

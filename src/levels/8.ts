@@ -8,6 +8,7 @@ import {
 
 export const level = 8
 export const title = 'Objects'
+export const hint = 'Change the coordinates'
 
 export const prescript = `
 ${addPlayer()}
