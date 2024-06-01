@@ -10,12 +10,10 @@ export function addEventListeners(callback: () => void) {
     'main button',
   ) as NodeListOf<HTMLButtonElement>
 
-  buttons.forEach((oldButton) => {
-    const newButton = oldButton.cloneNode(true) as HTMLButtonElement
-    newButton.addEventListener('click', () => {
+  buttons.forEach((button) => {
+    button.onclick = () => {
       audio.play()
       callback()
-    })
-    oldButton.parentNode?.replaceChild(newButton, oldButton)
+    }
   })
 }
