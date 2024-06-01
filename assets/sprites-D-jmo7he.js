@@ -1,4 +1,4 @@
-import{G as o}from"./index-BirVoFn6.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const p=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const i=()=>`
+import{G as o}from"./index-BuzeCisW.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const p=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const i=()=>`
 onKeyPress(() => {
   debug.log('Key press disabled!')
 })
@@ -89,4 +89,4 @@ add([sprite('exit'), anchor('center'), area(), pos(${e}), 'exit'])
 `;const g=({pos:e=""}={})=>`
 ${t()}
 add([sprite('player'), anchor('center'), area(), body(), pos(${e}), 'player'])
-`;const u=()=>`loadSprite('block', 'sprites/steel.png')`;const r=()=>`loadSprite('exit', 'sprites/door.png')`;const k=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const m=()=>`loadSprite('key', 'sprites/key.png')`;const t=()=>`loadSprite('player', 'sprites/bean.png')`;const b=()=>`loadSprite('spike', 'sprites/spike.png')`;export{g as a,c as b,y as c,m as d,d as e,p as f,b as g,u as h,k as i,t as j,i as k,r as l,n as r};
+`;const u=()=>`loadSprite('block', 'sprites/steel.png')`;const r=()=>`loadSprite('exit', 'sprites/door.png')`;const k=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const m=()=>`loadSprite('key', 'sprites/key.png')`;const t=()=>`loadSprite('player', 'sprites/bean.png')`;const b=()=>`loadSprite('spike', 'sprites/spike.png')`;export{g as a,c as b,y as c,m as d,d as e,p as f,b as g,u as h,k as i,i as j,t as k,r as l,n as r};

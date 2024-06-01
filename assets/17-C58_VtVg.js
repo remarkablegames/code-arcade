@@ -1,0 +1,64 @@
+import{h as t,a as o,b as s,r as i,c as a}from"./sprites-D-jmo7he.js";import"./index-BuzeCisW.js";import{a as l}from"./texts-D4Uwcsjn.js";const c=17;const d="Properties";const m="Edit the body's mass";const e=1e3;const b=`
+${t()}
+${o({pos:"95, 100"})}
+${s()}
+
+${i()}
+${a(c)}
+
+${l("Sokoban")}
+
+const player = get('player')[0]
+player.moveTo = () => {}
+
+const map = [
+  '###########',
+  '###########',
+  '##       ##',
+  '######## ##',
+  '##       ##',
+  '###########',
+  '##     ####',
+  '## ####  ##',
+  '##    #  ##',
+  '###########',
+  '###########',
+]
+
+const tileSize = 64
+
+const level = addLevel(map, {
+  tileWidth: tileSize,
+  tileHeight: tileSize,
+  pos: vec2(-tileSize, -tileSize),
+  tiles: {
+    '#': () => [
+      sprite('block'),
+      area(),
+      body({ mass: ${e} }),
+      'block'
+    ],
+  }
+})
+
+onUpdate(() => {
+  level.get('block').forEach((block) => {
+    if (block.mass < 1) {
+      throw new Error('Block mass cannot be less than 1')
+    }
+  })
+})
+`;const k=`
+/**
+ * A method is a function defined within an object
+ */
+
+onCollide('block', 'player', (block) => {
+  block.mass = ${e}
+})
+`;const h=`
+const exit = get('exit')[0]
+if (exit) {
+  exit.moveTo(480, 480)
+}
+`;export{m as hint,c as level,h as postscript,b as prescript,k as script,d as title};

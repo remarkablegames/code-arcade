@@ -1,4 +1,4 @@
-import{h as t,a as e,b as o,r as i,c as a}from"./sprites-9QqjVnbm.js";import"./index-BirVoFn6.js";import{a as s}from"./texts-D4Uwcsjn.js";const n=17;const p="Methods";const m="Call the methods in a for loop";const d=`
+import{h as t,a as e,b as o,j as i,c as a}from"./sprites-D-jmo7he.js";import"./index-BuzeCisW.js";import{a as s}from"./texts-D4Uwcsjn.js";const n=18;const c="Methods";const m="Call the methods in a for loop";const d=`
 ${t()}
 ${e({pos:"95, 100"})}
 ${o()}
@@ -23,7 +23,7 @@ const map = [
   '#########',
 ]
 
-const level = addLevel(map, {
+addLevel(map, {
   tileWidth: 64,
   tileHeight: 64,
   tiles: {
@@ -53,4 +53,4 @@ const exit = get('exit')[0]
 if (exit) {
   exit.moveTo(95, 480)
 }
-`;export{m as hint,n as level,v as postscript,d as prescript,h as script,p as title};
+`;export{m as hint,n as level,v as postscript,d as prescript,h as script,c as title};
