@@ -13,11 +13,10 @@ Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/code-arcade)
 
-## Stack
+## Credits
 
-- [Kaboom](https://kaboomjs.com/)
-- [Vite](https://vitejs.dev/)
-- [GitHub Pages](https://pages.github.com/)
+- Assets from [Kaboom](https://kaboomjs.com/)
+- Inspired by [Untrusted](https://alexnisnevich.github.io/untrusted/)
 
 ## Prerequisites
 
@@ -73,6 +72,14 @@ Your game is ready to be deployed!
 Builds the game and packages it into a Zip file in the `dist` folder.
 
 Your game can be uploaded to your server, [Itch.io](https://itch.io/), [Newgrounds](https://www.newgrounds.com/), etc.
+
+### `npm run increment-levels`
+
+Increments level by incrementing the level number and renaming file:
+
+```sh
+npm run increment-levels -- --level=<number>
+```
 
 ## License
 
