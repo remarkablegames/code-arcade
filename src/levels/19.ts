@@ -9,44 +9,35 @@ import {
 } from '../templates'
 
 export const level = 19
-export const title = 'Fullfilled Promise'
-export const hint = 'key.promise.then(...)'
+export const title = 'JSON.parse'
+export const hint = 'console.log(key.json)'
 
 const password = btoa(String(Date.now()))
+const json = JSON.stringify({ password })
 
 export const prescript = `
 ${loadExit()}
 ${loadKey()}
 
 ${addPlayer({ pos: '100, 100' })}
-add([sprite('key'), pos(center()), area(), 'key', { promise: Promise.resolve('${password}') }])
+add([sprite('key'), pos(center()), area(), 'key', { json: '${json}' }])
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Pass the Promise')}
+${addText('Parse the password')}
 `
 
 export const script = `
 /**
- * A Promise produces a value in the future
- * If a Promise succeeded, it will produce a resolved value
+ * JSON.parse() converts string into data
  */
 
 const key = get('key')[0]
 
-// example of successful Promise
-const examplePromise = Promise.resolve('some value')
-examplePromise.then((value) => {
-  console.log(value)
-  key.password = value
-})
+// parse the "password" from \`key.json\`
+let password
 
-// set \`key.password\` to the resolved value of \`key.promise\`
-console.log('is promise?', isPromise(key.promise))
-
-function isPromise(value) {
-  return value instanceof Promise
-}
+key.password = password
 `

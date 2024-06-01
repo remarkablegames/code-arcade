@@ -8,9 +8,9 @@ import {
   registerWinCondition,
 } from '../templates'
 
-export const level = 20
-export const title = 'Fullfilled Promise'
-export const hint = 'key.promise.then(...)'
+export const level = 21
+export const title = 'Rejected Promise'
+export const hint = 'key.promise.catch(...)'
 
 const password = btoa(String(Date.now()))
 
@@ -19,31 +19,31 @@ ${loadExit()}
 ${loadKey()}
 
 ${addPlayer({ pos: '100, 100' })}
-add([sprite('key'), pos(center()), area(), 'key', { promise: Promise.resolve('${password}') }])
+add([sprite('key'), pos(center()), area(), 'key', { promise: Promise.reject('${password}') }])
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Pass the Promise')}
+${addText('Catch the Promise')}
 `
 
 export const script = `
 /**
  * A Promise produces a value in the future
- * If a Promise succeeded, it will produce a resolved value
+ * If a Promise failed, it will produce a rejected value
  */
 
 const key = get('key')[0]
 
-// example of successful Promise
-const examplePromise = Promise.resolve('some value')
-examplePromise.then((value) => {
+// example of failed Promise
+const examplePromise = Promise.reject('some value')
+examplePromise.catch((value) => {
   console.log(value)
   key.password = value
 })
 
-// set \`key.password\` to the resolved value of \`key.promise\`
+// set \`key.password\` to the rejected value of \`key.promise\`
 console.log('is promise?', isPromise(key.promise))
 
 function isPromise(value) {
