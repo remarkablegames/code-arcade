@@ -16,6 +16,24 @@ add([
 `
 
 /**
+ * Loads and adds key.
+ *
+ * @param options - Options.
+ * @returns - Script.
+ */
+export const addKey = ({ pos = '', obj = '' } = {}) => `
+${loadKey()}
+add([
+  sprite('key'),
+  anchor('center'),
+  area(),
+  pos(${pos}),
+  'key',
+  ${obj},
+])
+`
+
+/**
  * Loads and adds player.
  *
  * @param options - Options.

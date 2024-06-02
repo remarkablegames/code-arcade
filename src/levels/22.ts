@@ -1,8 +1,8 @@
 import {
+  addKey,
   addPlayer,
   addText,
   loadExit,
-  loadKey,
   registerPasswordCheck,
   registerPlayerMovement,
   registerWinCondition,
@@ -16,10 +16,12 @@ const password = btoa(String(Date.now()))
 
 export const prescript = `
 ${loadExit()}
-${loadKey()}
 
 ${addPlayer({ pos: '100, 100' })}
-add([sprite('key'), pos(center()), area(), 'key', { promise: Promise.reject('${password}') }])
+${addKey({
+  pos: 'center()',
+  obj: `{ promise: Promise.reject('${password}') }`,
+})}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
