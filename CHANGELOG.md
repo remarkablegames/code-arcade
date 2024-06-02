@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.1](https://github.com/remarkablegames/code-arcade/compare/v1.0.0...v1.0.1) (2024-06-02)
+
+
+### Bug Fixes
+
+* make localStorage key more unique ([efb7f0a](https://github.com/remarkablegames/code-arcade/commit/efb7f0a03861f4160a93e8456d1d6f937e2a2fee))
+* **style:** set html background color to white ([e82260c](https://github.com/remarkablegames/code-arcade/commit/e82260cdc0ff6d01b585caa2a35e51615e6080e2))
+
 ## 1.0.0 (2024-06-02)
 
 
