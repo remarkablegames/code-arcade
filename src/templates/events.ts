@@ -73,7 +73,7 @@ ${loadBlip()}
 ${loadPowerup()}
 
 onCollide('key', 'player', (key) => {
-  if (key.password === ${typeof password === 'string' ? JSON.stringify(password) : password}) {
+  if (key.password === ${JSON.stringify(password)}) {
     play('powerup', { volume: 0.5 })
     key.destroy()
     add([sprite('exit'), pos(500, 500), area(), 'exit'])
