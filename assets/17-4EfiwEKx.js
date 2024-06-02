@@ -1,4 +1,4 @@
-import{h as t,a as o,b as s,r as i,c as a}from"./sprites-C84ybaqB.js";import"./index-CZUI8tuF.js";import{a as l}from"./texts-D4Uwcsjn.js";const r=17;const d="Properties";const m="Edit the body's mass";const e=1e3;const b=`
+import{h as t,a as o,b as s,r as i,c as a}from"./sprites-Dk09a4Sc.js";import"./index-DHW99aeY.js";import{a as l}from"./texts-D4Uwcsjn.js";const r=17;const d="Properties";const m="Edit the body's mass";const e=1e3;const b=`
 ${t()}
 ${o({pos:"95, 100"})}
 ${s()}

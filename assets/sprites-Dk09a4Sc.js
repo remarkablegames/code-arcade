@@ -1,4 +1,4 @@
-import{G as s}from"./index-CZUI8tuF.js";const a=()=>`loadSound('blip', 'sounds/blip.mp3')`;const n=()=>`loadSound('hit', 'sounds/hit.mp3')`;const r=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const d=()=>`
+import{G as s}from"./index-DHW99aeY.js";const a=()=>`loadSound('blip', 'sounds/blip.mp3')`;const n=()=>`loadSound('hit', 'sounds/hit.mp3')`;const r=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const d=()=>`
 onKeyPress(() => {
   debug.log('Key press disabled!')
 })
@@ -49,7 +49,7 @@ ${a()}
 ${r()}
 
 onCollide('key', 'player', (key) => {
-  if (key.password === ${typeof e==="string"?JSON.stringify(e):e}) {
+  if (key.password === ${JSON.stringify(e)}) {
     play('powerup', { volume: 0.5 })
     key.destroy()
     add([sprite('exit'), pos(500, 500), area(), 'exit'])
@@ -112,4 +112,4 @@ add([
   pos(${e}),
   'player',
 ])
-`;const b=()=>`loadSprite('block', 'sprites/steel.png')`;const t=()=>`loadSprite('exit', 'sprites/door.png')`;const $=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const l=()=>`loadSprite('key', 'sprites/key.png')`;const p=()=>`loadSprite('player', 'sprites/bean.png')`;const x=()=>`loadSprite('spike', 'sprites/spike.png')`;export{m as a,u as b,g as c,k as d,c as e,n as f,x as g,b as h,$ as i,l as j,d as k,t as l,p as m,y as r};
+`;const b=()=>`loadSprite('block', 'sprites/steel.png')`;const t=()=>`loadSprite('exit', 'sprites/door.png')`;const $=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const l=()=>`loadSprite('key', 'sprites/key.png')`;const p=()=>`loadSprite('player', 'sprites/bean.png')`;const w=()=>`loadSprite('spike', 'sprites/spike.png')`;export{m as a,u as b,g as c,k as d,c as e,n as f,w as g,b as h,$ as i,l as j,d as k,t as l,p as m,y as r};
