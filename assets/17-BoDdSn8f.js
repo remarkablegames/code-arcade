@@ -1,10 +1,10 @@
-import{h as t,a as o,b as s,r as i,c as a}from"./sprites-vZOQcHzG.js";import"./index-2wkZv_Fy.js";import{a as l}from"./texts-D4Uwcsjn.js";const c=17;const d="Properties";const m="Edit the body's mass";const e=1e3;const b=`
+import{h as t,a as o,b as s,r as i,c as a}from"./sprites-Biiawzgm.js";import"./index-D6DF_Sn_.js";import{a as l}from"./texts-D4Uwcsjn.js";const r=17;const d="Properties";const m="Edit the body's mass";const e=1e3;const b=`
 ${t()}
 ${o({pos:"95, 100"})}
 ${s()}
 
 ${i()}
-${a(c)}
+${a(r)}
 
 ${l("Sokoban")}
 
@@ -50,15 +50,15 @@ onUpdate(() => {
 })
 `;const k=`
 /**
- * A method is a function defined within an object
+ * A property is an association between an object key and its value
  */
 
 onCollide('block', 'player', (block) => {
   block.mass = ${e}
 })
-`;const h=`
+`;const y=`
 const exit = get('exit')[0]
 if (exit) {
   exit.moveTo(480, 480)
 }
-`;export{m as hint,c as level,h as postscript,b as prescript,k as script,d as title};
+`;export{m as hint,r as level,y as postscript,b as prescript,k as script,d as title};
