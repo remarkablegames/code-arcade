@@ -1,4 +1,4 @@
-import{h as t,a as e,b as o,j as i,c as a}from"./sprites-D-jmo7he.js";import"./index-BuzeCisW.js";import{a as s}from"./texts-D4Uwcsjn.js";const n=18;const c="Methods";const m="Call the methods in a for loop";const d=`
+import{h as t,a as e,b as o,j as i,c as a}from"./sprites-vZOQcHzG.js";import"./index-2wkZv_Fy.js";import{a as s}from"./texts-D4Uwcsjn.js";const n=18;const c="Methods";const m="Call the methods in a for loop";const d=`
 ${t()}
 ${e({pos:"95, 100"})}
 ${o()}

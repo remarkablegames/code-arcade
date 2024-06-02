@@ -1,4 +1,4 @@
-import{h as e,i as o,f as t,a as n,b as a,r as y,c as r}from"./sprites-D-jmo7he.js";import"./index-BuzeCisW.js";import{a as s}from"./texts-D4Uwcsjn.js";const c=13;const p="Loops";const m="Use for loops to add blocks around enemy";const E=`
+import{h as e,i as o,f as t,a as n,b as a,r as y,c as r}from"./sprites-vZOQcHzG.js";import"./index-2wkZv_Fy.js";import{a as s}from"./texts-D4Uwcsjn.js";const c=13;const p="Loops";const m="Use for loops to add blocks around enemy";const E=`
 ${e()}
 ${o()}
 ${t()}
