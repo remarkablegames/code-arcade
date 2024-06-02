@@ -14,9 +14,12 @@ Play the game on:
 - [remarkablegames](https://remarkablegames.org/code-arcade)
 - [itch.io](https://remarkablegames.itch.io/code-arcade)
 
+Read the [blog post](https://remarkablegames.org/posts/code-arcade/).
+
 ## Credits
 
 - Assets from [Kaboom](https://kaboomjs.com/)
+- Editor from [CodeMirror](https://codemirror.net/)
 - Inspired by [Untrusted](https://alexnisnevich.github.io/untrusted/)
 
 ## Prerequisites
