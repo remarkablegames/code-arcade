@@ -9,7 +9,7 @@ import {
   registerWinCondition,
 } from '../templates'
 
-export const level = 24
+export const level = 25
 export const title = 'fetch'
 export const hint = 'Google JavaScript Fetch API'
 
