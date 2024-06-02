@@ -1,13 +1,12 @@
-import{l as s,d as o,a as r,r as i,c as a,e as t}from"./sprites-x6WB0A11.js";import"./index-CImus4on.js";import{a as l}from"./texts-D4Uwcsjn.js";const m=21;const d="Fullfilled Promise";const u="key.promise.then(...)";const e=btoa(String(Date.now()));const P=`
+import{l as s,a as o,d as r,r as i,c as t,e as a}from"./sprites-Bp0J9eWI.js";import"./index-DpKqo4uQ.js";import{a as l}from"./texts-D4Uwcsjn.js";const m=21;const d="Fullfilled Promise";const u="key.promise.then(...)";const e=btoa(String(Date.now()));const P=`
 ${s()}
-${o()}
 
-${r({pos:"100, 100"})}
-add([sprite('key'), pos(center()), area(), 'key', { promise: Promise.resolve('${e}') }])
+${o({pos:"100, 100"})}
+${r({pos:"center()",obj:`{ promise: Promise.resolve('${e}') }`})}
 
 ${i()}
-${a(m)}
-${t(e)}
+${t(m)}
+${a(e)}
 
 ${l("Pass the Promise")}
 

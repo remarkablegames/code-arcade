@@ -1,4 +1,4 @@
-import{l as e,d as t,a as s,r as o,c as a}from"./sprites-x6WB0A11.js";import"./index-CImus4on.js";const r=16;const n="Repetition is key";const y="Use setInterval()";const l=`
+import{l as e,j as t,a as s,r as o,c as a}from"./sprites-Bp0J9eWI.js";import"./index-DpKqo4uQ.js";const r=16;const y="Repetition is key";const d="Use setInterval()";const l=`
 ${e()}
 ${t()}
 
@@ -53,4 +53,4 @@ function collectKey() {
   const key = get('key')[0]
   key && player.moveTo(key.pos)
 }
-`;export{y as hint,r as level,l as prescript,c as script,n as title};
+`;export{d as hint,r as level,l as prescript,c as script,y as title};
