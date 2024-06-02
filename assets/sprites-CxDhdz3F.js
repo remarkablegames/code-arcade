@@ -1,4 +1,4 @@
-import{G as s}from"./index-fPF1KxCe.js";const a=()=>`loadSound('blip', 'sounds/blip.mp3')`;const n=()=>`loadSound('hit', 'sounds/hit.mp3')`;const r=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const d=()=>`
+import{G as s}from"./index-DDIO_too.js";const a=()=>`loadSound('blip', 'sounds/blip.mp3')`;const i=()=>`loadSound('hit', 'sounds/hit.mp3')`;const r=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const d=()=>`
 onKeyPress(() => {
   debug.log('Key press disabled!')
 })
@@ -112,4 +112,4 @@ add([
   pos(${e}),
   'player',
 ])
-`;const b=()=>`loadSprite('block', 'sprites/steel.png')`;const t=()=>`loadSprite('exit', 'sprites/door.png')`;const $=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const l=()=>`loadSprite('key', 'sprites/key.png')`;const p=()=>`loadSprite('player', 'sprites/bean.png')`;const w=()=>`loadSprite('spike', 'sprites/spike.png')`;export{m as a,u as b,g as c,k as d,c as e,n as f,w as g,b as h,$ as i,l as j,d as k,t as l,p as m,y as r};
+`;const b=()=>`loadSprite('block', 'sprites/steel.png')`;const $=()=>`loadSprite('egg', 'sprites/egg.png')`;const t=()=>`loadSprite('exit', 'sprites/door.png')`;const w=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const l=()=>`loadSprite('key', 'sprites/key.png')`;const p=()=>`loadSprite('player', 'sprites/bean.png')`;const x=()=>`loadSprite('spike', 'sprites/spike.png')`;export{m as a,u as b,g as c,k as d,c as e,i as f,x as g,b as h,w as i,l as j,d as k,t as l,p as m,$ as n,y as r};

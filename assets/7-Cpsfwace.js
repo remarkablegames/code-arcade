@@ -1,4 +1,4 @@
-import{h as t,a,b as e,r,c as s}from"./sprites-DdwQz1PS.js";import"./index-fPF1KxCe.js";import{a as o}from"./texts-D4Uwcsjn.js";const p=7;const m="Arrays";const c="Edit the map";const l=`
+import{h as t,a,b as e,r,c as s}from"./sprites-CxDhdz3F.js";import"./index-DDIO_too.js";import{a as o}from"./texts-D4Uwcsjn.js";const p=7;const m="Arrays";const c="Edit the map";const l=`
 ${t()}
 ${a({pos:"center()"})}
 ${e({pos:"550, 550"})}

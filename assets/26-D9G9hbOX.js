@@ -1,4 +1,4 @@
-import{l as s,a as o,d as a,r,c as t,e as i}from"./sprites-DdwQz1PS.js";import"./index-fPF1KxCe.js";import{a as n}from"./texts-D4Uwcsjn.js";const c=25;const l="Async/await";const m="Google Async/await";const e=Date.now();const w=`
+import{l as s,a as o,d as a,r,c as t,e as i}from"./sprites-CxDhdz3F.js";import"./index-DDIO_too.js";import{a as n}from"./texts-D4Uwcsjn.js";const c=26;const l="Async/await";const m="Google Async/await";const e=Date.now();const w=`
 ${s()}
 
 ${o({pos:"100, 100"})}

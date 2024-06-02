@@ -1,4 +1,4 @@
-import{l as e,a as t,d as o,r,c as a,e as d}from"./sprites-DdwQz1PS.js";import"./index-fPF1KxCe.js";import{a as c}from"./texts-D4Uwcsjn.js";const s="swordfish";const i=26;const l="fetch";const w="Google JavaScript Fetch API";const f=`
+import{l as e,a as t,d as o,r,c as a,e as d}from"./sprites-CxDhdz3F.js";import"./index-DDIO_too.js";import{a as c}from"./texts-D4Uwcsjn.js";const s="swordfish";const i=27;const l="fetch";const w="Google JavaScript Fetch API";const f=`
 ${e()}
 
 ${t({pos:"100, 100"})}
