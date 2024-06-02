@@ -1,4 +1,4 @@
-import{l as o,a as s,d as r,r as t,c as a,e as i}from"./sprites-Dk09a4Sc.js";import"./index-DHW99aeY.js";import{a as c}from"./texts-D4Uwcsjn.js";const n=23;const l="Promise methods";const y="key.promise.then(...).catch(...)";const e=Date.now();const $=`
+import{l as o,a as s,d as r,r as t,c as a,e as i}from"./sprites-D7iR-17N.js";import"./index-CqD0C-zF.js";import{a as c}from"./texts-D4Uwcsjn.js";const n=23;const l="Promise methods";const y="key.promise.then(...).catch(...)";const e=Date.now();const $=`
 ${o()}
 
 ${s({pos:"100, 100"})}
