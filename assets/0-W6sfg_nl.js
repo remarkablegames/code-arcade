@@ -1,4 +1,4 @@
-import{a as e,b as o,r as t,c as s}from"./sprites-Bp0J9eWI.js";import"./index-DpKqo4uQ.js";import{a as r}from"./texts-D4Uwcsjn.js";const a=0;const i="console.log";const p="Reach the exit";const d=`
+import{a as e,b as o,r as t,c as s}from"./sprites-BVYswohr.js";import"./index-nTkgeooi.js";import{a as r}from"./texts-D4Uwcsjn.js";const a=0;const i="console.log";const p="Reach the exit";const d=`
 ${e({pos:"50, center().y"})}
 ${o({pos:"width() - 50, center().y"})}
 

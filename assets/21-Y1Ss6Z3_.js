@@ -1,4 +1,4 @@
-import{l as s,a as o,d as r,r as i,c as t,e as a}from"./sprites-Bp0J9eWI.js";import"./index-DpKqo4uQ.js";import{a as l}from"./texts-D4Uwcsjn.js";const m=21;const d="Fullfilled Promise";const u="key.promise.then(...)";const e=btoa(String(Date.now()));const P=`
+import{l as s,a as o,d as r,r as i,c as t,e as a}from"./sprites-BVYswohr.js";import"./index-nTkgeooi.js";import{a as l}from"./texts-D4Uwcsjn.js";const m=21;const d="Fullfilled Promise";const u="key.promise.then(...)";const e=btoa(String(Date.now()));const P=`
 ${s()}
 
 ${o({pos:"100, 100"})}

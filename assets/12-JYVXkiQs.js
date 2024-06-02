@@ -1,4 +1,4 @@
-import{f as o,g as s,a as i,b as p,r,c as a}from"./sprites-Bp0J9eWI.js";import"./index-DpKqo4uQ.js";import{a as n}from"./texts-D4Uwcsjn.js";const l=12;const m="forEach";const t=`
+import{f as o,g as s,a as i,b as r,r as p,c as a}from"./sprites-BVYswohr.js";import"./index-nTkgeooi.js";import{a as n}from"./texts-D4Uwcsjn.js";const l=12;const m="forEach";const t=`
 const map = [
   '          ',
   '          ',
@@ -9,14 +9,14 @@ const map = [
   '   ^      ',
   '^^^^ ^^^  ',
 ]
-`;const e=t.split("^").length-1;const k=`There's ${e} spikes`;const f=`
+`;const e=t.split("^").length-1;const k=`There are ${e} spikes`;const f=`
 ${o()}
 ${s()}
 
 ${i()}
-${p()}
-
 ${r()}
+
+${p()}
 ${a(l)}
 
 ${t}
