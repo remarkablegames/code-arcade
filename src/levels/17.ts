@@ -67,7 +67,7 @@ onUpdate(() => {
 
 export const script = `
 /**
- * A method is a function defined within an object
+ * A property is an association between an object key and its value
  */
 
 onCollide('block', 'player', (block) => {
