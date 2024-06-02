@@ -1,4 +1,4 @@
-import{a as t,b as e,r as i,c as s}from"./sprites-CxDhdz3F.js";import"./index-DDIO_too.js";import{a as n}from"./texts-D4Uwcsjn.js";const o=15;const d="setInterval";const l="2nd argument of setInterval() is delay in ms";const p=`
+import{a as t,b as e,r as i,c as s}from"./sprites-CWCiMgPd.js";import"./index-Dh-bW8nR.js";import{a as n}from"./texts-D4Uwcsjn.js";const o=15;const d="setInterval";const l="2nd argument of setInterval() is delay in ms";const p=`
 ${t({pos:"center()"})}
 ${e()}
 
