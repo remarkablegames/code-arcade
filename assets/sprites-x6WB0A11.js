@@ -1,4 +1,4 @@
-import{G as o}from"./index-D6DF_Sn_.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const p=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const i=()=>`
+import{G as o}from"./index-CImus4on.js";const s=()=>`loadSound('blip', 'sounds/blip.mp3')`;const p=()=>`loadSound('hit', 'sounds/hit.mp3')`;const a=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const i=()=>`
 onKeyPress(() => {
   debug.log('Key press disabled!')
 })
