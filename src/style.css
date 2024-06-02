@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    @apply bg-white;
+  }
+
   h1 {
     @apply font-mono text-3xl;
   }
