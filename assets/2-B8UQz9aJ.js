@@ -1,4 +1,4 @@
-import{m as t,b as e,c as r,r as s}from"./sprites-BVYswohr.js";import"./index-nTkgeooi.js";import{a as o}from"./texts-D4Uwcsjn.js";const i=2;const c="Multi-line comments";const l=`
+import{m as t,b as e,c as r,r as s}from"./sprites-qffG7hxt.js";import"./index-1OS901LI.js";import{a as o}from"./texts-D4Uwcsjn.js";const i=2;const c="Multi-line comments";const l=`
 ${t()}
 ${e({pos:"center()"})}
 ${r(i)}

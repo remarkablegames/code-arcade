@@ -1,4 +1,4 @@
-import{a as t,l as e,r as o,c as r}from"./sprites-BVYswohr.js";import"./index-nTkgeooi.js";import{a as s}from"./texts-D4Uwcsjn.js";const a=6;const p="Booleans";const c="What's the opposite of false?";const d=`
+import{a as t,l as e,r as o,c as r}from"./sprites-qffG7hxt.js";import"./index-1OS901LI.js";import{a as s}from"./texts-D4Uwcsjn.js";const a=6;const p="Booleans";const c="What's the opposite of false?";const d=`
 ${t({pos:"center()"})}
 ${e()}
 
