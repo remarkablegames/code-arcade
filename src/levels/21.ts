@@ -1,43 +1,33 @@
-import {
-  addKey,
-  addPlayer,
-  addText,
-  loadExit,
-  registerPasswordCheck,
-  registerPlayerMovement,
-  registerWinCondition,
-} from '../templates'
+import { addExit, addPlayer, addText, registerWinCondition } from '../templates'
 
 export const level = 21
-export const title = 'Fullfilled Promise'
-export const hint = 'key.promise.then(...)'
-
-const password = btoa(String(Date.now()))
+export const title = 'addEventListener'
+export const hint = "addEventListener('click', callback)"
 
 export const prescript = `
-${loadExit()}
+${addPlayer({ pos: '50, 100' })}
+${addExit({ pos: 'center()' })}
 
-${addPlayer({ pos: '100, 100' })}
-${addKey({
-  pos: 'center()',
-  obj: `{ promise: Promise.resolve('${password}') }`,
-})}
-
-${registerPlayerMovement()}
 ${registerWinCondition(level)}
-${registerPasswordCheck(password)}
 
-${addText('Pass the Promise')}
+onKeyPress(() => {
+  debug.log('Key press disabled!')
+})
+
+${addText('Listen to click')}
 `
 
 export const script = `
 /**
- * A Promise produces a value in the future
- * If a Promise succeeded, it will produce a resolved value
+ * addEventListener() allows you to add an event handler
  */
 
-const key = get('key')[0]
+const player = get('player')[0]
+const event = ''
 
-// set \`key.password\` to the resolved value of \`key.promise\`
-key.promise
+function callback() {
+  player.moveTo(mousePos())
+}
+
+addEventListener(event, null)
 `

@@ -1,4 +1,3 @@
-import { password } from '../../public/data/password.json'
 import {
   addKey,
   addPlayer,
@@ -10,8 +9,10 @@ import {
 } from '../templates'
 
 export const level = 25
-export const title = 'fetch'
-export const hint = 'Google JavaScript Fetch API'
+export const title = 'Async/await'
+export const hint = 'Google Async/await'
+
+const password = Date.now()
 
 export const prescript = `
 ${loadExit()}
@@ -19,25 +20,29 @@ ${loadExit()}
 ${addPlayer({ pos: '100, 100' })}
 ${addKey({
   pos: 'center()',
-  obj: JSON.stringify({ password }),
+  obj: `{ promise: randi(2) ? Promise.resolve(${password}) : Promise.reject(${password}) }`,
 })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Fetch the password')}
+${addText('Bye Bye Bye')}
 `
 
 export const script = `
 /**
- * fetch() makes a request for a resource
+ * \`await\` pauses an async function execution and
+ * waits for a Promise to resolve before continuing
  */
 
 const key = get('key')[0]
 
-// GET the password from "/data/password.json"
-let password
+async function main() {
+  // password = resolved or rejected value of \`key.promise\`
+  let password
+  key.password = password
+}
 
-key.password = password
+main()
 `
