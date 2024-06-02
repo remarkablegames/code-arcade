@@ -1,3 +1,5 @@
+const prefix = 'remarkablegames.code-arcade'
+
 export enum Data {
-  level = 'level',
+  level = `${prefix}.level`,
 }
