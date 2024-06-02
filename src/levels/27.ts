@@ -1,3 +1,4 @@
+import { password } from '../../public/data/password.json'
 import {
   addKey,
   addPlayer,
@@ -8,11 +9,9 @@ import {
   registerWinCondition,
 } from '../templates'
 
-export const level = 23
-export const title = 'Fullfilled Promise'
-export const hint = 'key.promise.then(...)'
-
-const password = btoa(String(Date.now()))
+export const level = 27
+export const title = 'fetch'
+export const hint = 'Google JavaScript Fetch API'
 
 export const prescript = `
 ${loadExit()}
@@ -20,24 +19,25 @@ ${loadExit()}
 ${addPlayer({ pos: '100, 100' })}
 ${addKey({
   pos: 'center()',
-  obj: `{ promise: Promise.resolve('${password}') }`,
+  obj: JSON.stringify({ password }),
 })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Pass the Promise')}
+${addText('Fetch the password')}
 `
 
 export const script = `
 /**
- * A Promise produces a value in the future
- * If a Promise succeeded, it will produce a resolved value
+ * fetch() makes a request for a resource
  */
 
 const key = get('key')[0]
 
-// set \`key.password\` to the resolved value of \`key.promise\`
-key.promise
+// GET the password from "/data/password.json"
+let password
+
+key.password = password
 `

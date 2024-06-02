@@ -53,6 +53,8 @@ add([
 
 export const loadBlock = () => `loadSprite('block', 'sprites/steel.png')`
 
+export const loadEgg = () => `loadSprite('egg', 'sprites/egg.png')`
+
 export const loadExit = () => `loadSprite('exit', 'sprites/door.png')`
 
 export const loadEnemy = () => `loadSprite('enemy', 'sprites/ghosty.png')`
