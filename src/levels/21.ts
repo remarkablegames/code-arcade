@@ -28,8 +28,6 @@ ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
 ${addText('Pass the Promise')}
-
-window.isPromise = (value) => value instanceof Promise
 `
 
 export const script = `
@@ -40,13 +38,6 @@ export const script = `
 
 const key = get('key')[0]
 
-// example of successful Promise
-const examplePromise = Promise.resolve('some value')
-examplePromise.then((value) => {
-  // console.log(value)
-  key.password = value
-})
-
 // set \`key.password\` to the resolved value of \`key.promise\`
-console.log('is promise?', isPromise(key.promise))
+key.promise
 `
