@@ -6,7 +6,13 @@
  */
 export const addExit = ({ pos = '' } = {}) => `
 ${loadExit()}
-add([sprite('exit'), anchor('center'), area(), pos(${pos}), 'exit'])
+add([
+  sprite('exit'),
+  anchor('center'),
+  area({ scale: 0.7, offset: vec2(0, 10) }),
+  pos(${pos}),
+  'exit',
+])
 `
 
 /**
@@ -17,7 +23,14 @@ add([sprite('exit'), anchor('center'), area(), pos(${pos}), 'exit'])
  */
 export const addPlayer = ({ pos = '' } = {}) => `
 ${loadPlayer()}
-add([sprite('player'), anchor('center'), area(), body(), pos(${pos}), 'player'])
+add([
+  sprite('player'),
+  anchor('center'),
+  area({ scale: 0.9 }),
+  body(),
+  pos(${pos}),
+  'player',
+])
 `
 
 export const loadBlock = () => `loadSprite('block', 'sprites/steel.png')`
