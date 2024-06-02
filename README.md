@@ -12,6 +12,7 @@
 Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/code-arcade)
+- [itch.io](https://remarkablegames.itch.io/code-arcade)
 
 ## Credits
 
