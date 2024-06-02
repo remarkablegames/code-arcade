@@ -1,4 +1,4 @@
-import{n as e,i as s,f as o,b as t,c as n,a}from"./sprites-CWCiMgPd.js";import"./index-Dh-bW8nR.js";const c=22;const r="Last stand";const g="addEventListener('click', ...)";const l=`
+import{n as e,i as s,f as o,b as t,c as n,a}from"./sprites-BJl0l-Y-.js";import"./index-BOTDccgU.js";const c=22;const r="Last stand";const g="addEventListener('click', ...)";const l=`
 ${e()}
 ${s()}
 ${o()}
