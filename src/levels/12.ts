@@ -25,7 +25,7 @@ const map = [
 `
 const spikesCount = map.split('^').length - 1
 
-export const hint = `There's ${spikesCount} spikes`
+export const hint = `There are ${spikesCount} spikes`
 
 export const prescript = `
 ${loadHit()}
