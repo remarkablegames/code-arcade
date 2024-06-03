@@ -6,7 +6,7 @@ import { Data } from './types'
 
 const level =
   Number(
-    new URLSearchParams(location.search).get(Data.level) || getData(Data.level),
+    new URLSearchParams(location.search).get('level') || getData(Data.level),
   ) || 0
 
 go(level)
