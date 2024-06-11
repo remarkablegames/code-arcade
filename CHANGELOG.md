@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.4](https://github.com/remarkablegames/code-arcade/compare/v1.0.3...v1.0.4) (2024-06-11)
+
+
+### Continuous Integration
+
+* **github:** fix repository name in upload release artifact ([327a32f](https://github.com/remarkablegames/code-arcade/commit/327a32f7ed10076b0b1b35bed3a7be900dec3115))
+
 ## [1.0.3](https://github.com/remarkablegames/code-arcade/compare/v1.0.2...v1.0.3) (2024-06-11)
 
 
