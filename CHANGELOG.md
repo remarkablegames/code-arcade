@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/remarkablegames/code-arcade/compare/v1.0.2...v1.0.3) (2024-06-11)
+
+
+### Continuous Integration
+
+* **github:** fix upload release artifact in workflow `release-please.yml` ([1b9f7b4](https://github.com/remarkablegames/code-arcade/commit/1b9f7b41e634d0ce0469a3f02218316116bcbe0f))
+
 ## [1.0.2](https://github.com/remarkablegames/code-arcade/compare/v1.0.1...v1.0.2) (2024-06-11)
 
 
