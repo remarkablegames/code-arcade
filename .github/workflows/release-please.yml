@@ -22,7 +22,7 @@ jobs:
         with:
           release-type: node
 
-  publish:
+  deploy:
     needs: release
     runs-on: ubuntu-latest
     if: ${{ needs.release.outputs.release_created }}
@@ -55,6 +55,6 @@ jobs:
           BUTLER_API_KEY: ${{ secrets.BUTLER_API_KEY }}
 
       - name: Upload Release Artifact
-        run: gh release upload ${{ needs.release.outputs.tag_name }} dist/${{ github.repository }}-${{ env.VERSION }}.zip
+        run: gh release upload ${{ needs.release.outputs.tag_name }} dist/${{ github.event.repository.name }}-${{ env.VERSION }}.zip
         env:
           GITHUB_TOKEN: ${{ github.token }}
