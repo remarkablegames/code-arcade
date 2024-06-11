@@ -13,6 +13,7 @@ Play the game on:
 
 - [remarkablegames](https://remarkablegames.org/code-arcade)
 - [itch.io](https://remarkablegames.itch.io/code-arcade)
+- [newgrounds](https://www.newgrounds.com/portal/view/934247)
 
 Read the [blog post](https://remarkablegames.org/posts/code-arcade/).
 
