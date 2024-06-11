@@ -1,4 +1,4 @@
-import{G as s}from"./index-B9iPS959.js";const a=()=>`loadSound('blip', 'sounds/blip.mp3')`;const i=()=>`loadSound('hit', 'sounds/hit.mp3')`;const r=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const d=()=>`
+import{G as o}from"./index-CqfouwQU.js";const a=()=>`loadSound('blip', 'sounds/blip.mp3')`;const n=()=>`loadSound('hit', 'sounds/hit.mp3')`;const r=()=>`loadSound('powerup', 'sounds/powerup.mp3')`;const i=()=>`
 onKeyPress(() => {
   debug.log('Key press disabled!')
 })
@@ -49,14 +49,22 @@ ${a()}
 ${r()}
 
 onCollide('key', 'player', (key) => {
-  if (key.password === ${JSON.stringify(e)}) {
+  const password = ${JSON.stringify(e)}
+
+  if (key.password === password) {
     play('powerup', { volume: 0.5 })
     key.destroy()
     add([sprite('exit'), pos(500, 500), area(), 'exit'])
+    return
+  }
+
+  if (typeof key.password !== typeof password) {
+    debug.log('Password should be a ' + typeof password)
   } else {
-    play('blip', { volume: 0.5 })
     debug.log('Incorrect password')
   }
+
+  play('blip', { volume: 0.5 })
 })
 `;const g=e=>`
 loadSound('exit', 'sounds/wooosh.mp3')
@@ -66,7 +74,7 @@ onCollide('player', 'exit', () => {
 
   wait(0.2, () => {
     window.parent.postMessage({
-      source: '${s}',
+      source: '${o}',
       level: ${e+1},
     })
   })
@@ -92,18 +100,18 @@ add([
   pos(${e}),
   'exit',
 ])
-`;const k=({pos:e="",obj:o=""}={})=>`
-${l()}
+`;const k=({pos:e="",obj:s=""}={})=>`
+${p()}
 add([
   sprite('key'),
   anchor('center'),
   area(),
   pos(${e}),
   'key',
-  ${o},
+  ${s},
 ])
-`;const m=({pos:e=""}={})=>`
-${p()}
+`;const w=({pos:e=""}={})=>`
+${l()}
 add([
   sprite('player'),
   anchor('center'),
@@ -112,4 +120,4 @@ add([
   pos(${e}),
   'player',
 ])
-`;const b=()=>`loadSprite('block', 'sprites/steel.png')`;const $=()=>`loadSprite('egg', 'sprites/egg.png')`;const t=()=>`loadSprite('exit', 'sprites/door.png')`;const w=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const l=()=>`loadSprite('key', 'sprites/key.png')`;const p=()=>`loadSprite('player', 'sprites/bean.png')`;const x=()=>`loadSprite('spike', 'sprites/spike.png')`;export{m as a,u as b,g as c,k as d,c as e,i as f,x as g,b as h,w as i,l as j,d as k,t as l,p as m,$ as n,y as r};
+`;const b=()=>`loadSprite('block', 'sprites/steel.png')`;const m=()=>`loadSprite('egg', 'sprites/egg.png')`;const t=()=>`loadSprite('exit', 'sprites/door.png')`;const $=()=>`loadSprite('enemy', 'sprites/ghosty.png')`;const p=()=>`loadSprite('key', 'sprites/key.png')`;const l=()=>`loadSprite('player', 'sprites/bean.png')`;const f=()=>`loadSprite('spike', 'sprites/spike.png')`;export{w as a,u as b,g as c,k as d,c as e,n as f,f as g,b as h,$ as i,p as j,i as k,t as l,l as m,m as n,y as r};

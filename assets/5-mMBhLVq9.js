@@ -1,4 +1,4 @@
-import{a as t,l as e,r as i,c as r}from"./sprites-B7_9a9v4.js";import"./index-B9iPS959.js";import{a as o}from"./texts-D4Uwcsjn.js";const s=5;const d="Numbers";const c="Change the coordinates";const l=`
+import{a as t,l as e,r as i,c as r}from"./sprites-Bw9HW_wQ.js";import"./index-CqfouwQU.js";import{a as o}from"./texts-D4Uwcsjn.js";const s=5;const d="Numbers";const c="Change the coordinates";const l=`
 ${t({pos:"500, 500"})}
 ${e()}
 

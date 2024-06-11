@@ -1,4 +1,4 @@
-import{a as e,l as t,r as s,c as r}from"./sprites-B7_9a9v4.js";import"./index-B9iPS959.js";import{a as i}from"./texts-D4Uwcsjn.js";const n=1;const c="Single-line comments";const m="Delete the `//` and press Run";const p=`
+import{a as e,l as t,r as s,c as r}from"./sprites-Bw9HW_wQ.js";import"./index-CqfouwQU.js";import{a as i}from"./texts-D4Uwcsjn.js";const n=1;const c="Single-line comments";const m="Delete the `//` and press Run";const p=`
 ${e({pos:"50, 100"})}
 ${t()}
 
