@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/remarkablegames/code-arcade/compare/v1.0.4...v1.0.5) (2024-06-11)
+
+
+### Build System
+
+* **scripts:** zip dist bundle in CI ([d84d3cc](https://github.com/remarkablegames/code-arcade/commit/d84d3cc39e82eb16c30f5617358b8e041c3b8810))
+
 ## [1.0.4](https://github.com/remarkablegames/code-arcade/compare/v1.0.3...v1.0.4) (2024-06-11)
 
 
