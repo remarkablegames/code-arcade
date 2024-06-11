@@ -8,7 +8,7 @@ import {
 
 export const level = 0
 export const title = 'console.log'
-export const hint = 'Reach the exit'
+export const hint = 'Press the door'
 
 export const prescript = `
 ${addPlayer({ pos: '50, center().y' })}

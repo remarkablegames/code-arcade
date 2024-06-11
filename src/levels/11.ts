@@ -10,6 +10,7 @@ import {
 
 export const level = 11
 export const title = 'For Loop'
+export const hint = "Array(42).fill().map(...).join('')"
 
 const password = Array.from(Array(42).keys())
   .map(() => 'answer')

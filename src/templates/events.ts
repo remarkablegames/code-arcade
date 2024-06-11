@@ -73,14 +73,22 @@ ${loadBlip()}
 ${loadPowerup()}
 
 onCollide('key', 'player', (key) => {
-  if (key.password === ${JSON.stringify(password)}) {
+  const password = ${JSON.stringify(password)}
+
+  if (key.password === password) {
     play('powerup', { volume: 0.5 })
     key.destroy()
     add([sprite('exit'), pos(500, 500), area(), 'exit'])
+    return
+  }
+
+  if (typeof key.password !== typeof password) {
+    debug.log('Password should be a ' + typeof password)
   } else {
-    play('blip', { volume: 0.5 })
     debug.log('Incorrect password')
   }
+
+  play('blip', { volume: 0.5 })
 })
 `
 

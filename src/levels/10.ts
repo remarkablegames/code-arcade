@@ -13,6 +13,8 @@ export const title = 'Variables'
 
 const password = (new Date().getFullYear() + level) * 31337
 
+export const hint = String(password)
+
 export const prescript = `
 ${loadExit()}
 
