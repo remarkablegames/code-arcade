@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/remarkablegames/code-arcade/compare/v1.0.1...v1.0.2) (2024-06-11)
+
+
+### Bug Fixes
+
+* **levels:** improve hints and incorrect password message ([4b60b12](https://github.com/remarkablegames/code-arcade/commit/4b60b12bba0f494edc068a59646b2ceaafb1a251))
+
 ## [1.0.1](https://github.com/remarkablegames/code-arcade/compare/v1.0.0...v1.0.1) (2024-06-02)
 
 
