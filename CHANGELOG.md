@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/remarkablegames/code-arcade/compare/v1.0.5...v1.1.0) (2024-06-12)
+
+
+### Features
+
+* add "Restart" button ([5e07d91](https://github.com/remarkablegames/code-arcade/commit/5e07d91d149ebb99255beb006e4a740062e7ce2b))
+
 ## [1.0.5](https://github.com/remarkablegames/code-arcade/compare/v1.0.4...v1.0.5) (2024-06-11)
 
 
