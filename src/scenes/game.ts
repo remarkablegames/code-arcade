@@ -36,12 +36,23 @@ export async function go(levelNumber: number) {
     },
   })
 
+  run()
+
   function run() {
     const script = editorView.state.doc.toString()
     iframe.srcdoc = wrapGame({ ...level, script })
   }
 
-  run()
+  function restart() {
+    editorView.dispatch({
+      changes: {
+        from: 0,
+        to: editorView.state.doc.length,
+        insert: level.script?.trim(),
+      },
+    })
+    run()
+  }
 
   function hint() {
     iframe.contentWindow?.postMessage({
@@ -50,7 +61,7 @@ export async function go(levelNumber: number) {
     })
   }
 
-  addEventListeners(run, hint)
+  addEventListeners(run, restart, hint)
 }
 
 /**

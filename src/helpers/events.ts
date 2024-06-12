@@ -3,13 +3,15 @@ const audio = new Audio('sounds/score.mp3')
 type Callback = () => void
 
 /**
- * Attaches click listeners to "Run" and "Hint" buttons.
+ * Attaches click listeners to "Run", "Restart", and "Hint" buttons.
  *
  * @param runCallback - Run callback.
+ * @param restartCallback - Restart callback.
  * @param hintCallback - Hint callback.
  */
 export function addEventListeners(
   runCallback: Callback,
+  restartCallback: Callback,
   hintCallback: Callback,
 ) {
   const runButtons = document.querySelectorAll(
@@ -20,6 +22,17 @@ export function addEventListeners(
     runButton.onclick = () => {
       audio.play()
       runCallback()
+    }
+  })
+
+  const restartButtons = document.querySelectorAll(
+    'main .btn-tertiary',
+  ) as NodeListOf<HTMLButtonElement>
+
+  restartButtons.forEach((restartButton) => {
+    restartButton.onclick = () => {
+      audio.play()
+      restartCallback()
     }
   })
 
