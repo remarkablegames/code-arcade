@@ -1,4 +1,4 @@
-import{l as e,j as t,a as s,r as o,c as a}from"./sprites-Dpo28SL0.js";import"./index-CVmblMP6.js";const r=16;const y="Repetition is key";const d="Use setInterval()";const l=`
+import{l as e,j as t,a as s,r as o,c as a}from"./sprites-BDbM0h0-.js";import"./index-CNmIWtGc.js";const r=17;const y="Repetition is key";const d="Use setInterval()";const l=`
 ${e()}
 ${t()}
 

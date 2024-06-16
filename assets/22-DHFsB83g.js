@@ -1,4 +1,4 @@
-import{a as e,b as t,c as n}from"./sprites-Dpo28SL0.js";import"./index-CVmblMP6.js";import{a as s}from"./texts-D4Uwcsjn.js";const o=21;const i="addEventListener";const c="addEventListener('click', callback)";const l=`
+import{a as e,b as t,c as n}from"./sprites-BDbM0h0-.js";import"./index-CNmIWtGc.js";import{a as s}from"./texts-D4Uwcsjn.js";const o=22;const i="addEventListener";const c="addEventListener('click', callback)";const l=`
 ${e({pos:"50, 100"})}
 ${t({pos:"center()"})}
 
