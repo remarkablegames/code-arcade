@@ -36,5 +36,5 @@ player.onUpdate(() => movePlayer())
 `
 
 export const postscript = `
-get('player')[0].moveTo(width() - 50, 75)
+get('player')[0]?.moveTo(width() - 50, 75)
 `

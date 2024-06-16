@@ -1,83 +1,70 @@
 import {
-  addExit,
   addPlayer,
-  addText,
-  loadBlock,
+  loadExit,
+  loadKey,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
 export const level = 19
-export const title = 'Properties'
-export const hint = "Edit the body's mass"
-
-const mass = 1000
+export const title = 'Repetition is key'
+export const hint = 'Use setInterval()'
 
 export const prescript = `
-${loadBlock()}
-${addPlayer({ pos: '95, 100' })}
-${addExit()}
+${loadExit()}
+${loadKey()}
+
+${addPlayer({ pos: 'center()' })}
+
+let keys = 420
+
+const getMessage = () => 'Collect ' + keys + ' more key' + (keys !== 1 ? 's' : '')
+
+add([rect(width(), 32), color(0, 0, 0), z(100)])
+const message = add([text(getMessage()), z(100)])
+
+function addKey() {
+  add([
+    sprite('key'),
+    pos(randi(width()), randi(height())),
+    area(),
+    anchor('center'),
+    'key',
+  ])
+}
+
+addKey()
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
-${addText('Sokoban')}
+onCollide('key', 'player', (key) => {
+  keys--
+  key.destroy()
+  message.text = getMessage()
 
-const player = get('player')[0]
-player.moveTo = () => {}
-
-const map = [
-  '###########',
-  '###########',
-  '##       ##',
-  '######## ##',
-  '##       ##',
-  '###########',
-  '##     ####',
-  '## ####  ##',
-  '##    #  ##',
-  '###########',
-  '###########',
-]
-
-const tileSize = 64
-
-const level = addLevel(map, {
-  tileWidth: tileSize,
-  tileHeight: tileSize,
-  pos: vec2(-tileSize, -tileSize),
-  tiles: {
-    '#': () => [
-      sprite('block'),
-      area(),
-      body({ mass: ${mass} }),
-      'block'
-    ],
+  if (keys) {
+    addKey()
+  } else {
+    add([sprite('exit'), pos(center()), area(), 'exit'])
   }
 })
 
-onUpdate(() => {
-  level.get('block').forEach((block) => {
-    if (block.mass < 1) {
-      throw new Error('Block mass cannot be less than 1')
-    }
-  })
+onAdd('exit', () => {
+  if (keys) {
+    destroyAll('exit')
+  }
 })
 `
 
 export const script = `
 /**
- * A property is an association between an object key and its value
+ * Can we speed things up?
  */
 
-onCollide('block', 'player', (block) => {
-  block.mass = ${mass}
-})
-`
-
-export const postscript = `
-const exit = get('exit')[0]
-if (exit) {
-  exit.moveTo(480, 480)
+function collectKey() {
+  const player = get('player')[0]
+  const key = get('key')[0]
+  key && player.moveTo(key.pos)
 }
 `

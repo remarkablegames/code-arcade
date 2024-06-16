@@ -9,35 +9,51 @@ import {
 } from '../templates'
 
 export const level = 13
-export const title = 'For Loop'
-export const hint = "Array(42).fill().map(...).join('')"
+export const title = 'Template Literals'
+export const hint = '"hash": "${hash}"'
 
-const password = Array.from(Array(42).keys())
-  .map(() => 'answer')
+const hash = Array(10)
+  .fill(undefined)
+  .map(() => '286755fad04869ca523320acce0dc6a4')
   .join('')
+
+const password = `
+{
+  "level": ${level},
+  "hash": "${hash}"
+}
+`
 
 export const prescript = `
 ${loadExit()}
 
 ${addPlayer({ pos: '100, 100' })}
-${addKey({ pos: 'center()', obj: JSON.stringify({ password }) })}
+${addKey({ pos: 'center()', obj: JSON.stringify({ password, hash }) })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Repeat the password')}
+${addText('Multiline password')}
 `
 
 export const script = `
 /**
- * A for loop repeats a block of code
+ * A template literal allows variables to be interpolated in a string
  */
 
 const key = get('key')[0]
 
-// password = 'answer' repeated 42 times
-let password = 'answer' + 'answer'
+const level = ${level}
+const hash = key.hash
+
+// pass in hash
+const password = \`
+{
+  "level": $\{level},
+  "hash": ""
+}
+\`
 
 key.password = password
 `

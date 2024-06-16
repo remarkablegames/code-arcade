@@ -1,41 +1,70 @@
 import {
-  addKey,
+  addExit,
   addPlayer,
   addText,
-  loadExit,
-  registerPasswordCheck,
-  registerPlayerMovement,
+  loadBlock,
+  registerDisableMovement,
   registerWinCondition,
 } from '../templates'
 
 export const level = 21
-export const title = 'JSON.stringify'
-export const hint = '{ level: _, year: _ }'
-
-const password = JSON.stringify({ level, year: new Date().getFullYear() })
+export const title = 'Methods'
+export const hint = 'Call the methods in a for loop'
 
 export const prescript = `
-${loadExit()}
+${loadBlock()}
+${addPlayer({ pos: '95, 100' })}
+${addExit()}
 
-${addPlayer({ pos: '100, 100' })}
-${addKey({ pos: 'center()', obj: JSON.stringify({ password }) })}
-
-${registerPlayerMovement()}
+${registerDisableMovement()}
 ${registerWinCondition(level)}
-${registerPasswordCheck(password)}
 
-${addText('Stringify the password')}
+${addText('Exit the maze')}
+
+const player = get('player')[0]
+player.moveTo = () => {}
+
+const map = [
+  '#########',
+  '#       #',
+  '####### #',
+  '#       #',
+  '# #######',
+  '#       #',
+  '####### #',
+  '#       #',
+  '#########',
+]
+
+addLevel(map, {
+  tileWidth: 64,
+  tileHeight: 64,
+  tiles: {
+    '#': () => [
+      sprite('block'),
+      area(),
+      body({ isStatic: true }),
+    ],
+  }
+})
 `
 
 export const script = `
 /**
- * JSON.stringify() converts data into a string
+ * A method is a function defined within an object
  */
 
-const key = get('key')[0]
+const player = get('player')[0]
+const SPEED = 300
 
-// password = JSON string of object containing "level" and "year"
-let password
+player.moveUp = function() { this.move(0, -SPEED) }
+player.moveLeft = function() { this.move(-SPEED, 0) }
+player.moveDown = function() { this.move(0, SPEED) }
+player.moveRight = function() { this.move(SPEED, 0) }
 
-key.password = password
+player.moveRight()
+`
+
+export const postscript = `
+get('exit')[0]?.moveTo(95, 480)
 `

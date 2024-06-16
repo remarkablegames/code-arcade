@@ -25,6 +25,7 @@ onMousePress(() => {
 export const registerPlayerMovement = (speed = 320) => `
 onKeyDown((key) => {
   const player = get('player')[0]
+
   if (!player) {
     return
   }
@@ -53,12 +54,7 @@ onKeyDown((key) => {
 })
 
 onMouseDown(() => {
-  const player = get('player')[0]
-  if (!player) {
-    return
-  }
-
-  player.moveTo(mousePos(), ${speed})
+  get('player')[0]?.moveTo(mousePos(), ${speed})
 })
 `
 

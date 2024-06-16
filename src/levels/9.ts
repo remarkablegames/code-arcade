@@ -35,5 +35,5 @@ player.onUpdate(() => movePlayer())
 `
 
 export const postscript = `
-get('player')[0].moveTo(50, 75)
+get('player')[0]?.moveTo(50, 75)
 `

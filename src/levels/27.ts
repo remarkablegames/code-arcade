@@ -9,10 +9,10 @@ import {
 } from '../templates'
 
 export const level = 27
-export const title = 'Promise methods'
-export const hint = 'key.promise.then(...).catch(...)'
+export const title = 'Rejected Promise'
+export const hint = 'key.promise.catch(...)'
 
-const password = Date.now()
+const password = btoa(String(Date.now()))
 
 export const prescript = `
 ${loadExit()}
@@ -20,19 +20,26 @@ ${loadExit()}
 ${addPlayer({ pos: '100, 100' })}
 ${addKey({
   pos: 'center()',
-  obj: `{ promise: randi(2) ? Promise.resolve(${password}) : Promise.reject(${password}) }`,
+  obj: `{ promise: Promise.reject('${password}') }`,
 })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('then or catch')}
+${addText('Catch the Promise')}
+
+window.isPromise = (value) => value instanceof Promise
 `
 
 export const script = `
+/**
+ * A Promise produces a value in the future
+ * If a Promise failed, it will produce a rejected value
+ */
+
 const key = get('key')[0]
 
-// set \`key.password\` to the resolved or rejected value of \`key.promise\`
+// set \`key.password\` to the rejected value of \`key.promise\`
 key.promise
 `
