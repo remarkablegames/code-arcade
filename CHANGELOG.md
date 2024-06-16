@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.2.0](https://github.com/remarkablegames/code-arcade/compare/v1.1.0...v1.2.0) (2024-06-16)
+
+
+### Features
+
+* **levels:** insert 10 ([f58ba49](https://github.com/remarkablegames/code-arcade/commit/f58ba49cc3da206a1d3edc9149183a18996d007e))
+* **levels:** insert 11 ([14fcd45](https://github.com/remarkablegames/code-arcade/commit/14fcd45a17f45c002ad9e602934c7fc3825571de))
+* **levels:** insert 11 ([b3f7258](https://github.com/remarkablegames/code-arcade/commit/b3f7258f2e34a332d841c4fd65018608a91f4c6f))
+
 ## [1.1.0](https://github.com/remarkablegames/code-arcade/compare/v1.0.5...v1.1.0) (2024-06-12)
 
 
