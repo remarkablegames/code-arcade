@@ -1,4 +1,4 @@
-import{l as t,a as o,d as r,r as i,c as l,e as n}from"./sprites-BDbM0h0-.js";import"./index-CNmIWtGc.js";import{a as c}from"./texts-D4Uwcsjn.js";const s=11;const $="Template Literals";const m='"hash": "${hash}"';const a=Array(10).fill(void 0).map(()=>"286755fad04869ca523320acce0dc6a4").join("");const e=`
+import{l as t,a as o,e as r,r as i,c as l,f as n}from"./sprites-BYQQgCUS.js";import"./index-YZxV9Vrg.js";import{a as c}from"./texts-D4Uwcsjn.js";const s=12;const $="Template Literals";const m='"hash": "${hash}"';const a=Array(10).fill(void 0).map(()=>"286755fad04869ca523320acce0dc6a4").join("");const e=`
 {
   "level": ${s},
   "hash": "${a}"

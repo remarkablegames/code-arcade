@@ -1,4 +1,4 @@
-import{f as o,g as s,a as i,b as r,r as p,c as a}from"./sprites-BDbM0h0-.js";import"./index-CNmIWtGc.js";import{a as n}from"./texts-D4Uwcsjn.js";const l=13;const m="forEach";const t=`
+import{g as o,h as s,a as i,b as r,r as p,c as a}from"./sprites-BYQQgCUS.js";import"./index-YZxV9Vrg.js";import{a as n}from"./texts-D4Uwcsjn.js";const l=14;const m="forEach";const t=`
 const map = [
   '          ',
   '          ',
@@ -9,7 +9,7 @@ const map = [
   '   ^      ',
   '^^^^ ^^^  ',
 ]
-`;const e=t.split("^").length-1;const k=`There are ${e} spikes`;const f=`
+`;const e=t.split("^").length-1;const h=`There are ${e} spikes`;const k=`
 ${o()}
 ${s()}
 
@@ -60,7 +60,7 @@ onUpdate(() => {
 })
 
 ${n("Invisible spikes")}
-`;const h=`
+`;const f=`
 /**
  * forEach() is an iterative method
  */
@@ -78,4 +78,4 @@ const player = get('player')[0]
 if (player) {
   player.moveTo(50, 70)
 }
-`;export{k as hint,l as level,x as postscript,f as prescript,h as script,m as title};
+`;export{h as hint,l as level,x as postscript,k as prescript,f as script,m as title};
