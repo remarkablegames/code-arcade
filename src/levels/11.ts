@@ -9,51 +9,35 @@ import {
 } from '../templates'
 
 export const level = 11
-export const title = 'Template Literals'
-export const hint = '"hash": "${hash}"'
+export const title = 'Variables'
 
-const hash = Array(10)
-  .fill(undefined)
-  .map(() => '286755fad04869ca523320acce0dc6a4')
-  .join('')
+const password = (new Date().getFullYear() + level) * 31337
 
-const password = `
-{
-  "level": ${level},
-  "hash": "${hash}"
-}
-`
+export const hint = String(password)
 
 export const prescript = `
 ${loadExit()}
 
 ${addPlayer({ pos: '100, 100' })}
-${addKey({ pos: 'center()', obj: JSON.stringify({ password, hash }) })}
+${addKey({ pos: 'center()', obj: JSON.stringify({ password }) })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Multiline password')}
+${addText('Update password & go to key')}
 `
 
 export const script = `
 /**
- * A template literal allows variables to be interpolated in a string
+ * A variable stores data
+ * 'const' cannot be reassigned, whereas 'let' can be reassigned
  */
 
 const key = get('key')[0]
 
-const level = ${level}
-const hash = key.hash
-
-// pass in hash
-const password = \`
-{
-  "level": $\{level},
-  "hash": ""
-}
-\`
+// password = (current_year + current_level_number) * 31337
+let password
 
 key.password = password
 `

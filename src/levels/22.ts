@@ -1,33 +1,42 @@
-import { addExit, addPlayer, addText, registerWinCondition } from '../templates'
+import {
+  addKey,
+  addPlayer,
+  addText,
+  loadExit,
+  registerPasswordCheck,
+  registerPlayerMovement,
+  registerWinCondition,
+} from '../templates'
 
 export const level = 22
-export const title = 'addEventListener'
-export const hint = "addEventListener('click', callback)"
+export const title = 'JSON.parse'
+export const hint = 'console.log(key.json)'
+
+const password = btoa(String(Date.now()))
+const json = JSON.stringify({ password })
 
 export const prescript = `
-${addPlayer({ pos: '50, 100' })}
-${addExit({ pos: 'center()' })}
+${loadExit()}
 
+${addPlayer({ pos: '100, 100' })}
+${addKey({ pos: 'center()', obj: JSON.stringify({ json }) })}
+
+${registerPlayerMovement()}
 ${registerWinCondition(level)}
+${registerPasswordCheck(password)}
 
-onKeyPress(() => {
-  debug.log('Key press disabled!')
-})
-
-${addText('Listen to click')}
+${addText('Parse the password')}
 `
 
 export const script = `
 /**
- * addEventListener() allows you to add an event handler
+ * JSON.parse() converts string into data
  */
 
-const player = get('player')[0]
-const event = ''
+const key = get('key')[0]
 
-function callback() {
-  player.moveTo(mousePos())
-}
+// parse the "password" from \`key.json\`
+let password
 
-addEventListener(event, null)
+key.password = password
 `

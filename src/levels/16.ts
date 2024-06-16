@@ -1,39 +1,35 @@
 import {
-  addExit,
   addPlayer,
   addText,
+  loadExit,
   registerPlayerMovement,
   registerWinCondition,
 } from '../templates'
 
 export const level = 16
-export const title = 'setInterval'
-export const hint = '2nd argument of setInterval() is delay in ms'
+export const title = 'setTimeout'
+export const hint = '2nd argument of setTimeout() is delay in ms'
 
 export const prescript = `
+${loadExit()}
 ${addPlayer({ pos: 'center()' })}
-${addExit()}
 
-${registerPlayerMovement(50)}
+${registerPlayerMovement()}
 ${registerWinCondition(level)}
 
-${addText('Exit in a loop')}
+${addText('How to not wait?')}
 `
 
 export const script = `
 /**
- * setInterval() calls a function at specified periods
+ * setTimeout() executes a function once the timer expires
  */
 
 const MILLISECOND = 1
 const SECOND = MILLISECOND * 1000
+const MINUTE = SECOND * 60
 
-const exit = get('exit')[0]
-
-setInterval(() => {
-  exit.moveTo(
-    randi(width()),
-    randi(height()),
-  )
-}, 2 * SECOND)
+setTimeout(() => {
+  add([sprite('exit'), area(), 'exit'])
+}, 5 * MINUTE)
 `

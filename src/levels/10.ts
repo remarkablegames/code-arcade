@@ -1,43 +1,40 @@
 import {
-  addKey,
+  addExit,
   addPlayer,
   addText,
-  loadExit,
-  registerPasswordCheck,
-  registerPlayerMovement,
+  registerDisableMovement,
   registerWinCondition,
 } from '../templates'
 
 export const level = 10
-export const title = 'Variables'
-
-const password = (new Date().getFullYear() + level) * 31337
-
-export const hint = String(password)
+export const title = 'Function Expressions'
+export const hint = 'Use a negative number'
 
 export const prescript = `
-${loadExit()}
+${addPlayer()}
+${addExit({ pos: 'center().x, 550' })}
 
-${addPlayer({ pos: '100, 100' })}
-${addKey({ pos: 'center()', obj: JSON.stringify({ password }) })}
-
-${registerPlayerMovement()}
+${registerDisableMovement()}
 ${registerWinCondition(level)}
-${registerPasswordCheck(password)}
 
-${addText('Update password & go to key')}
+${addText('Move me again')}
 `
 
 export const script = `
 /**
- * A variable stores data
- * 'const' cannot be reassigned, whereas 'let' can be reassigned
+ * A function expression can omit the function name
+ * to create an anonymous function
  */
 
-const key = get('key')[0]
+const player = get('player')[0]
 
-// password = (current_year + current_level_number) * 31337
-let password
+const movePlayer = function () {
+  player.move(0, 0)
+}
 
-key.password = password
+player.onUpdate(() => movePlayer())
+`
+
+export const postscript = `
+get('player')[0].moveTo(width() - 50, 75)
 `

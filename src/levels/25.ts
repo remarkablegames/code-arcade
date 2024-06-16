@@ -9,8 +9,8 @@ import {
 } from '../templates'
 
 export const level = 25
-export const title = 'Rejected Promise'
-export const hint = 'key.promise.catch(...)'
+export const title = 'Fullfilled Promise'
+export const hint = 'key.promise.then(...)'
 
 const password = btoa(String(Date.now()))
 
@@ -20,26 +20,24 @@ ${loadExit()}
 ${addPlayer({ pos: '100, 100' })}
 ${addKey({
   pos: 'center()',
-  obj: `{ promise: Promise.reject('${password}') }`,
+  obj: `{ promise: Promise.resolve('${password}') }`,
 })}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Catch the Promise')}
-
-window.isPromise = (value) => value instanceof Promise
+${addText('Pass the Promise')}
 `
 
 export const script = `
 /**
  * A Promise produces a value in the future
- * If a Promise failed, it will produce a rejected value
+ * If a Promise succeeded, it will produce a resolved value
  */
 
 const key = get('key')[0]
 
-// set \`key.password\` to the rejected value of \`key.promise\`
+// set \`key.password\` to the resolved value of \`key.promise\`
 key.promise
 `
