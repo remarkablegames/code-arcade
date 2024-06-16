@@ -1,3 +1,4 @@
+import { password } from '../../public/data/password.json'
 import {
   addKey,
   addPlayer,
@@ -8,34 +9,34 @@ import {
   registerWinCondition,
 } from '../templates'
 
-export const level = 21
-export const title = 'JSON.parse'
-export const hint = 'console.log(key.json)'
-
-const password = btoa(String(Date.now()))
-const json = JSON.stringify({ password })
+export const level = 28
+export const title = 'fetch'
+export const hint = 'Google JavaScript Fetch API'
 
 export const prescript = `
 ${loadExit()}
 
 ${addPlayer({ pos: '100, 100' })}
-${addKey({ pos: 'center()', obj: JSON.stringify({ json }) })}
+${addKey({
+  pos: 'center()',
+  obj: JSON.stringify({ password }),
+})}
 
 ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Parse the password')}
+${addText('Fetch the password')}
 `
 
 export const script = `
 /**
- * JSON.parse() converts string into data
+ * fetch() makes a request for a resource
  */
 
 const key = get('key')[0]
 
-// parse the "password" from \`key.json\`
+// GET the password from "/data/password.json"
 let password
 
 key.password = password

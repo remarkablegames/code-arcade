@@ -7,7 +7,7 @@ import {
 } from '../templates'
 
 export const level = 1
-export const title = 'Single-line comments'
+export const title = 'Single-line Comments'
 export const hint = 'Delete the `//` and press Run'
 
 export const prescript = `

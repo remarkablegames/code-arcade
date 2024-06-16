@@ -9,8 +9,8 @@ import {
 } from '../templates'
 
 export const level = 26
-export const title = 'Async/await'
-export const hint = 'Google Async/await'
+export const title = 'Promise methods'
+export const hint = 'key.promise.then(...).catch(...)'
 
 const password = Date.now()
 
@@ -27,22 +27,12 @@ ${registerPlayerMovement()}
 ${registerWinCondition(level)}
 ${registerPasswordCheck(password)}
 
-${addText('Bye Bye Bye')}
+${addText('then or catch')}
 `
 
 export const script = `
-/**
- * \`await\` pauses an async function execution and
- * waits for a Promise to resolve before continuing
- */
-
 const key = get('key')[0]
 
-async function main() {
-  // password = resolved or rejected value of \`key.promise\`
-  let password
-  key.password = password
-}
-
-main()
+// set \`key.password\` to the resolved or rejected value of \`key.promise\`
+key.promise
 `

@@ -7,7 +7,7 @@ import {
 } from '../templates'
 
 export const level = 2
-export const title = 'Multi-line comments'
+export const title = 'Multi-line Comments'
 
 export const prescript = `
 ${loadPlayer()}
