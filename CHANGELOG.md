@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.1](https://github.com/remarkablegames/code-arcade/compare/v1.2.0...v1.2.1) (2024-07-03)
+
+
+### Bug Fixes
+
+* **levels:** improve hint in level 9 ([f10f505](https://github.com/remarkablegames/code-arcade/commit/f10f5056cc7d36371a1262bc784607e41f2e01e2))
+
 ## [1.2.0](https://github.com/remarkablegames/code-arcade/compare/v1.1.0...v1.2.0) (2024-06-16)
 
 
