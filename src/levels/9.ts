@@ -8,7 +8,7 @@ import {
 
 export const level = 9
 export const title = 'Functions'
-export const hint = '0 = not moving'
+export const hint = 'Edit the values in player.move(...)'
 
 export const prescript = `
 ${addPlayer()}
