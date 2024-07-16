@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/remarkablegames/code-arcade/compare/v1.2.1...v1.2.2) (2024-07-16)
+
+
+### Code Refactoring
+
+* **templates:** add SRI (Subresource Integrity) to Kaboom.js CDN URL ([5320feb](https://github.com/remarkablegames/code-arcade/commit/5320febb575b23b39ec5466129755cc4b1d67e1f))
+
 ## [1.2.1](https://github.com/remarkablegames/code-arcade/compare/v1.2.0...v1.2.1) (2024-07-03)
 
 
