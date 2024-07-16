@@ -29,7 +29,7 @@ body {
 </style>
 </head>
 <body>
-<script src="https://unpkg.com/kaboom@3000.1.17/dist/kaboom.js"></script>
+<script src="https://unpkg.com/kaboom@3000.1.17/dist/kaboom.js" integrity="sha512-+4bwhMkroxw4uj24LoIa6vo2KSyaydGiOJ4HZSuOW7HZK9MuKBnibYtRinFiEIZT3NBXnqZrYvL1p0jlJbTqbg==" crossorigin="anonymous"></script>
 
 <script>
 kaboom()
