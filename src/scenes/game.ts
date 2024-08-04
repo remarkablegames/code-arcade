@@ -21,6 +21,7 @@ export async function go(levelNumber: number) {
 
   try {
     level = await getLevel(levelNumber)
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
   } catch (error) {
     return go(0)
   }
