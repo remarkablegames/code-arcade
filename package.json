@@ -23,7 +23,7 @@
   "devDependencies": {
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
-    "@types/yargs": "17.0.32",
+    "@types/yargs": "17.0.33",
     "@typescript-eslint/eslint-plugin": "8.0.1",
     "@typescript-eslint/parser": "8.0.1",
     "autoprefixer": "10.4.20",
