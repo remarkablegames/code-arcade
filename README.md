@@ -80,7 +80,7 @@ Your game can be uploaded to your server, [Itch.io](https://itch.io/), [Newgroun
 
 ### `npm run increment-levels`
 
-Increments level by incrementing the level number and renaming file:
+Increments a level and renames the file:
 
 ```sh
 npm run increment-levels -- --level=<number>
