@@ -38,7 +38,7 @@
     "postcss": "8.5.5",
     "prettier": "3.5.3",
     "tailwindcss": "4.1.10",
-    "tsx": "4.20.2",
+    "tsx": "4.20.3",
     "typescript": "5.8.3",
     "vite": "6.3.5",
     "vite-plugin-html": "3.2.2",
