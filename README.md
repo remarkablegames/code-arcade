@@ -4,16 +4,16 @@
 
 # Code Arcade
 
-![release](https://img.shields.io/github/v/release/remarkablegames/code-arcade)
+[![release](https://img.shields.io/github/v/release/remarkablegames/code-arcade)](https://github.com/remarkablegames/code-arcade/releases)
 [![build](https://github.com/remarkablegames/code-arcade/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/code-arcade/actions/workflows/build.yml)
 
 🕹️ Learn how to program with Code Arcade.
 
 Play the game on:
 
-- [remarkablegames](https://remarkablegames.org/code-arcade)
 - [itch.io](https://remarkablegames.itch.io/code-arcade)
 - [newgrounds](https://www.newgrounds.com/portal/view/934247)
+- [remarkablegames](https://remarkablegames.org/code-arcade)
 
 Read the [blog post](https://remarkablegames.org/posts/code-arcade/).
 
