@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.2.3 (2026-04-28)
+
+
+### Miscellaneous Chores
+
+* release 1.2.3 ([bf69471](https://github.com/remarkablegames/code-arcade/commit/bf69471815e3b689dd6c0ac828f6e6a05f93501e))
+
 ## [1.2.3](https://github.com/remarkablegames/code-arcade/compare/v1.2.2...v1.2.3) (2025-04-30)
 
 ### Miscellaneous Chores
