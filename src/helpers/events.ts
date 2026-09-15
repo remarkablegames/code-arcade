@@ -14,35 +14,33 @@ export function addEventListeners(
   restartCallback: Callback,
   hintCallback: Callback,
 ) {
-  const runButtons = document.querySelectorAll(
-    'main .btn-primary',
-  ) as NodeListOf<HTMLButtonElement>
+  const runButtons =
+    document.querySelectorAll<HTMLButtonElement>('main .btn-primary')
 
   runButtons.forEach((runButton) => {
     runButton.onclick = () => {
-      audio.play()
+      void audio.play()
       runCallback()
     }
   })
 
-  const restartButtons = document.querySelectorAll(
-    'main .btn-tertiary',
-  ) as NodeListOf<HTMLButtonElement>
+  const restartButtons =
+    document.querySelectorAll<HTMLButtonElement>('main .btn-tertiary')
 
   restartButtons.forEach((restartButton) => {
     restartButton.onclick = () => {
-      audio.play()
+      void audio.play()
       restartCallback()
     }
   })
 
-  const hintButtons = document.querySelectorAll(
+  const hintButtons = document.querySelectorAll<HTMLButtonElement>(
     'main .btn-secondary',
-  ) as NodeListOf<HTMLButtonElement>
+  )
 
   hintButtons.forEach((hintButton) => {
     hintButton.onclick = () => {
-      audio.play()
+      void audio.play()
       hintCallback()
     }
   })

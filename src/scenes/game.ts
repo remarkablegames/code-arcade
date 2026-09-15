@@ -7,9 +7,15 @@ import {
   renderLevel,
 } from '../helpers'
 import { wrapGame } from '../templates'
-import { Data, Level } from '../types'
+import { Data, type Level } from '../types'
 
-const iframe = document.querySelector('iframe') as HTMLIFrameElement
+const iframeElement = document.querySelector('iframe')
+
+if (!iframeElement) {
+  throw new Error('Missing iframe element')
+}
+
+const iframe: HTMLIFrameElement = iframeElement
 
 /**
  * Starts level.
@@ -69,12 +75,11 @@ export async function go(levelNumber: number) {
  * Listen to iframe postMessage on level clear.
  */
 window.addEventListener('message', (event) => {
-  if (
-    !event.origin.includes(location.origin) ||
-    event.data?.source !== GAME_ID
-  ) {
+  const data = event.data as { source?: string; level: number } | undefined
+
+  if (!event.origin.includes(location.origin) || data?.source !== GAME_ID) {
     return
   }
 
-  go(event.data.level)
+  void go(data.level)
 })
