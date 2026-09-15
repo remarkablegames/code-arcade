@@ -29,10 +29,10 @@ body {
 </style>
 </head>
 <body>
-<script src="https://unpkg.com/kaboom@3000.1.17/dist/kaboom.js" integrity="sha512-+4bwhMkroxw4uj24LoIa6vo2KSyaydGiOJ4HZSuOW7HZK9MuKBnibYtRinFiEIZT3NBXnqZrYvL1p0jlJbTqbg==" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/kaplay@3001.0.19/dist/kaplay.js" integrity="sha512-e6Ye/jWcQIfNO9kq7G5T3LxNURgT6NZ2B2lJ4Mwl6gN26S0rFTkq5euDxKGwv5Gp8xbOGgPcNgATP0ZWbHN65w==" crossorigin="anonymous"></script>
 
 <script>
-kaboom()
+kaplay()
 
 window.onerror = (message) => {
   debug.log(message)
