@@ -7,13 +7,19 @@
 [![release](https://img.shields.io/github/v/release/remarkablegames/code-arcade)](https://github.com/remarkablegames/code-arcade/releases)
 [![build](https://github.com/remarkablegames/code-arcade/actions/workflows/build.yml/badge.svg)](https://github.com/remarkablegames/code-arcade/actions/workflows/build.yml)
 
-🕹️ Learn how to program with Code Arcade.
+🕹️ Learn how to program with Code Arcade!
 
-Play the game on:
+Play in your browser:
 
 - [itch.io](https://remarkablegames.itch.io/code-arcade)
 - [Newgrounds](https://www.newgrounds.com/portal/view/934247)
-- [remarkablegames](https://remarkablegames.org/code-arcade)
+- [remarkablegames](https://remarkablegames.org/code-arcade/)
+
+Or download for desktop:
+
+- [Windows](https://github.com/remarkablegames/code-arcade/releases/latest/download/windows.zip)
+- [macOS](https://github.com/remarkablegames/code-arcade/releases/latest/download/macos.zip)
+- [Linux](https://github.com/remarkablegames/code-arcade/releases/latest/download/linux.zip)
 
 Read the [blog post](https://remarkablegames.org/posts/code-arcade/).
 
