@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.2.4](https://github.com/remarkablegames/code-arcade/compare/v1.2.3...v1.2.4) (2026-09-16)
+
+### Bug Fixes
+
+- **scenes:** verify postMessage origin with exact match ([751eb2b](https://github.com/remarkablegames/code-arcade/commit/751eb2b77da51e6c27cf013fc42214017df88dc3))
+
+### Code Refactoring
+
+- **templates:** replace kaboom with kaplay ([f544420](https://github.com/remarkablegames/code-arcade/commit/f544420d59b9dc5f93aff90272f6ca71ad2504f4))
+
 ## [1.2.3](https://github.com/remarkablegames/code-arcade/compare/v1.2.2...v1.2.3) (2025-04-30)
 
 ### Miscellaneous Chores
