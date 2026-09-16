@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/remarkablegames/code-arcade/blob/master/public/logo.png" alt="Code Arcade">
+  <img src="public/cover.png" width="600" alt="Code Arcade">
 </p>
 
 # Code Arcade
