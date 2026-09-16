@@ -77,7 +77,7 @@ export async function go(levelNumber: number) {
 window.addEventListener('message', (event) => {
   const data = event.data as { source?: string; level: number } | undefined
 
-  if (!event.origin.includes(location.origin) || data?.source !== GAME_ID) {
+  if (event.origin !== window.location.origin || data?.source !== GAME_ID) {
     return
   }
 
