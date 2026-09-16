@@ -1,5 +1,17 @@
 # Changelog
 
+## 1.2.4 (2026-09-16)
+
+
+### Miscellaneous Chores
+
+* release 1.2.3 ([bf69471](https://github.com/remarkablegames/code-arcade/commit/bf69471815e3b689dd6c0ac828f6e6a05f93501e))
+
+
+### Code Refactoring
+
+* **templates:** replace kaboom with kaplay ([f544420](https://github.com/remarkablegames/code-arcade/commit/f544420d59b9dc5f93aff90272f6ca71ad2504f4))
+
 ## [1.2.3](https://github.com/remarkablegames/code-arcade/compare/v1.2.2...v1.2.3) (2025-04-30)
 
 ### Miscellaneous Chores
