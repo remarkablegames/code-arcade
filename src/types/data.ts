@@ -1,4 +1,4 @@
-const prefix = 'remarkablegames.code-arcade'
+const prefix = 'org.remarkablegames.code-arcade'
 
 export const Data = {
   level: `${prefix}.level`,
