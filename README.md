@@ -11,6 +11,7 @@
 
 Play in your browser:
 
+- [Wavedash](https://wavedash.com/games/code-arcade)
 - [itch.io](https://remarkablegames.itch.io/code-arcade)
 - [Newgrounds](https://www.newgrounds.com/portal/view/934247)
 - [remarkablegames](https://remarkablegames.org/code-arcade/)
