@@ -12,16 +12,15 @@
 Play the game on:
 
 - [itch.io](https://remarkablegames.itch.io/code-arcade)
-- [newgrounds](https://www.newgrounds.com/portal/view/934247)
+- [Newgrounds](https://www.newgrounds.com/portal/view/934247)
 - [remarkablegames](https://remarkablegames.org/code-arcade)
 
 Read the [blog post](https://remarkablegames.org/posts/code-arcade/).
 
 ## Credits
 
-- Assets from [Kaboom](https://kaboomjs.com/)
+- Assets from [KAPLAY Crew](https://kaplayjs.com/crew/)
 - Editor from [CodeMirror](https://codemirror.net/)
-- Inspired by [Untrusted](https://alexnisnevich.github.io/untrusted/)
 
 ## Prerequisites
 
@@ -76,7 +75,7 @@ Your game is ready to be deployed!
 
 Builds the game and packages it into a Zip file in the `dist` folder.
 
-Your game can be uploaded to your server, [Itch.io](https://itch.io/), [Newgrounds](https://www.newgrounds.com/), etc.
+Your game can be uploaded to your server, [Itch.io](https://itch.io/), etc.
 
 ### `npm run increment-levels`
 
@@ -84,6 +83,20 @@ Increments a level and renames the file:
 
 ```sh
 npm run increment-levels -- --level=<number>
+```
+
+## Testing
+
+Jump to a level by passing it as a query string (overrides the saved level in `localStorage`):
+
+```
+http://localhost:5173/?level=<number>
+```
+
+For example, to play level 10:
+
+```
+http://localhost:5173/?level=10
 ```
 
 ## License
