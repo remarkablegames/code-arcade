@@ -1,3 +1,4 @@
+import tailwind from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 import { createHtmlPlugin } from 'vite-plugin-html'
 
@@ -19,5 +20,5 @@ export default defineConfig({
     },
   },
 
-  plugins: [createHtmlPlugin()],
+  plugins: [tailwind(), createHtmlPlugin()],
 })
