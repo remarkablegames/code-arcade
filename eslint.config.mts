@@ -25,9 +25,7 @@ export default defineConfig([
 
     languageOptions: {
       parserOptions: {
-        projectService: {
-          allowDefaultProject: ['postcss.config.mjs'],
-        },
+        projectService: {},
         tsconfigRootDir: import.meta.dirname,
       },
     },
